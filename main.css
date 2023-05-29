@@ -1,0 +1,184 @@
+/* Main css */
+
+@font-face {
+    font-family: 'Inter';
+    src: url("./font/Inter/Inter.woff") format("woff");
+  }
+
+.background{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(./images/main-b.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.title{
+    position: absolute;    
+    font-size: 128px;
+    font-weight: bolder;
+    color: white;
+    top: 52%;
+    left: 4%;
+}
+
+.comment{
+    position: absolute;
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+    top: 70%;
+    left: 5%;
+}
+
+.start-button{
+    position: absolute;
+    width: 370px;
+    height: 111px;
+    bottom: 108px;
+    right: 140px;
+    border-radius: 100px;
+    color: #7000FF;
+    font-size: 48px;
+    font-style: Extra Bold;
+    /* font-weight: bolder; */
+}/* Main css - end*/
+
+/*Genre css*/
+.bar{
+    position: relative;
+    width: 90%;
+    height: 110px;
+    border-bottom: 2px solid #E6E6E6;
+    justify-content: center;
+    margin:0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home{
+    position: absolute;
+    font-size: 38px;
+    font-weight: bolder;
+    color: #7000FF;
+    background-color: white;
+    border:none;
+    display: grid;
+    place-items: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 70px;
+}
+
+.k{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 254px;
+    height: 805px;
+    background: linear-gradient(rgba(112, 0, 255, 0.5), rgba(112, 0, 255, 0.5)), url(./images/k-pop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 30px;
+    font-size: 48px;
+    font-weight: bolder;
+    color: white;
+    margin: 0px 56px 0 56px;
+}
+
+.b{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 254px;
+    height: 805px;
+    background: linear-gradient(rgba(112, 0, 255, 0.5), rgba(112, 0, 255, 0.5)), url(./images/ballad.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 30px;
+    font-size: 48px;
+    font-weight: bolder;
+    color: white;
+    margin-right: 56px;
+}
+
+.h{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 254px;
+    height: 805px;
+    background: linear-gradient(rgba(112, 0, 255, 0.5), rgba(112, 0, 255, 0.5)), url(./images/hip-pop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 30px;
+    font-size: 48px;
+    font-weight: bolder;
+    color: white;
+    margin-right: 56px;
+}
+
+.i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 254px;
+    height: 805px;
+    background: linear-gradient(rgba(112, 0, 255, 0.5), rgba(112, 0, 255, 0.5)), url(./images/indi.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 30px;
+    font-size: 48px;
+    font-weight: bolder;
+    color: white;
+    margin-right: 56px;
+}
+
+.p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 254px;
+    height: 805px;
+    background: linear-gradient(rgba(112, 0, 255, 0.5), rgba(112, 0, 255, 0.5)), url(./images/pop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 30px;
+    font-size: 48px;
+    font-weight: bolder;
+    color: white;
+    margin-right: 56px;
+}
+
+/*Game css*/
+.container1{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 40%;
+}
+
+.box{
+    position: absolute;
+    width: 496px;
+    height: 657px;
+    border-radius: 45px;
+    box-shadow: 0px 4px 17px 0px rgb(0, 0, 0, 0.25);
+}
