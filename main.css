@@ -1,9 +1,20 @@
-/* Main css */
+/*desktop*/
+
+/* Main css*/
 
 @font-face {
-    font-family: 'Inter';
-    src: url("./font/Inter/Inter.woff") format("woff");
-  }
+    font-family: 'Inter', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Inter&family=Noto+Sans+KR:wght@700&display=swap');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Inter&family=Noto+Sans+KR:wght@700&display=swap');
+}
+
+body {
+    font-family: 'Inter', 'Noto Sans KR', sans-serif;
+}
 
 .background{
     position: relative;
@@ -26,7 +37,7 @@
 
 .comment{
     position: absolute;
-    font-size: 48px;
+    font-size: 3rem;
     font-weight: bold;
     color: white;
     top: 70%;
@@ -39,12 +50,24 @@
     height: 111px;
     bottom: 108px;
     right: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 100px;
+}
+
+.start-text{
+    justify-content: center;
     color: #7000FF;
     font-size: 48px;
-    font-style: Extra Bold;
-    /* font-weight: bolder; */
-}/* Main css - end*/
+    font-weight: bolder;
+    margin-right: 10px;
+}
+
+.fa-arrow-right{
+    font-size: 3rem;
+    color: #7000FF;
+}
 
 /*Genre css*/
 .bar{
@@ -168,17 +191,51 @@
     margin-right: 56px;
 }
 
-/*Game css*/
-.container1{
+/*Choice css*/
+.container1 {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 40%;
-}
-
-.box{
-    position: absolute;
+    justify-content: center;
+    margin-top: 7%;
+  }
+  
+  .box {
+    position: relative;
     width: 496px;
     height: 657px;
     border-radius: 45px;
+    margin: 0px 40px 0px 40px;
     box-shadow: 0px 4px 17px 0px rgb(0, 0, 0, 0.25);
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .text {
+    font-size: 40px;
+    font-weight: bolder;
+    color: #7000FF;
+    text-align: center;
+    bottom: 60px;
+    margin-top: 80px;
+  }
+  
+  .icon {
+    width: 188px;
+    height: 188px;
+  }
+  
+
+  /* tap */
+
+  @media screen and (max-width: 720px) {
+    
+  }
+
+
+  /* phone */
+
+  @media screen and (max-width: 430px) {
+    
+  }
