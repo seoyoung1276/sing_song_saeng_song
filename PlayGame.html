@@ -6,12 +6,27 @@
 </head>
 <body>
     <script>
+        var genre = localStorage.getItem("hiphop");
+        if(genre == 3){
+        var audio = new Audio('songs/hiphop/primetime.m4a');
+        audio.play();
+        }
     </script>
     <div class="musicbox"></div>
-    <div class="inputsongname">노래 제목을 입력하세요!</div>
+    <input type="text" placeholder='제목을 입력하세요!'></input>
     <div class="unknowncover"></div>
     <div class="questionmark"></div>
     <div class="musicline"></div>
     <div class="playbar"></div>
+
+
+
+
+
+
+
+
+    
+
 </body>
 </html>

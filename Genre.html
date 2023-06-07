@@ -4,15 +4,51 @@
     <link rel="icon" href="images/logo.ico">
     <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
-    <div class="bar"><button class="home" onclick="location.href='Main.html'">싱송생송</button></div>
-    <div class="container">
-        <div class="k" onclick="location.href='Choice.html'">K-POP</div>
-        <div class="b" onclick="location.href='Choice.html'">발라드</div>
-        <div class="h" onclick="location.href='Choice.html'">힙합</div>
-        <div class="i" onclick="location.href='Choice.html'">인디</div>
-        <div class="p" onclick="location.href='Choice.html'">POP</div>
+    <div class="bar">
+        <button class="home" onclick="location.href='Main.html'">싱송생송</button>
     </div>
+    <div class="container">
+        <button id="kpopbutton" class="k">K-POP</button>
+        <button id="balbutton" class="b">발라드</button>
+        <button id="hiphopbutton" class="h">힙합</button>
+        <button id="indybutton" class="i">인디</button>
+        <button id="popbutton" class="p">POP</button>
+    </div>
+</body>
+<script>
+    var kpop = document.getElementById("kpopbutton");
+    var bal = document.getElementById("balbutton");
+    var hiphop = document.getElementById("hiphopbutton");
+    var indy = document.getElementById("indybutton");
+    var pop = document.getElementById("popbutton");
+    
+    kpop.addEventListener("click", function(){
+        localStorage.setItem("genre", 1);
+        window.location.href = 'Choice.html';
+    });
+    
+    bal.addEventListener("click", function(){
+        localStorage.setItem("genre", 2);
+        window.location.href = 'Choice.html';
+    });
+    
+    hiphop.addEventListener("click", function(){
+        localStorage.setItem("genre", 3);
+        window.location.href = 'Choice.html';
+    });
+    
+    indy.addEventListener("click", function(){
+        localStorage.setItem("genre", 4);
+        window.location.href = 'Choice.html';
+    });
+    
+    pop.addEventListener("click", function(){
+        localStorage.setItem("genre", 5);
+        window.location.href = 'Choice.html';
+    });
+</script>
     
 </body>
 </html>
