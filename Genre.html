@@ -15,38 +15,7 @@
         <button id="popbutton" class="p">POP</button>
     </div>
 </body>
-<script>
-    var kpop = document.getElementById("kpopbutton");
-    var bal = document.getElementById("balbutton");
-    var hiphop = document.getElementById("hiphopbutton");
-    var indy = document.getElementById("indybutton");
-    var pop = document.getElementById("popbutton");
-    
-    kpop.addEventListener("click", function(){
-        localStorage.setItem("genre", 1);
-        window.location.href = 'Choice.html';
-    });
-    
-    bal.addEventListener("click", function(){
-        localStorage.setItem("genre", 2);
-        window.location.href = 'Choice.html';
-    });
-    
-    hiphop.addEventListener("click", function(){
-        localStorage.setItem("genre", 3);
-        window.location.href = 'Choice.html';
-    });
-    
-    indy.addEventListener("click", function(){
-        localStorage.setItem("genre", 4);
-        window.location.href = 'Choice.html';
-    });
-    
-    pop.addEventListener("click", function(){
-        localStorage.setItem("genre", 5);
-        window.location.href = 'Choice.html';
-    });
-</script>
+<script src="/javascript/genre.js"></script>
     
 </body>
 </html>
