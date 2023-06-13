@@ -2,19 +2,36 @@
 
 /* Main css*/
 
-@font-face {
-    font-family: 'Inter', sans-serif;
-    src: url('https://fonts.googleapis.com/css2?family=Inter&family=Noto+Sans+KR:wght@700&display=swap');
+/* @font-face {
+    font-family: 'KBO-Dia-Gothic_bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/KBO-Dia-Gothic_bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
 }
 
+*{
+    font-family: 'KBO-Dia-Gothic_bold';
+} */
+
 @font-face {
-    font-family: 'Noto Sans KR', sans-serif;
-    src: url('https://fonts.googleapis.com/css2?family=Inter&family=Noto+Sans+KR:wght@700&display=swap');
+    font-family: 'GangwonEduPowerExtraBoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
-body {
-    font-family: 'Inter', 'Noto Sans KR', sans-serif;
+*{
+    font-family: 'GangwonEduPowerExtraBoldA';
 }
+
+body{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .background{
     position: relative;
@@ -28,11 +45,11 @@ body {
 
 .title{
     position: absolute;    
-    font-size: 128px;
+    font-size: 9rem;
     font-weight: bolder;
     color: white;
-    top: 52%;
-    left: 4%;
+    top: 60%;
+    left: 4.5%;
 }
 
 .comment{
@@ -40,20 +57,22 @@ body {
     font-size: 3rem;
     font-weight: bold;
     color: white;
-    top: 70%;
-    left: 5%;
+    top: 76%;
+    left: 5.5%;
 }
 
 .start-button{
     position: absolute;
-    width: 370px;
-    height: 111px;
+    width: 18vw;
+    height: 5vw;
     bottom: 108px;
-    right: 140px;
+    right: 110px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 100px;
+    border: none;
+
 }
 
 .start-text{
@@ -61,7 +80,8 @@ body {
     color: #7000FF;
     font-size: 48px;
     font-weight: bolder;
-    margin-right: 10px;
+    text-align: center;
+    align-items: center;
 }
 
 .fa-arrow-right{
@@ -70,10 +90,10 @@ body {
 }
 
 /*Genre css*/
-.bar{
+header{
     position: relative;
-    width: 90%;
-    height: 110px;
+    width: 80%;
+    height: 5vw;
     border-bottom: 2px solid #E6E6E6;
     justify-content: center;
     margin:0 auto;
@@ -82,16 +102,16 @@ body {
     align-items: center;
 }
 
-.home{
+.nav{
     position: absolute;
-    font-size: 38px;
+    font-size: 3vw;
     font-weight: bolder;
     color: #7000FF;
-    background-color: white;
-    border:none;
     display: grid;
-    place-items: center;
+    text-decoration: none;
+    align-items: center;
 }
+
 
 .container{
     display: flex;
@@ -112,6 +132,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    border: none;
     border-radius: 30px;
     font-size: 48px;
     font-weight: bolder;
@@ -130,6 +151,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    border: none;
     border-radius: 30px;
     font-size: 48px;
     font-weight: bolder;
@@ -148,6 +170,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    border: none;
     border-radius: 30px;
     font-size: 48px;
     font-weight: bolder;
@@ -166,6 +189,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    border: none;
     border-radius: 30px;
     font-size: 48px;
     font-weight: bolder;
@@ -184,6 +208,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    border: none;
     border-radius: 30px;
     font-size: 48px;
     font-weight: bolder;
@@ -199,13 +224,13 @@ body {
     margin-top: 7%;
   }
   
-  .box {
+ .box {
     position: relative;
     width: 496px;
     height: 657px;
     border-radius: 45px;
     margin: 0px 40px 0px 40px;
-    box-shadow: 0px 4px 17px 0px rgb(0, 0, 0, 0.25);
+    box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.092);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -218,7 +243,6 @@ body {
     color: #7000FF;
     text-align: center;
     bottom: 60px;
-    margin-top: 80px;
   }
   
   .icon {
@@ -229,39 +253,97 @@ body {
   
   /* PlayGame css*/
 
+  .container2{
+    /* position: relative; */
+    width: 70vw;
+    height: 62vh;
+    display: flex;
+    flex-direction: row ;
+    align-items: flex-end;
+    margin-top: 8%;
+  }
+
   .coverbox{
-    position: absolute;
-    width: 630px;
-    height: 630px;
+    width: 35vw;
+    height: 35vw;
     border-radius: 25px;
     background-color: #7000FF;
-    top: 163px;
-    left: 323px;
+    /* margin: 10vw 0vw 0vw 17vw; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .answerbox{
+    width: 35vw;
+    height: 35vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
   }
 
   .musicbox{
-    position: absolute;
-    width: 650px;
-    height: 385px;
-    background-color: #0000;
-    border-radius: 0px 54px 54px 0px;
-    box-shadow: 0px 4px 16px 0px #0000 rgba(0, 0, 0, 0.153);
-    left: 953px;
-    top: 217px;
-
+    /* position: absolute; */
+    width: 35vw;
+    height: 18vw;
+    border-radius: 0px 45px 45px 0px;
+    /* margin: 21vw 0vw 0vw 50vw; */
+    box-shadow: 0px 4px 17px 0px rgb(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5%;
   }
 
   input{
-    position: absolute;
-    width: 494px;
-    height: 86px;
+    /* position: absolute; */
+    width: 28vw;
+    height: 5vw;
     border-radius: 50px;
     outline: none;
     border: none;
-    box-shadow: 0px 4px 10px 0px inset rgba(0, 0, 0, 0.153);
-    font-size: 20px;
+    box-shadow: 0px 4px 10px 0px inset rgba(0, 0, 0, 0.12);
+    font-size: 1.4rem;
     text-align: center;
+    text-align: center;
+    margin-top: 3vw;
   }
+
+  input:focus::placeholder {
+    color: transparent;
+  }
+
+  
+
+  .playline{
+    width: 28vw;
+    height: 0.3vw;
+    margin-top: 5%;
+    background-color: #E3E3E3;
+    border-radius: 50px;
+  }
+
+  @keyframes expandRight {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  
+  .element {
+    width: 28vw;
+    height: 0.3vw;
+    margin-top: 5%;
+    background-color: #7000FF;
+    border-radius: 50px;
+    animation-name: expandRight;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards; /* 애니메이션 종료 후 상태를 유지 */
+  }
+  
   
 
   /* tap */
