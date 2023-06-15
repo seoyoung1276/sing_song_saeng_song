@@ -20,6 +20,13 @@
     font-style: normal;
 }
 
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+/* .notosanskr * { 
+ font-family: 'Noto Sans KR', sans-serif;
+} */
+
+
 *{
     font-family: 'GangwonEduPowerExtraBoldA';
 }
@@ -31,6 +38,35 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+nav {
+    height: 44px;
+}
+.nav.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px 0 16px;
+}
+
+.nav-list {
+    display: flex;
+    column-gap: 80px;
+    font-weight: var(--font-extra-bold);
+}
+
+.nav-toggle{
+    font-size: var(--h2-font-size); /* 시험문제 : 아이콘 사이즈를 변경할때 이미지 속성이 아닌 폰트 사이즈 속성을 사용함 */
+    visibility: hidden;
+}
+
+/* Main */
 
 
 .background{
@@ -89,30 +125,15 @@ body{
     color: #7000FF;
 }
 
+.nav-container{
+  height: 44px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 /*Genre css*/
-header{
-    position: relative;
-    width: 80%;
-    height: 5vw;
-    border-bottom: 2px solid #E6E6E6;
-    justify-content: center;
-    margin:0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.nav{
-    position: absolute;
-    font-size: 3vw;
-    font-weight: bolder;
-    color: #7000FF;
-    display: grid;
-    text-decoration: none;
-    align-items: center;
-}
-
-
 .container{
     display: flex;
     flex-direction: row;
@@ -253,20 +274,25 @@ header{
   
   /* PlayGame css*/
 
+  .popup{
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+
   .container2{
     /* position: relative; */
     width: 70vw;
-    height: 62vh;
+    height: 48vh;
     display: flex;
     flex-direction: row ;
     align-items: flex-end;
-    margin-top: 8%;
+    margin-top: 22%;
+    margin-left: 5%;
   }
 
   .coverbox{
-    width: 35vw;
-    height: 35vw;
-    border-radius: 25px;
+    width: 28vw;
+    height: 28vw;
+    border-radius: 1.3vw;
     background-color: #7000FF;
     /* margin: 10vw 0vw 0vw 17vw; */
     display: flex;
@@ -274,9 +300,50 @@ header{
     align-items: center;
   }
 
+  .hint {
+    position: relative;
+    height: 2.7vw;
+    width: 2.7vw;
+    border: none;
+    border-radius: 100%;
+    background-color: #7000FF;
+    box-shadow: 0px 4px 17px 0px rgba(0, 0, 0, 0.15);
+    margin: 0 0 3% 3%;
+    cursor: pointer;
+    z-index: 1;
+    }
+
+  .hiddenHint {
+    position: absolute;
+    display: none;
+    height: 2.7vw;
+    width: 23vw;
+    box-shadow: 0px 4px 17px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 50px;
+    opacity: 0;
+    visibility: hidden;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    margin: 0 0 20.3% 1%;
+  }
+
+    .show-animation {
+        animation-name: hintMove;
+    }
+
+    @keyframes hintMove {
+        0% {
+            width: 0;
+        }
+        100% {
+            width: 21vw;
+        }
+    }
+
   .answerbox{
-    width: 35vw;
-    height: 35vw;
+    width: auto;
+    height: 25vw;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -284,26 +351,28 @@ header{
 
   .musicbox{
     /* position: absolute; */
-    width: 35vw;
-    height: 18vw;
-    border-radius: 0px 45px 45px 0px;
+    width: 30vw;
+    height: 17vw;
+    border-radius: 0px 2vw 2vw 0px;
     /* margin: 21vw 0vw 0vw 50vw; */
     box-shadow: 0px 4px 17px 0px rgb(0, 0, 0, 0.15);
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 5%;
+    margin-bottom: 8%;
   }
 
   input{
     /* position: absolute; */
-    width: 28vw;
-    height: 5vw;
+    width: 23vw;
+    height: 4vw;
     border-radius: 50px;
     outline: none;
     border: none;
-    box-shadow: 0px 4px 10px 0px inset rgba(0, 0, 0, 0.12);
-    font-size: 1.4rem;
+    box-shadow: 0px 4px 10px 0px inset rgba(0, 0, 0, 0.2);
+    font-size: 1vw;
+    font-family: 'Noto Sans KR', sans-serif;
+    /* font-weight: bold; */
     text-align: center;
     text-align: center;
     margin-top: 3vw;
@@ -313,17 +382,22 @@ header{
     color: transparent;
   }
 
-  
+  .genre{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 0.8vw;
+    margin-top: 3.5%;
+    color: #7e7e7e;
+  }
 
   .playline{
-    width: 28vw;
-    height: 0.3vw;
-    margin-top: 5%;
+    width: 23vw;
+    height: 0.28vw;
+    margin-top: 5.5%;
     background-color: #E3E3E3;
     border-radius: 50px;
   }
 
-  @keyframes expandRight {
+  @keyframes lineMove {
     0% {
       width: 0;
     }
@@ -331,14 +405,37 @@ header{
       width: 100%;
     }
   }
+
+  .play{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    margin-top: 1.6vw;
+    grid-column-gap: 5vw;
+  }
+
+  .backBtn{
+    background: none;
+    border: none;
+  }
   
+  .playBtn{
+    background: none;
+    border: none;
+  }
+
+  .nextBtn{
+    background: none;
+    border: none;
+  }
+
   .element {
-    width: 28vw;
-    height: 0.3vw;
-    margin-top: 5%;
+    width: 23vw;
+    height: 0.28vw;
+    margin-top: 5.5%;
     background-color: #7000FF;
     border-radius: 50px;
-    animation-name: expandRight;
+    animation-name: lineMove;
     animation-duration: 2s;
     animation-timing-function: linear;
     animation-fill-mode: forwards; /* 애니메이션 종료 후 상태를 유지 */

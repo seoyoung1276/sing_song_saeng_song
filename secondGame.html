@@ -5,27 +5,59 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <script>
-    var gameGenr = localStorage.getItem("genre");
-    switch(gameGenr){
-        case 1 : 
+    function showHiddenHint() {
+        var hiddenHint = document.querySelector('.hiddenHint');
+        hiddenHint.style.display = 'block';
+        hiddenHint.style.opacity = '1';
+        hiddenHint.style.visibility = 'visible';
+        hiddenHint.classList.add('show-animation');
     }
+
+    // window.onload = function () {
+    //         var popup = document.querySelector('.popup');
+    //         popup.style.display = 'block';
+
+    //         setTimeout(function () {
+    //             popup.style.display = 'none';
+    //         }, 3000);
+    //     };
 </script>
 <body>
-    <header><a href="" class="nav">싱송생송</a></header>
-    <div class="container2">
-        <div class="coverbox"><img src="/images/question-mark-icon.png" width="35%" height="53%"></div>
-        <div class="answerbox">
-            <div class="hint">
-                <div class="hiddenHint"></div>
+    <header>
+        <nav class="nav-container">
+            <a href="" class="nav-logo">싱송생송</a>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="" class="nav-link">k-pop</a></li>
+                <li class="nav-item"><a href="" class="nav-link">발라드</a></li>
+                <li class="nav-item"><a href="" class="nav-link">힙합</a></li>
+                <li class="nav-item"><a href="" class="nav-link">인디</a></li>
+                <li class="nav-item"><a href="" class="nav-link">pop</a></li>
+            </ul>
+            <div class="new-toggle" id="nav_toggle">
+                <i class="bi bi-list"></i>
             </div>
-            <div class="musicbox">
-                <input type="text" placeholder='노래 제목을 입력하세요!'></input>
-                <div class="line">
-                    <div class="playline">
-                        <div class="element"></div>
+        </nav>
+    </header>
+    <div class="popup" >
+        <div class="container2">
+            <div class="coverbox"><img src="/images/question-mark-icon.png" width="33%" height="50%"></div>
+            <div class="answerbox">
+                <button class="hint" onclick="showHiddenHint()"><img src="./images/hint-icon.png" width="80%"></button>
+                <div class="hiddenHint"></div>
+                <div class="musicbox">
+                    <input type="text" placeholder='노래 제목을 입력하세요!'></input>
+                    <div class="genre">♬ k-pop</div>
+                    <div class="line">
+                        <div class="playline">
+                            <div class="element"></div>
+                        </div>
+                    </div>
+                    <div class="play">
+                        <button class="backBtn"><img src="./images/back.png" width="100%" height="100%"></button>
+                        <button class="playBtn"><img src="./images/play.png" width="80%" height="80%"></button>
+                        <button class="nextBtn"><img src="./images/next.png" width="100%" height="100%"></button>
                     </div>
                 </div>
-                <div class="playbutton"></div>
             </div>
         </div>
     </div>
