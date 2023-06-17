@@ -5,22 +5,48 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <script>
-    function showHiddenHint() {
-        var hiddenHint = document.querySelector('.hiddenHint');
-        hiddenHint.style.display = 'block';
-        hiddenHint.style.opacity = '1';
-        hiddenHint.style.visibility = 'visible';
-        hiddenHint.classList.add('show-animation');
-    }
+    window.onload = function () {
+        var popup = document.createElement('div');
+        popup.className = 'popup';
 
-    // window.onload = function () {
-    //         var popup = document.querySelector('.popup');
-    //         popup.style.display = 'block';
+        var startText = document.createElement('div');
+        startText.textContent = '잠시 후 시작됩니다...';
+        startText.className = 'start-text';
 
-    //         setTimeout(function () {
-    //             popup.style.display = 'none';
-    //         }, 3000);
-    //     };
+        var countdownImage = document.createElement('img');
+        countdownImage.className = 'countdown-image';
+
+        var popupMessage = document.createElement('div');
+        popupMessage.className = 'popup-message';
+        popupMessage.textContent = '난이도는 갈수록 어려워집니다!';
+
+        popup.appendChild(startText);
+        popup.appendChild(countdownImage);
+        popup.appendChild(popupMessage);
+
+        document.body.appendChild(popup);
+
+        var countdown = 3; // 카운트다운 초
+        var countdownInterval = setInterval(function () {
+            if (countdown === 0) {
+                startText.style.display = 'none';
+                countdownImage.style.display = 'none';
+            } else {
+                startText.style.display = 'block';
+                countdownImage.style.display = 'block';
+                countdownImage.src = 'countdown-' + countdown + 'one.png'; // 각 카운트다운 값에 따라 다른 이미지 파일명을 설정
+                countdownImage.src = 'countdown-' + countdown + 'two.png'; // 각 카운트다운 값에 따라 다른 이미지 파일명을 설정
+                countdownImage.src = 'countdown-' + countdown + 'three.png'; // 각 카운트다운 값에 따라 다른 이미지 파일명을 설정
+            }
+
+            countdown--;
+
+            if (countdown < 0) {
+                clearInterval(countdownInterval);
+                popup.style.display = 'none';
+            }
+        }, 1000);
+    };
 </script>
 <body>
     <header>
@@ -38,25 +64,23 @@
             </div>
         </nav>
     </header>
-    <div class="popup" >
-        <div class="container2">
-            <div class="coverbox"><img src="/images/question-mark-icon.png" width="33%" height="50%"></div>
-            <div class="answerbox">
-                <button class="hint" onclick="showHiddenHint()"><img src="./images/hint-icon.png" width="80%"></button>
-                <div class="hiddenHint"></div>
-                <div class="musicbox">
-                    <input type="text" placeholder='노래 제목을 입력하세요!'></input>
-                    <div class="genre">♬ k-pop</div>
-                    <div class="line">
-                        <div class="playline">
-                            <div class="element"></div>
-                        </div>
+    <div class="container2">
+        <div class="coverbox"><img src="/images/question-mark-icon.png" width="33%" height="50%"></div>
+        <div class="answerbox">
+            <button class="hint" onclick="showHiddenHint()"><img src="./images/hint-icon.png" width="80%"></button>
+            <div class="hiddenHint"></div>
+            <div class="musicbox">
+                <input type="text" placeholder='노래 제목을 입력하세요!'></input>
+                <div class="genre">♬ k-pop</div>
+                <div class="line">
+                    <div class="playline">
+                        <div class="element"></div>
                     </div>
-                    <div class="play">
-                        <button class="backBtn"><img src="./images/back.png" width="100%" height="100%"></button>
-                        <button class="playBtn"><img src="./images/play.png" width="80%" height="80%"></button>
-                        <button class="nextBtn"><img src="./images/next.png" width="100%" height="100%"></button>
-                    </div>
+                </div>
+                <div class="play">
+                    <button class="backBtn"><img src="./images/back.png" width="100%" height="100%"></button>
+                    <button class="playBtn"><img src="./images/play.png" width="80%" height="80%"></button>
+                    <button class="nextBtn"><img src="./images/next.png" width="100%" height="100%"></button>
                 </div>
             </div>
         </div>
