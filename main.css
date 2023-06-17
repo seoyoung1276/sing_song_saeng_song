@@ -46,6 +46,7 @@ header {
 }
 nav {
     height: 60px;
+    background-color: white;
 }
 /* .nav.container {
     display: flex;
@@ -335,11 +336,18 @@ nav {
     /* position: relative; */
     width: 70vw;
     height: 48vh;
-    display: flex;
-    flex-direction: row ;
+    display: grid;
+    grid-template-columns: auto auto;
+    /* flex-direction: row ; */
     align-items: flex-end;
-    margin-top: 15%;
+    margin-top: 8%;
     margin-left: 5%;
+  }
+
+  .songbox{
+    display: grid;
+    grid-template-columns: auto;
+    justify-items: end;
   }
 
   .coverbox{
@@ -353,6 +361,7 @@ nav {
     align-items: center;
   }
 
+
   .hint {
     position: relative;
     height: 2.7vw;
@@ -362,9 +371,9 @@ nav {
     background-color: #7000FF;
     box-shadow: 0px 4px 17px 0px rgba(0, 0, 0, 0.15);
     margin: 0 0 3% 3%;
-    cursor: pointer;
-    z-index: 1;
-    }
+    left: 11%;
+    top: 264%;
+  }
 
   .hiddenHint {
     position: absolute;
@@ -378,7 +387,8 @@ nav {
     animation-duration: 0.3s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
-    margin: 0 0 20.3% 1%;
+    top: 2%;
+
   }
 
   .show-animation {
@@ -394,13 +404,6 @@ nav {
     }
   }
 
-  .answerbox{
-    width: auto;
-    height: 25vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-  }
 
   .musicbox{
     /* position: absolute; */
@@ -412,7 +415,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 8%;
+    margin-bottom: 3.5%;
   }
 
   input{
@@ -538,7 +541,7 @@ nav {
 
   /* phone */
 
-  @media screen and (max-width: 540px) {
+  @media screen and (max-width: 700px) {
     .container2{
       /* position: relative; */
       width: 70vw;
@@ -546,8 +549,14 @@ nav {
       display: flex;
       flex-direction: column ;
       align-items: flex-end;
-      margin-top: 40%;
+      margin-top: 25vw;
       margin-left: 5%;
+      row-gap: 1.5%;
+    }
+
+    .songbox{
+      display: grid;
+      grid-template-columns: auto auto;
     }
 
     .coverbox{
@@ -564,23 +573,21 @@ nav {
 
     .hint {
       position: relative;
-      height: 16vw;
-      width: 7vw;
+      height: 6vw;
+      width: 6vw;
       border: none;
       border-radius: 100%;
       background-color: #7000FF;
       box-shadow: 0px 4px 17px 0px rgba(0, 0, 0, 0.15);
-      margin: 0 0 3% 0;
-      cursor: pointer;
-      z-index: 1;
-      top: -80vw;
+      top: -13%;
+      left: 6.5vw;
     }
   
     .hiddenHint {
       position: absolute;
       display: none;
-      height: 6.9vw;
-      width: 15vw;
+      height: 6vw;
+      width: 23vw;
       box-shadow: 0px 4px 17px 0px rgba(0, 0, 0, 0.15);
       border-radius: 50px;
       opacity: 0;
@@ -588,8 +595,7 @@ nav {
       animation-duration: 0.3s;
       animation-timing-function: ease-in-out;
       animation-fill-mode: forwards;
-      margin: 0 0 35% 1%;
-      top: 29vw;
+      top: 2%;
     }
   
     .show-animation {
@@ -601,19 +607,20 @@ nav {
           width: 0;
       }
       100% {
-          width: 21vw;
+          width: 66.5vw;
       }
     }
   
     .answerbox{
       width: auto;
       height: 45vw;
+      row-gap: 10%;
     }
   
     .musicbox{
       /* position: absolute; */
       width: 70vw;
-      height: 65vw;
+      height: 35vw;
       border-radius: 3vw;
       /* margin: 21vw 0vw 0vw 50vw; */
       box-shadow: 0px 4px 17px 0px rgb(0, 0, 0, 0.15);
@@ -635,7 +642,7 @@ nav {
       font-family: 'Noto Sans KR', sans-serif;
       /* font-weight: bold; */
       text-align: center;
-      margin-top: 5vw;
+      margin-top: 6vw;
     }
   
     input:focus::placeholder {
@@ -645,14 +652,14 @@ nav {
     .genre{
       font-family: 'Noto Sans KR', sans-serif;
       font-size: 0.8vw;
-      margin-top: 2.8%;
+      margin-top: 4%;
       color: #7e7e7e;
     }
   
     .playline{
       width: 57vw;
-      height: 0.5vw;
-      margin-top: 3.9%;
+      height: 0.6vw;
+      margin-top: 7%;
       background-color: #E3E3E3;
       border-radius: 50px;
     }
@@ -668,8 +675,8 @@ nav {
   
     .element {
       width: 57vw;
-      height: 0.5vw;
-      margin-top: 3.9%;
+      height: 0.6vw;
+      margin-top: 7%;
       background-color: #7000FF;
       border-radius: 50px;
       animation: lineMove 2s linear 3s forwards;
@@ -683,7 +690,7 @@ nav {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       align-items: center;
-      margin-top: 1.6vw;
+      margin-top: 1.8vw;
       grid-column-gap: 5vw;
     }
   
