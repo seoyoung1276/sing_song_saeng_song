@@ -1,14 +1,18 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=&height=200&section=header&text=싱송생송&fontSize=90" />
+<img src="https://capsule-render.vercel.app/api?type=rounded&color=7000ff&height=200&section=header&text=싱송생송&fontSize=90&fontColor=ffff&animation=fadeIn&" />
+
+<br>
 
 <div align="center">
 
 WSM 반응형 웹 프로젝트_싱송생송 🎵 
 ###### 2410이서영 2413이해원
+<br>
+
 ---
 
 </div><br>
 
-> 싱송생송은 총 5개의 장르에서 3가지 게임을 선택해 노래를 맞추는 게임사이트 입니다.
+> 싱송생송은 총 5개의 장르에서 3가지 게임을 선택해<br>노래를 맞추는 게임사이트 입니다.
 
 <br>
 
