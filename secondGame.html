@@ -5,48 +5,45 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <script>
+    function showHiddenHint() {
+        var hiddenHint = document.querySelector('.hiddenHint');
+        hiddenHint.style.display = 'block';
+        hiddenHint.style.opacity = '1';
+        hiddenHint.style.visibility = 'visible';
+        hiddenHint.classList.add('show-animation');
+    }
+
     window.onload = function () {
-        var popup = document.createElement('div');
-        popup.className = 'popup';
+            var popup = document.querySelector('.popup');
+            var startText = document.querySelector('.start-text');
+            var countdownImage = document.querySelector('.countdown-image');
+            var popupMessage = document.querySelector('.popup-message');
 
-        var startText = document.createElement('div');
-        startText.textContent = '잠시 후 시작됩니다...';
-        startText.className = 'start-text';
+            var countdown = 2; // 카운트다운 초
+            var countdownInterval = setInterval(function () {
+                if (countdown === 0) {
+                    startText.style.display = 'none';
+                    countdownImage.style.display = 'none';
+                } else {
+                    startText.style.display = 'block';
+                    countdownImage.style.display = 'block';
+                        if (countdown === 1) {
+                            countdownImage.src = './images/one.png';
+                        } else if (countdown === 2) {
+                            countdownImage.src = './images/two.png';
+                        } else if (countdown === 3) {
+                            countdownImage.src = './images/three.png';
+                        }
+                }
 
-        var countdownImage = document.createElement('img');
-        countdownImage.className = 'countdown-image';
+                countdown--;
 
-        var popupMessage = document.createElement('div');
-        popupMessage.className = 'popup-message';
-        popupMessage.textContent = '난이도는 갈수록 어려워집니다!';
-
-        popup.appendChild(startText);
-        popup.appendChild(countdownImage);
-        popup.appendChild(popupMessage);
-
-        document.body.appendChild(popup);
-
-        var countdown = 3; // 카운트다운 초
-        var countdownInterval = setInterval(function () {
-            if (countdown === 0) {
-                startText.style.display = 'none';
-                countdownImage.style.display = 'none';
-            } else {
-                startText.style.display = 'block';
-                countdownImage.style.display = 'block';
-                countdownImage.src = 'countdown-' + countdown + 'one.png'; // 각 카운트다운 값에 따라 다른 이미지 파일명을 설정
-                countdownImage.src = 'countdown-' + countdown + 'two.png'; // 각 카운트다운 값에 따라 다른 이미지 파일명을 설정
-                countdownImage.src = 'countdown-' + countdown + 'three.png'; // 각 카운트다운 값에 따라 다른 이미지 파일명을 설정
-            }
-
-            countdown--;
-
-            if (countdown < 0) {
-                clearInterval(countdownInterval);
-                popup.style.display = 'none';
-            }
-        }, 1000);
-    };
+                if (countdown < 0) {
+                    clearInterval(countdownInterval);
+                    popup.style.display = 'none';
+                }
+            }, 1000);
+        };
 </script>
 <body>
     <header>
@@ -85,5 +82,11 @@
             </div>
         </div>
     </div>
+    <div class="popup">
+        <div class="popup-message">난이도는 갈수록 어려워집니다!</div>
+        <div class="start-text">잠시 후 시작됩니다...</div>
+        <img class="countdown-image" src="./images/three.png" alt="countdown">
+    </div>
+
 </body>
 </html>
