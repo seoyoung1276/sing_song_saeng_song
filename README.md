@@ -12,8 +12,8 @@ WSM 반응형 웹 프로젝트_싱송생송 🎵
 
 </div><br>
 
-    💡싱송생송은 총 5개의 장르에서 3가지 게임을 선택해
-    노래를 맞추는 게임 웹사이트 입니다
+    💡 싱송생송은 총 5개의 장르에서 3가지 게임을 선택해
+        노래를 맞추는 게임 웹사이트 입니다
 
 <br>
 
@@ -49,16 +49,16 @@ WSM 반응형 웹 프로젝트_싱송생송 🎵
 
 <br>
 
-## Team_member
+### Team_member
 
 <br>
 
-### seouyoung1276
+#### seouyoung1276
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=seoyoung1276&layout=compact">
 
 <br>
 
-### haewon171
+#### haewon171
 
 
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=haewon1106&layout=compact">
