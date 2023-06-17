@@ -152,6 +152,7 @@ nav {
 .container{
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: flex-start;
     margin-top: 70px;
@@ -422,7 +423,6 @@ nav {
     font-family: 'Noto Sans KR', sans-serif;
     /* font-weight: bold; */
     text-align: center;
-    text-align: center;
     margin-top: 3vw;
   }
 
@@ -496,6 +496,31 @@ nav {
     height: 3vw;
   }
 
+  /* Answer css */
+  .musicTitle{
+    width: 23vw;
+    height: 1.8vw;
+    font-size: 1.3vw;
+    text-align: center;
+    justify-content: end;
+    margin-top: 3.9vw;
+  }
+
+  .element2 {
+    width: 23vw;
+    height: 0.27vw;
+    margin-top: 5.5%;
+    background-color: #7000FF;
+    border-radius: 50px;
+  }
+
+  .genre2{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 0.8vw;
+    margin-top: 3.5%;
+    margin-bottom: 2%;
+    color: #7e7e7e;
+  }
   
   
   
