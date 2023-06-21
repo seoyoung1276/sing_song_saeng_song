@@ -5,14 +5,26 @@
     <link rel="stylesheet" href="../main.css">
 </head>
 <script>
-    
+    function showHiddenHint() {
+                var hiddenHint = document.querySelector('.hiddenHint');
+                hiddenHint.classList.toggle('show-animation');
+                
+                if (hiddenHint.classList.contains('show-animation')) {
+                    hiddenHint.style.display = 'block';
+                    hiddenHint.style.opacity = '1';
+                    hiddenHint.style.visibility = 'visible';
+                } else {
+                    hiddenHint.style.display = 'none';
+                    hiddenHint.style.opacity = '0';
+                    hiddenHint.style.visibility = 'hidden';
+                }
+            }
 
     window.onload = function() {
         var popup = document.querySelector('.popup');
         var startText = document.querySelector('.start-text2');
         var countdownImage = document.querySelector('.countdown-image');
         var popupMessage = document.querySelector('.popup-message');
-        var btnPopClose = document.querySelectorAll('.startBtn');
         var countdown = 2; // 카운트다운 초
         var countdownInterval;
 
@@ -23,6 +35,7 @@
             if (countdown === 0) {
                 startText.style.display = 'none';
                 countdownImage.style.display = 'none';
+                startBtn.style.display = 'block';
             } else {
                 startText.style.display = 'block';
                 countdownImage.style.display = 'block';
@@ -86,6 +99,7 @@
                     </button>
                 <div class="coverbox"><img src="../images/question-mark-icon.png" width="33%" height="50%"></div>
             </div>
+            <div class="flex-start">
                 <div class="musicbox">
                     <input id = "inputanswer" type="text" placeholder='노래 제목을 입력하세요!'></input>
                     <div id="musicTitle" class="musicTitle"></div>
@@ -101,6 +115,7 @@
                         <button id="nextBtn" class="nextBtn"><img src="../images/next.png" width="100%" height="100%"></button>
                     </div>
                 </div>
+            </div>
         </div>
         <div class="popup">
             <div class="popup-message">시작하기 버튼을 누르면 시작됩니다!</div>

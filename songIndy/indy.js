@@ -156,7 +156,7 @@ function nextquiz() {
         cover.style.display = 'none';
         musicTitle.style.display = 'none';
         // hint.style.left = '120%'/
-        document.getElementById('hint').style.left="120%"
+        // document.getElementById('hint').style./left="120%"
         songbox.style.display = 'block';
         hint.style.display = 'block';
         hint.textContent = indy[i].hint;
