@@ -105,6 +105,7 @@ var indy = [
    const startBtn = document.getElementById("startBtn");
    let answerimage = document.getElementById("answerimage");
    let inputanswer = document.getElementById("inputanswer");
+   let playBtns = document.getElementById("play");
    let answer ="";
    let currentTime = 0;
    let cnt = 10;
@@ -225,6 +226,8 @@ var indy = [
                answerimage.src = indy[i].answerimage;
                musicTitle.textContent = indy[i].title;
                songbox.style.display = 'none';
+               playBtns.style.marginTop = '4%'
+               hint.style.opacity = '0';
                document.getElementById('coverbox').style.marginTop="14%"
                answersong = new Audio(indy[i].answersong);
                answersong.play();
