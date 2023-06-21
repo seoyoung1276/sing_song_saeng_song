@@ -344,7 +344,7 @@ nav {
 
   .container2{
     /* position: relative; */
-    width: 70vw;
+    /* width: 70vw; */
     height: 48vh;
     display: grid;
     grid-template-columns: auto auto;
