@@ -6,7 +6,7 @@ var indy = [
     "secondsong": 'songs/잔나비 - 주저하는 연인들을 위해.mp3',
     "hint":"ㅈㅈㅎㄴㅇㄴㄷㅇㅇㅎ",
     "answersong": 'songs/A잔나비 - 주저하는 연인들을 위해.mp3',
-    "answerimage": 'image/1.jpg'
+    "answerimage": "image/1.jpg"
  },
   
  {
@@ -30,19 +30,31 @@ var indy = [
  }
 ];
 
-var inputanswer = document.getElementById("inputanswer");
-var answer ="";
+
+
+
+var bol = false;
+var i = 0; 
 
 const cover = document.getElementById("coverbox");
 const songbox = document.getElementById("songbox");
 const hint = document.getElementById("hint");
 const musicTitle = document.getElementById("musicTitle");
+const playBtn = document.getElementById("playBtn");
+let answerimage = document.getElementById("answerimage");
+let inputanswer = document.getElementById("inputanswer");
+let answer ="";
+let currentTime = 0;
+let isPlaying = false;
+
+var secondsong = new Audio(indy[i].secondsong);
+var answersong = new Audio(indy[i].answersong);
+var songPath2 = indy[i].secondsong;
+var songPath = indy[i].answersong;
 
 cover.style.display = 'none';
 musicTitle.style.display = 'none';
 
-var bol = false;
-var i = 0; 
 
 function nextquiz() {
     if(bol === false){
@@ -53,8 +65,34 @@ function nextquiz() {
         songbox.style.display = 'block';
         hint.style.display = 'block';
         //hint.textContent = indy[i].hint;
+        secondsong = new Audio(indy[i].secondsong);
+        songPath2 = indy[i].secondsong;
+        secondsong = new Audio(songPath2);
+        setTimeout(function(){
+            secondsong.play();
+        }, 3000);
     }
 }
+
+// 노래 재생 버튼 클릭 (다시 재생 됨)
+if(typeof playBtn !== 'undefined' && playBtn !== null){
+    playBtn.addEventListener("click", function(){
+        if(bol === false) {
+            secondsong.play();
+        }else{
+            if(isPlaying) {
+                answersong.pause();
+                currentTime = answersong.currentTime;
+                isPlaying = false;
+            }else{
+                answersong.currentTime = currentTime;
+                answersong.play();
+                isPlaying = true;
+            }
+        }
+    })
+}
+
 
 // 엔터 키 동작
 function handleEnterKey(event) {
@@ -70,20 +108,26 @@ function input() {
     checkanswer();
 }
 
+// 정답 체크
 function checkanswer() {
     for(var j=0; j<indy[i].answer.length; j++){
+        //정답이 맞을 때
         if(answer === indy[i].answer[j]){
             bol = true; 
-            cover.style.display = 'block';
-            inputanswer.style.display = 'none';
+            cover.style.display = 'flex';
             musicTitle.style.display = 'block';
-            cover.src = indy[i].answerimage;
+            inputanswer.style.display = 'none';
+            answerimage.src = indy[i].answerimage;
             musicTitle.textContent = indy[i].title;
             songbox.style.display = 'none';
             hint.style.display = 'none';
+            answersong = new Audio(indy[i].answersong);
+            answersong.play();
+            isPlaying = true;
             alert(answer);
             i++;
             break; 
+        //정답이 아닐 때
         }else{
             alert("땡!");
             break;
@@ -96,12 +140,15 @@ if (typeof nextBtn !== 'undefined' && nextBtn !== null) {
     nextBtn.addEventListener("click", function(){
         if(i < indy.length) {
             bol = false;
+            answersong.pause();
             nextquiz();
         }else{
             alert("문제 끝~ ^>^");
         }
     }); 
 }
+
+
 
     // let i = 0;
     // let b = false;
