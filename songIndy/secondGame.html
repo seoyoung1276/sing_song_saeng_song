@@ -28,6 +28,8 @@
         var countdown = 2; // 카운트다운 초
         var countdownInterval;
 
+        startBtn.style.display = 'none';
+        
         function startCountdown() {
             countdownInterval = setInterval(function() {
             if (countdown === 0) {
@@ -48,6 +50,7 @@
             countdown--;
 
             if (countdown < 0) {
+                startBtn.style.display = 'block';
                 clearInterval(countdownInterval);
             }
             }, 1000);

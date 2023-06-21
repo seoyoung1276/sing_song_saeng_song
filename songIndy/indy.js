@@ -94,9 +94,6 @@ var indy = [
  */
 ];
 
-
-
-
 var bol = false;
 var i = 0; 
 
