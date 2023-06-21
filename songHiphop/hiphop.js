@@ -3,11 +3,11 @@ var i = 0;
 var hiphop = [
  {
     title: "김승민 - Deep Sea",
-    answer: ["deap sea", "deap Sea", "딥씨", "딥시", "Deap sea", "Deap Sea", "deapsea", "Deapsea","deapSea"],
+    answer: ["deep sea", "deep Sea", "딥씨", "딥시", "Deep sea", "Deep Sea", "deepsea", "Deepsea","deepSea"],
     secondsong: 'songs/김승민 - deapsea.mp3',
     hint:"ㄷㅆ",
     answersong: 'songs/A김승민 - deapsea.mp3',
-    answerimage: 'image/1.jpg'
+    answerimage: 'images/1.jpg'
  },
   
  {
@@ -16,39 +16,39 @@ var hiphop = [
     secondsong: 'songs/더콰이엇 - primetime.mp3',
     hint: "ㅍㄹㅇㅌㅇ",
     answersong: 'songs/A더콰이엇 - primetime.mp3',
-    answerimage: 'image/2.jpg'
+    answerimage: 'images/2.jpg'
  },
  {
-   title: "릴러말즈 - Gone",
+   title: "릴러말즈 - Gone (Feat. 팔로알토)",
    answer: ["gone", "건", "Gone", "곤"],
    secondsong: 'songs/릴러말즈 - gone.mp3',
    hint: "ㄱ",
    answersong: 'songs/A릴러말즈 - gone.mp3',
-   answerimage: 'image/3.jpg'
+   answerimage: 'images/3.jpg'
 },
 {
-   title: "미란이 - Lambo",
+   title: "미란이 - Lambo (Feat. UNEDUCATED KID)",
    answer: ["lambo", "Lambo", "람보", "림보"],
    secondsong: 'songs/미란이 - lambo.mp3',
    hint: "ㄹㅂ",
    answersong: 'songs/A미란이 - lambo.mp3',
-   answerimage: 'image/4.jpg'
+   answerimage: 'images/4.jpg'
 },
 {
-   title: "블라세 - Piece Out",
-   answer: ["Piece out", "pieceout", "piece out", "피스아웃", "피스 아웃", "피쓰 아웃", "피쓰아웃"],
+   title: "블라세 - Peace Out",
+   answer: ["peace out", "peaceout", "peace out", "피스아웃", "피스 아웃", "피쓰 아웃", "피쓰아웃"],
    secondsong: 'songs/블라세 - pieceout.mp3',
    hint: "ㅍㅅㅇㅇ",
    answersong: 'songs/A블라세 - pieceout.mp3',
-   answerimage: 'image/5.jpg'
+   answerimage: 'images/5.jpg'
 },
 {
-   title: "수퍼비 - 문제아",
+   title: "수퍼비 & UNEDUCATED KID - 문제아",
    answer: ["문제아"],
    secondsong: 'songs/수퍼비 - 문제아.mp3',
    hint: "ㅁㅈㅇ",
    answersong: 'songs/A수퍼비 - 문제아.mp3',
-   answerimage: 'image/6.jpg'
+   answerimage: 'images/6.jpg'
 },
 {
    title: "창모 - Selfmade Orange",
@@ -56,7 +56,7 @@ var hiphop = [
    secondsong: 'songs/창모 - selfmadeorange.mp3',
    hint: "ㅅㅍㅁㅇㄷ ㅇㄹㅈ",
    answersong: 'songs/A창모 - selfmadeorange.mp3',
-   answerimage: 'image/7.jpg'
+   answerimage: 'images/7.jpg'
 },
 {
    title: "폴 블랑코 - Summer",
@@ -64,7 +64,7 @@ var hiphop = [
    secondsong: 'songs/폴블랑코 - Summer.mp3',
    hint: "ㅅㅁ",
    answersong: 'songs/A폴블랑코 - summer.mp3',
-   answerimage: 'image/8.jpg'
+   answerimage: 'images/8.jpg'
 },
 {
    title: "허성현 - Cliche",
@@ -72,7 +72,7 @@ var hiphop = [
    secondsong: 'songs/허성현 - 클리셰.mp3',
    hint: "ㅋㄹㅅ",
    answersong: 'songs/A허성현 - 클리셰.mp3',
-   answerimage: 'image/9.jpg'
+   answerimage: 'images/9.jpg'
 },
 {
    title: "pH-1, Kid Milli, 루피 - Good Day (Feat. 팔로알토)",
@@ -80,7 +80,7 @@ var hiphop = [
    secondsong: 'songs/ph1 - 굿데이.mp3',
    hint: "ㄱㄷㅇ",
    answersong: 'songs/Aph1 - 굿데이.mp3',
-   answerimage: 'image/10.jpg'
+   answerimage: 'images/10.jpg'
 },
 ];
 
