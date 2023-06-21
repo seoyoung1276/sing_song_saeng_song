@@ -295,17 +295,16 @@ nav {
   /* PlayGame css*/
 
   .popup {
-    position: fixed;
-    top: 13%;
+    position: absolute;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.8);
+    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 1;
   }
 
 .popup-message {
@@ -347,7 +346,7 @@ nav {
     height: 60%;
     display: grid;
     grid-template-columns: auto auto;
-    align-items: flex-end;
+    align-items: center;
     margin: auto;
   }
 
@@ -421,7 +420,8 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 6%;
+    margin-top: 37%;
+    /* margin-bottom: 6%; */
   }
 
   input{
@@ -548,35 +548,67 @@ nav {
   /* phone */
 
   @media screen and (max-width: 700px) {
-    .container2{
-      /* position: relative; */
-      width: 70vw;
+    .popup {
+      position: absolute;
+      left: 0;
+      width: 100%;
       height: 100%;
+      background-color: rgba(255, 255, 255, 0.8);
+      
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  
+  .popup-message {
+    color: rgb(0, 0, 0);
+    font-size: 5vw;
+    text-align: center;
+    margin-bottom: 1.5%;
+  }
+  
+  .start-text2 {
+    font-size: 2vw;
+    margin: none;
+    color: #7e7e7e;
+    margin-bottom: 2.5%;
+  }
+  
+  .countdown-image {
+    display: block;
+    width: 8vw; 
+    height: 11vw;
+    margin: none;
+    /* margin: 0 auto; */
+    /* margin-bottom: 20px; */
+  }
+  
+    .container2{
+      height: 60%;
       display: flex;
       flex-direction: column ;
-      align-items: flex-end;
-      margin-top: 16%;
-      margin-left: auto auto;
-      row-gap: 1.5%;
+      align-items: center;
+      margin: 0px;
     }
-
+  
     .songbox{
       display: grid;
       grid-template-columns: auto auto;
     }
-
+  
     .coverbox{
       width: 70vw;
       height: 70vw;
-      border-radius: 3vw;
+      border-radius: 2vw;
       background-color: #7000FF;
       /* margin: 10vw 0vw 0vw 17vw; */
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      /* justify-content: center; */
+      /* align-items: center; */
     }
-
+  
+  
     .hint {
       position: relative;
       height: 6vw;
@@ -585,11 +617,7 @@ nav {
       border-radius: 100%;
       box-shadow: 0px 4px 17px 0px rgba(0, 0, 0, 0.15);
       top: -11%;
-      left: 6.5vw;
-    }
-
-    .hint.clicked{
-      background-color: #7000FF;
+      left: 6vw;
     }
   
     .hiddenHint {
@@ -616,14 +644,8 @@ nav {
           width: 0;
       }
       100% {
-          width: 66.5vw;
+          width: 68vw;
       }
-    }
-  
-    .answerbox{
-      width: auto;
-      height: 45vw;
-      row-gap: 10%;
     }
   
     .musicbox{
@@ -636,9 +658,14 @@ nav {
       display: flex;
       flex-direction: column;
       align-items: center;
-      /* margin-bottom: 8%;/ */
+      margin-bottom: 6%;
     }
 
+    .flex-start{
+      display: flex;
+      align-items:flex-start;
+    }
+  
     input{
       /* position: absolute; */
       width: 57vw;
@@ -653,7 +680,6 @@ nav {
       text-align: center;
       margin-top: 6vw;
     }
-  
     input:focus::placeholder {
       color: transparent;
     }
@@ -724,4 +750,3 @@ nav {
       height: 5vw;
     }
   }
-
