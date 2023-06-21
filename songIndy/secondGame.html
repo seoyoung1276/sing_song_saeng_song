@@ -25,6 +25,7 @@
         var startText = document.querySelector('.start-text2');
         var countdownImage = document.querySelector('.countdown-image');
         var popupMessage = document.querySelector('.popup-message');
+        var btnPopClose = document.querySelectorAll('.startBtn');
         var countdown = 2; // 카운트다운 초
         var countdownInterval;
 
@@ -33,6 +34,7 @@
             if (countdown === 0) {
                 startText.style.display = 'none';
                 countdownImage.style.display = 'none';
+                btnPopClose.style.display='block'
             } else {
                 startText.style.display = 'block';
                 countdownImage.style.display = 'block';
@@ -54,8 +56,8 @@
         }
 
     startCountdown();
-
     var btnPopClose = document.querySelectorAll('.startBtn');
+
         setTimeout(function() {
             for (var j = 0; j < btnPopClose.length; j++) {
             btnPopClose[j].addEventListener('click', function() {
