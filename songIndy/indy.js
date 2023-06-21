@@ -55,7 +55,6 @@ var songPath = indy[i].answersong;
 cover.style.display = 'none';
 musicTitle.style.display = 'none';
 
-
 function nextquiz() {
     if(bol === false){
         inputanswer.value = null;
@@ -68,9 +67,13 @@ function nextquiz() {
         secondsong = new Audio(indy[i].secondsong);
         songPath2 = indy[i].secondsong;
         secondsong = new Audio(songPath2);
-        setTimeout(function(){
+        if(i === 0){
+            setTimeout(function(){
+                secondsong.play();
+            }, 3000);
+        }else{
             secondsong.play();
-        }, 3000);
+        }
     }
 }
 
