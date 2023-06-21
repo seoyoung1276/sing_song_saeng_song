@@ -134,6 +134,8 @@ function nextquiz() {
         inputanswer.style.display = 'block';
         cover.style.display = 'none';
         musicTitle.style.display = 'none';
+        // hint.style.left = '120%'/
+        document.getElementById('hint').style.left="120%"
         songbox.style.display = 'block';
         hint.style.display = 'block';
         hint.textContent = indy[i].hint;
@@ -210,7 +212,8 @@ function checkanswer() {
             answerimage.src = indy[i].answerimage;
             musicTitle.textContent = indy[i].title;
             songbox.style.display = 'none';
-            hint.style.display = 'none';
+            hint.style.opacity = '0';
+            document.getElementById('coverbox').style.marginTop="14%"
             answersong = new Audio(indy[i].answersong);
             answersong.play();
             isPlaying = true;

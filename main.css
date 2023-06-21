@@ -357,7 +357,6 @@ nav {
 }
 
   .container2{
-    height: 60%;
     display: grid;
     grid-template-columns: auto auto;
     align-items: center;
@@ -434,8 +433,8 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 37%;
-    /* margin-bottom: 6%; */
+    /* margin-top: 36%; */
+    margin-bottom: -38%;
   }
 
   input{
@@ -579,20 +578,15 @@ nav {
     #answerimage{
       width: 100%;
       height: 100%;
-      border-radius: 3vw;
+      border-radius: 5%;
     }
 
     .container2{
-      /* position: relative; */
-      width: 70vw;
-      height: 100%;
-      background-color: rgba(255, 255, 255, 0.8);
-      
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      row-gap: 5%;
     }
+  
   
   .popup-message {
     color: rgb(0, 0, 0);
@@ -629,28 +623,14 @@ nav {
     box-shadow: 0px 4px 17px 0px rgba(0, 0, 0, 0.15);
   }
   
-    .container2{
-      height: 60%;
-      display: flex;
-      flex-direction: column ;
-      align-items: center;
-      margin: 0px;
-    }
-  
     .songbox{
-      display: grid;
-      grid-template-columns: auto auto;
+      grid-template-columns: center;
     }
   
     .coverbox{
       width: 70vw;
       height: 70vw;
       border-radius: 2vw;
-      background-color: #7000FF;
-      /* margin: 10vw 0vw 0vw 17vw; */
-      display: flex;
-      /* justify-content: center; */
-      /* align-items: center; */
     }
   
   
@@ -662,7 +642,7 @@ nav {
       border-radius: 100%;
       box-shadow: 0px 4px 17px 0px rgba(0, 0, 0, 0.15);
       top: -11%;
-      left: 6vw;
+      left: -64vw;
     }
   
     .hiddenHint {
@@ -677,7 +657,8 @@ nav {
       animation-duration: 0.3s;
       animation-timing-function: ease-in-out;
       animation-fill-mode: forwards;
-      top: 2%;
+      top: -11%;
+      left: -64vw;
     }
   
     .show-animation {
@@ -703,13 +684,15 @@ nav {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-bottom: 6%;
     }
 
-    .flex-start{
-      display: flex;
-      align-items:flex-start;
+    .musicTitle{
+      width: auto;
+      font-size: 3.5vw;
+      text-align: center;
+      margin-top: 9vw;
     }
+
   
     input{
       /* position: absolute; */
