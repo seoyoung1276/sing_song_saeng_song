@@ -294,6 +294,16 @@ nav {
   
   /* PlayGame css*/
 
+  @keyframes fadeInLeft{
+    0%{
+      opacity: 0;
+      transform: translate3d(-20%, 0, 0);
+    }
+    to{
+      opacity: 1;
+      transform: translateZ(0);
+    }
+  }
   .popup {
     position: absolute;
     left: 0;
@@ -407,7 +417,11 @@ nav {
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
     top: 2%;
+  }
 
+  #hint{
+    position: relative;
+    animation: fadeInLeft 1.5s; 
   }
 
   .show-animation {
@@ -562,6 +576,17 @@ nav {
       width: 70%;
       height: 70%;
       border-radius: 3vw;
+    }
+    .container2{
+      /* position: relative; */
+      width: 70vw;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.8);
+      
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
   }
 
