@@ -20,40 +20,40 @@
                 }
             }
 
-            window.onload = function() {
-  var popup = document.querySelector('.popup');
-  var startText = document.querySelector('.start-text2');
-  var countdownImage = document.querySelector('.countdown-image');
-  var popupMessage = document.querySelector('.popup-message');
-  var countdown = 2; // 카운트다운 초
-  var countdownInterval;
+    window.onload = function() {
+        var popup = document.querySelector('.popup');
+        var startText = document.querySelector('.start-text2');
+        var countdownImage = document.querySelector('.countdown-image');
+        var popupMessage = document.querySelector('.popup-message');
+        var countdown = 2; // 카운트다운 초
+        var countdownInterval;
 
-  function startCountdown() {
-    countdownInterval = setInterval(function() {
-      if (countdown === 0) {
-        startText.style.display = 'none';
-        countdownImage.style.display = 'none';
-      } else {
-        startText.style.display = 'block';
-        countdownImage.style.display = 'block';
-        if (countdown === 1) {
-          countdownImage.src = '../images/one.png';
-        } else if (countdown === 2) {
-          countdownImage.src = '../images/two.png';
-        } else if (countdown === 3) {
-          countdownImage.src = '../images/three.png';
+        function startCountdown() {
+            countdownInterval = setInterval(function() {
+            if (countdown === 0) {
+                startText.style.display = 'none';
+                countdownImage.style.display = 'none';
+            } else {
+                startText.style.display = 'block';
+                countdownImage.style.display = 'block';
+                if (countdown === 1) {
+                countdownImage.src = '../images/one.png';
+                } else if (countdown === 2) {
+                countdownImage.src = '../images/two.png';
+                } else if (countdown === 3) {
+                countdownImage.src = '../images/three.png';
+                }
+            }
+
+            countdown--;
+
+            if (countdown < 0) {
+                clearInterval(countdownInterval);
+            }
+            }, 1000);
         }
-      }
 
-      countdown--;
-
-      if (countdown < 0) {
-        clearInterval(countdownInterval);
-      }
-    }, 1000);
-  }
-
-  startCountdown();
+    startCountdown();
 
     var btnPopClose = document.querySelectorAll('.startBtn');
         setTimeout(function() {
