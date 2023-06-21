@@ -823,7 +823,7 @@ nav {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       align-items: center;
-      margin-top: 4vw;
+      margin-top: 3vw;
       grid-column-gap: 5vw;
     }
   
