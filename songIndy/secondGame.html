@@ -29,6 +29,8 @@
         var countdown = 2; // 카운트다운 초
         var countdownInterval;
 
+        startBtn.style.display = 'none';
+        
         function startCountdown() {
             countdownInterval = setInterval(function() {
             if (countdown === 0) {
@@ -50,6 +52,7 @@
             countdown--;
 
             if (countdown < 0) {
+                startBtn.style.display = 'block';
                 clearInterval(countdownInterval);
             }
             }, 1000);
@@ -117,7 +120,7 @@
             <div class="popup-message">난이도는 갈수록 어려워집니다!</div>
             <div class="start-text2">시작하기 버튼을 누르면 시작됩니다..</div>
             <img class="countdown-image" src="../images/three.png" alt="countdown">
-            <button class="startBtn">시작하기</button>
+            <button id="startBtn" class="startBtn">시작하기</button>
         </div>
     </div>
     <script src="indy.js"></script>
