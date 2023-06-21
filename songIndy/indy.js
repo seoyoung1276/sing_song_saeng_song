@@ -97,6 +97,27 @@ var indy = [
 var bol = false;
 var i = 0; 
 
+// 애니메이션 시도... 
+// var typingBool = false;
+// var typingIdx=0;
+
+// //타이핑 될 텍스트 가져오기
+// var typingTxt = $(".hiddenhint").text();
+// typingTxt=typingTxt.split(""); //한글자씩 자르기
+// if(typingBool == false){
+//     typingBool = true;
+//     var tyInt = setInterval(typing,100);
+// }
+
+// function typing(){
+//     if(typingIdx<typingTxt.length){
+//         $(".typing").append(typingTxt[typingIdx]);
+//         typingIdx++;
+//     }else{
+//         clearInterval(tyInt);
+//     }
+// }
+
 const cover = document.getElementById("coverbox");
 const songbox = document.getElementById("songbox");
 const hint = document.getElementById("hint");
@@ -200,9 +221,11 @@ function input() {
 
 // 정답 체크
 function checkanswer() {
-    for(var j=0; j<indy[i].answer.length; j++){
+    var isCorrect = indy[i].answer.some(function(answer){
+        return answer === inputanswer.value
+    });
         //정답이 맞을 때
-        if(answer === indy[i].answer[j]){
+        if(isCorrect){
             bol = true; 
             cover.style.display = 'flex';
             musicTitle.style.display = 'block';
@@ -216,14 +239,11 @@ function checkanswer() {
             isPlaying = true;
             alert(answer);
             i++;
-            break; 
         //정답이 아닐 때
         }else{
             alert("땡!");
-            break;
         }
     }
-}
 
 
 
