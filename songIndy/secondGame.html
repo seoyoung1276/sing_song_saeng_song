@@ -6,12 +6,19 @@
 </head>
 <script>
     function showHiddenHint() {
-        var hiddenHint = document.querySelector('.hiddenHint');
-        hiddenHint.style.display = 'block';
-        hiddenHint.style.opacity = '1';
-        hiddenHint.style.visibility = 'visible';
-        hiddenHint.classList.add('show-animation');
-    }
+                var hiddenHint = document.querySelector('.hiddenHint');
+                hiddenHint.classList.toggle('show-animation');
+                
+                if (hiddenHint.classList.contains('show-animation')) {
+                    hiddenHint.style.display = 'block';
+                    hiddenHint.style.opacity = '1';
+                    hiddenHint.style.visibility = 'visible';
+                } else {
+                    hiddenHint.style.display = 'none';
+                    hiddenHint.style.opacity = '0';
+                    hiddenHint.style.visibility = 'hidden';
+                }
+            }
 
     window.onload = function () {
             var popup = document.querySelector('.popup');

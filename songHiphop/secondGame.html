@@ -3,48 +3,63 @@
     <title>싱송생송</title>
     <link rel="icon" href="../images/logo.ico">
     <link rel="stylesheet" href="../main.css">
-</head>
-<script>
-    function showHiddenHint() {
-        var hiddenHint = document.querySelector('.hiddenHint');
-        hiddenHint.style.display = 'block';
-        hiddenHint.style.opacity = '1';
-        hiddenHint.style.visibility = 'visible';
-        hiddenHint.classList.add('show-animation');
-    }
+    <script>
+        window.onload = function () {
+                var popup = document.querySelector('.popup');
+                var startText = document.querySelector('.start-text2');
+                var countdownImage = document.querySelector('.countdown-image');
+                var popupMessage = document.querySelector('.popup-message');
+    
+                var countdown = 2; // 카운트다운 초
+                var countdownInterval = setInterval(function () {
+                    if (countdown === 0) {
+                        startText.style.display = 'none';
+                        countdownImage.style.display = 'none';
+                    } else {
+                        startText.style.display = 'block';
+                        countdownImage.style.display = 'block';
+                            if (countdown === 1) {
+                                countdownImage.src = '../images/one.png';
+                            } else if (countdown === 2) {
+                                countdownImage.src = '../images/two.png';
+                            } else if (countdown === 3) {
+                                countdownImage.src = '../images/three.png';
+                            }
+                    }
+    
+                    countdown--;
+    
+                    if (countdown < 0) {
+                        clearInterval(countdownInterval);
+                        popup.style.display = 'none';
+                    }
+                }, 1000);
+            };
 
-    window.onload = function () {
-            var popup = document.querySelector('.popup');
-            var startText = document.querySelector('.start-text2');
-            var countdownImage = document.querySelector('.countdown-image');
-            var popupMessage = document.querySelector('.popup-message');
-
-            var countdown = 2; // 카운트다운 초
-            var countdownInterval = setInterval(function () {
-                if (countdown === 0) {
-                    startText.style.display = 'none';
-                    countdownImage.style.display = 'none';
+                
+            function showHiddenHint() {
+                var hiddenHint = document.querySelector('.hiddenHint');
+                hiddenHint.classList.toggle('show-animation');
+                
+                if (hiddenHint.classList.contains('show-animation')) {
+                    hiddenHint.style.display = 'block';
+                    hiddenHint.style.opacity = '1';
+                    hiddenHint.style.visibility = 'visible';
                 } else {
-                    startText.style.display = 'block';
-                    countdownImage.style.display = 'block';
-                        if (countdown === 1) {
-                            countdownImage.src = '../images/one.png';
-                        } else if (countdown === 2) {
-                            countdownImage.src = '../images/two.png';
-                        } else if (countdown === 3) {
-                            countdownImage.src = '../images/three.png';
-                        }
+                    hiddenHint.style.display = 'none';
+                    hiddenHint.style.opacity = '0';
+                    hiddenHint.style.visibility = 'hidden';
                 }
+            }
+    
+    
+            const button = document.getElementById("myButton");
+            button.addEventListener("click", function() {
+                button.classList.toggle("clicked");
+            });
+    </script>
+</head>
 
-                countdown--;
-
-                if (countdown < 0) {
-                    clearInterval(countdownInterval);
-                    popup.style.display = 'none';
-                }
-            }, 1000);
-        };
-</script>
 <body>
     <header>
         <nav class="nav-container">
@@ -62,9 +77,9 @@
         </nav>
     </header>
     <div class="secondBack">
-        <div class="container2">
+        <div class="container2 center">
             <div class="songbox">
-                    <button class="hint" onclick="showHiddenHint()"><img src="../images/hint-icon.png" width="80%">
+                    <button id="myButton" class="hint" onclick="showHiddenHint()"><img src="../images/hint-icon.png" width="80%">
                         <div class="hiddenHint"></div>
                     </button>
                 <div class="coverbox"><img src="../images/question-mark-icon.png" width="33%" height="50%"></div>
