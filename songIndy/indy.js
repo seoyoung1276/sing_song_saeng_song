@@ -55,6 +55,18 @@ var songPath = indy[i].answersong;
 cover.style.display = 'none';
 musicTitle.style.display = 'none';
 
+// (function() {
+//     if(i === 0){
+//         setTimeout(function(){
+//             secondsong = new Audio(indy[0].secondsong);
+//             secondsong.play();
+//         }, 3000);
+//         hint.textContent = indy[0].hint;
+//     }
+// })();
+
+
+// 문제 화면
 function nextquiz() {
     if(bol === false){
         inputanswer.value = null;
@@ -63,21 +75,14 @@ function nextquiz() {
         musicTitle.style.display = 'none';
         songbox.style.display = 'block';
         hint.style.display = 'block';
-        //hint.textContent = indy[i].hint;
+        hint.textContent = indy[i].hint;
         secondsong = new Audio(indy[i].secondsong);
-        songPath2 = indy[i].secondsong;
-        secondsong = new Audio(songPath2);
-        if(i === 0){
-            setTimeout(function(){
-                secondsong.play();
-            }, 3000);
-        }else{
-            secondsong.play();
-        }
+        secondsong.play();
+        
     }
 }
 
-// 노래 재생 버튼 클릭 (다시 재생 됨)
+// 노래 재생 & 멈춤 버튼 (다시 재생 됨)
 if(typeof playBtn !== 'undefined' && playBtn !== null){
     playBtn.addEventListener("click", function(){
         if(bol === false) {
@@ -138,6 +143,8 @@ function checkanswer() {
     }
 }
 
+
+
 // 다음 문제 버튼 클릭시
 if (typeof nextBtn !== 'undefined' && nextBtn !== null) {
     nextBtn.addEventListener("click", function(){
@@ -150,6 +157,7 @@ if (typeof nextBtn !== 'undefined' && nextBtn !== null) {
         }
     }); 
 }
+
 
 
 

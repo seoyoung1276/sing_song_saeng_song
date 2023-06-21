@@ -534,14 +534,22 @@ nav {
     margin-bottom: 2%;
     color: #7e7e7e;
   }
-  
+  #answerimage {
+    width: 100%;
+    height: 100%;
+    border-radius: 3%;
+  }
   
   
 
   /* tap */
 
   @media screen and (max-width: 540px) {
-    
+    #answerimage {
+      width: 70%;
+      height: 70%;
+      border-radius: 3vw;
+    }
   }
 
 
@@ -552,6 +560,17 @@ nav {
       position: absolute;
       left: 0;
       width: 100%;
+    }
+
+    #answerimage{
+      width: 100%;
+      height: 100%;
+      border-radius: 3vw;
+    }
+
+    .container2{
+      /* position: relative; */
+      width: 70vw;
       height: 100%;
       background-color: rgba(255, 255, 255, 0.8);
       
