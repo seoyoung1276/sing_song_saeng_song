@@ -35,7 +35,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;  
+    align-items: center;
 }
 
 header {
@@ -46,17 +46,14 @@ header {
 }
 nav {
     height: 60px;
+    background-color: white;
 }
-
-.nav.container {
-  display: flex;  /* 기본값: 수평 정렬 */
-  justify-content: space-between;
-  align-items: center;
-  color: #fff;
-  /* padding-left: 16px;
-  padding-right: 16px; */
-  padding: 0 16px;    /* 위아래:0, 왼오른: 16px */
-}
+/* .nav.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px 0 16px;
+} */
 
 .nav-list {
     display: flex;
@@ -69,7 +66,7 @@ nav {
 }
 
 .nav-item{
-  width: 5vw;
+  /* width: 5vw; */
 }
 
 .nav-link{
@@ -90,11 +87,6 @@ nav {
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid #E6E6E6;
-}
-
-.nav-toggle{
-  font-size: 1.5rem;
-  visibility: hidden;
 }
 
 /* Main */
@@ -430,9 +422,8 @@ nav {
   }
 
   #hint{
-    font-size: 1vw;
-    padding-top: 5%;
-    animation: ease-in-out 0.3s; 
+    position: relative;
+    animation: fadeInLeft 1.5s; 
   }
 
   .show-animation {
@@ -445,15 +436,6 @@ nav {
     }
     100% {
         width: 21vw;
-    }
-  }
-
-  @keyframes vibration {
-    from {
-      transform: rotate(1deg);
-    }
-    to {
-      transform: rotate(-1deg);
     }
   }
 
@@ -814,38 +796,6 @@ nav {
   /* phone */
 
   @media screen and (max-width: 540px) {
-    .nav-logo{
-      margin: 0 auto;
-    }
-    .nav-list {
-      position: absolute;
-      top: 70px;  /* navbar 아래로 */
-      right: 0;   /* 너비를 양 옆으로 늘리기 */
-      left: 0;    /* 너비를 양 옆으로 늘리기 */
-      flex-direction: column; /* 수직 배열 */
-      /* align-items: center;    교차축 가운데 */
-      text-align: center; /* 글자만 가운데로 */
-      background-color: rgba(239, 177, 28, 0.4);
-      backdrop-filter: blur(8px); /* blur 효과 */
-      height: 0;
-      overflow: hidden;
-      transition: 0.4s;
-  }
-  .nav-item {
-      padding: 1em 0;
-  }
-  .nav-link {
-    display: block;
-  }
-
-  .nav-toggle{
-    visibility: visible;
-    margin-right: 3%;
-  }
-
-  .show-menu {
-    height: 156px;
-  }
     /*choice*/
     .container1 {
       display: flex;
@@ -896,14 +846,13 @@ nav {
     }
 
     .secondBack{
-      height: 100%;
+      height: 85%;
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
     .container2{
-      margin-top: 25%;
       display: flex;
       flex-direction: column;
       row-gap: 3vw;
@@ -966,11 +915,6 @@ nav {
       box-shadow: 0px 4px 17px 0px rgba(0, 0, 0, 0.15);
       top: -11%;
       left: -64vw;
-    }
-
-    #hint{
-      padding-top: 3.2%;
-      animation: fadeInLeft 1.5s; 
     }
   
     .hiddenHint {
