@@ -231,12 +231,13 @@ var indy = [
                answersong = new Audio(indy[i].answersong);
                answersong.play();
                isPlaying = true;
-               alert(answer);
-               i++;
-           //정답이 아닐 때
-           }else{
-               alert("땡!");
-           }
+               alert("정답입니다!");
+                i++;
+        //정답이 아닐 때
+        }else{
+            alert("땡! 다시 입력해보세요");
+            inputanswer.value = null;
+        }
           
     }
 

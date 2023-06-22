@@ -235,7 +235,8 @@ var kpop = [
                i++;
            //정답이 아닐 때
            }else{
-               alert("땡!");
+               alert("땡! 다시 입력해보세요");
+               inputanswer.value = null;
            }
           
     }

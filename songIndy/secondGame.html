@@ -3,7 +3,6 @@
     <title>싱송생송</title>
     <link rel="icon" href="../images/logo.ico">
     <link rel="stylesheet" href="../main.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 <script>
     function showHiddenHint() {
@@ -56,8 +55,6 @@
                 clearInterval(countdownInterval);
             }
             }, 1000);
-
-
         }
 
     startCountdown();
@@ -73,16 +70,6 @@
         }, 3000);
     }
 
-    const navToggle = document.getElementById('nav_toggle');
-    const navToggleIcon = document.getElementById('nav_toggle_icon');
-    const navList = document.querySelector('.nav-list');
-
-    navToggle.addEventListener('click', function () {
-        navToggleIcon.classList.toggle('bi-list');
-        navToggleIcon.classList.toggle('bi-x-lg');
-        navList.classList.toggle('show-menu');
-    });
-
 
 </script>
 <body>
@@ -96,8 +83,8 @@
                 <li class="nav-item"><a href="" class="nav-link">인디</a></li>
                 <li class="nav-item"><a href="" class="nav-link">pop</a></li>
             </ul>
-            <div class="nav-toggle" id="nav_toggle">
-                <i class="bi bi-list" id="nav_toggle_icon"></i>
+            <div class="new-toggle" id="nav_toggle">
+                <i class="bi bi-list"></i>
             </div>
         </nav>
     </header>
@@ -107,14 +94,14 @@
             <div id="songbox" class="songbox">
                     <button class="hint" onclick="showHiddenHint()"><img src="../images/hint-icon.png" width="80%">
                         <div class="hiddenHint">
-                            <div id="hint"></div>
+                            <p id="hint"></p>
                         </div>
                     </button>
                <div  class="coverbox"><img src="../images/question-mark-icon.png" width="33%" height="50%"></div> 
             </div>
             <div class="flex-start">
                 <div class="musicbox">
-                        <input id = "inputanswer" type="text" placeholder='노래 제목을 입력하세요!'></input>
+                    <input id = "inputanswer" type="text" placeholder='노래 제목을 입력하세요!'></input>
                     <div id="musicTitle" class="musicTitle"></div>
                     <div class="genre">♬ 인디</div>
                     <div class="line">
@@ -122,7 +109,7 @@
                             <div class="element"></div>
                         </div>
                     </div>
-                    <div id="play" class="play">
+                    <div class="play">
                         <button class="backBtn"><img src="../images/back.png" width="100%" height="100%"></button>
                         <button id="playBtn" class="playBtn"><img src="../images/play.png" width="80%" height="80%"></button>
                         <button id="nextBtn" class="nextBtn"><img src="../images/next.png" width="100%" height="100%"></button>

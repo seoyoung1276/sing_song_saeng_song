@@ -6,44 +6,71 @@
 </head>
 <script>
     function showHiddenHint() {
-        var hiddenHint = document.querySelector('.hiddenHint');
-        hiddenHint.style.display = 'block';
-        hiddenHint.style.opacity = '1';
-        hiddenHint.style.visibility = 'visible';
-        hiddenHint.classList.add('show-animation');
+                var hiddenHint = document.querySelector('.hiddenHint');
+                hiddenHint.classList.toggle('show-animation');
+                
+                if (hiddenHint.classList.contains('show-animation')) {
+                    hiddenHint.style.display = 'block';
+                    hiddenHint.style.opacity = '1';
+                    hiddenHint.style.visibility = 'visible';
+                } else {
+                    hiddenHint.style.display = 'none';
+                    hiddenHint.style.opacity = '0';
+                    hiddenHint.style.visibility = 'hidden';
+                }
+            }
+
+    window.onload = function() {
+        var popup = document.querySelector('.popup');
+        var startText = document.querySelector('.start-text2');
+        var countdownImage = document.querySelector('.countdown-image');
+        var popupMessage = document.querySelector('.popup-message');
+        var countdown = 2; // 카운트다운 초
+        var countdownInterval;
+
+        startBtn.style.display = 'none';
+        
+        function startCountdown() {
+            countdownInterval = setInterval(function() {
+            if (countdown === 0) {
+                startText.style.display = 'none';
+                countdownImage.style.display = 'none';
+                startBtn.style.display = 'block';
+            } else {
+                startText.style.display = 'block';
+                countdownImage.style.display = 'block';
+                if (countdown === 1) {
+                countdownImage.src = '../images/one.png';
+                } else if (countdown === 2) {
+                countdownImage.src = '../images/two.png';
+                } else if (countdown === 3) {
+                countdownImage.src = '../images/three.png';
+                }
+            }
+
+            countdown--;
+
+            if (countdown < 0) {
+                startBtn.style.display = 'block';
+                clearInterval(countdownInterval);
+            }
+            }, 1000);
+        }
+
+    startCountdown();
+    var btnPopClose = document.querySelectorAll('.startBtn');
+
+        setTimeout(function() {
+            for (var j = 0; j < btnPopClose.length; j++) {
+            btnPopClose[j].addEventListener('click', function() {
+                var popup = this.closest('.popup');
+                popup.style.display = 'none';
+            });
+            }
+        }, 3000);
     }
 
-    window.onload = function () {
-            var popup = document.querySelector('.popup');
-            var startText = document.querySelector('.start-text2');
-            var countdownImage = document.querySelector('.countdown-image');
-            var popupMessage = document.querySelector('.popup-message');
 
-            var countdown = 2; // 카운트다운 초
-            var countdownInterval = setInterval(function () {
-                if (countdown === 0) {
-                    startText.style.display = 'none';
-                    countdownImage.style.display = 'none';
-                } else {
-                    startText.style.display = 'block';
-                    countdownImage.style.display = 'block';
-                        if (countdown === 1) {
-                            countdownImage.src = '../images/one.png';
-                        } else if (countdown === 2) {
-                            countdownImage.src = '../images/two.png';
-                        } else if (countdown === 3) {
-                            countdownImage.src = '../images/three.png';
-                        }
-                }
-
-                countdown--;
-
-                if (countdown < 0) {
-                    clearInterval(countdownInterval);
-                    popup.style.display = 'none';
-                }
-            }, 1000);
-        };
 </script>
 <body>
     <header>
@@ -63,32 +90,40 @@
     </header>
     <div class="secondBack">
         <div class="container2">
-            <div class="songbox">
+            <div id="coverbox" class="coverbox"><img id="answerimage" src="" width="33%" height="50%"></div> 
+            <div id="songbox" class="songbox">
                     <button class="hint" onclick="showHiddenHint()"><img src="../images/hint-icon.png" width="80%">
-                        <div class="hiddenHint"></div>
+                        <div class="hiddenHint">
+                            <p id="hint"></p>
+                        </div>
                     </button>
-                <div class="coverbox"><img src="../images/question-mark-icon.png" width="33%" height="50%"></div>
+               <div  class="coverbox"><img src="../images/question-mark-icon.png" width="33%" height="50%"></div> 
             </div>
-            <div class="musicbox">
-                <input type="text" placeholder='노래 제목을 입력하세요!'></input>
-                <div class="genre">♬ 힙합</div>
-                <div class="line">
-                    <div class="playline">
-                        <div class="element"></div>
+            <div class="flex-start">
+                <div class="musicbox">
+                    <input id = "inputanswer" type="text" placeholder='노래 제목을 입력하세요!'></input>
+                    <div id="musicTitle" class="musicTitle"></div>
+                    <div class="genre">♬ 발라드</div>
+                    <div class="line">
+                        <div class="playline">
+                            <div class="element"></div>
+                        </div>
                     </div>
-                </div>
-                <div class="play">
-                    <button class="backBtn"><img src="../images/back.png" width="100%" height="100%"></button>
-                    <button class="playBtn"><img src="../images/play.png" width="80%" height="80%"></button>
-                    <button class="nextBtn"><img src="../images/next.png" width="100%" height="100%"></button>
+                    <div class="play">
+                        <button class="backBtn"><img src="../images/back.png" width="100%" height="100%"></button>
+                        <button id="playBtn" class="playBtn"><img src="../images/play.png" width="80%" height="80%"></button>
+                        <button id="nextBtn" class="nextBtn"><img src="../images/next.png" width="100%" height="100%"></button>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="popup">
-            <div class="popup-message">난이도는 갈수록 어려워집니다!</div>
-            <div class="start-text2">잠시 후 시작됩니다.</div>
+            <div class="popup-message">시작하기 버튼을 누르면 시작됩니다!</div>
+            <div class="start-text2">총 10개의 노래가 있습니다.</div>
             <img class="countdown-image" src="../images/three.png" alt="countdown">
+            <button id="startBtn" class="startBtn">시작하기</button>
         </div>
     </div>
+    <script src="bal.js"></script>
 </body>
 </html>

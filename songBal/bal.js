@@ -1,85 +1,88 @@
-var hiphop = [
-    {
-        title: "애쉬아일랜드 - Melody",
-        answer: ["멜로디", "melody", "Melody"],
-        secondsong: 'songs/멜로디.mp3',
-        hint:"ㅁㄹㄷ",
-        answersong: 'songs/A멜로디.mp3',
-        answerimage: 'images/11.jpg'
-     },
-      
-     {
-        title: "Jvcki Wai - Fadeaway",
-        answer: ["fadeaway", "Fadeaway", "페이드어웨이", "페이다 어웨이", "페이드 어웨이", "페이다어웨이"],
-        secondsong: 'songs/fadeaway.mp3',
-        hint: "ㅍㅇㄷㅇㅇㅇ",
-        answersong: 'songs/Afadeaway.mp3',
-        answerimage: 'images/12.jpg'
-     },
-     {
-       title: "호미들 - 사이렌 (Remix)",
-       answer: ["사이렌", "사이렌 리믹스", "사이렌리믹스"],
-       secondsong: 'songs/사이렌.mp3',
-       hint: "ㅅㅇㄹ",
-       answersong: 'songs/A사이렌.mp3',
-       answerimage: 'images/13.jpg'
-    },
-    {
-       title: "pH-1 - Nerdy Love",
-       answer: ["널디러브", "널디럽", "널디 러브", "nerdy love", "Nerdy Love", "nerdylove", "Nerdylove", "NerdyLove"],
-       secondsong: 'songs/널디러브.mp3',
-       hint: "ㄴㄷㄹㅂ",
-       answersong: 'songs/A널디러브.mp3',
-       answerimage: 'images/14.jpg'
-    },
-    {
-       title: "BE'O - Brand",
-       answer: ["브랜드", "Brand", "brand"],
-       secondsong: 'songs/brand.mp3',
-       hint: "ㅂㄹㄷ",
-       answersong: 'songs/Abrand.mp3',
-       answerimage: 'images/15.jpg'
-    },
-    {
-       title: "기리보이 - 거지",
-       answer: ["거지"],
-       secondsong: 'songs/거지.mp3',
-       hint: "ㄱㅈ",
-       answersong: 'songs/A거지.mp3',
-       answerimage: 'images/16.jpg'
-    },
-    {
-       title: "김효은 - Come Back",
-       answer: ["컴백", "come back", "comeback", "Comeback", "Come Back", "come Back", "comeBack", "ComeBack"],
-       secondsong: 'songs/cameback.mp3',
-       hint: "ㅋㅂ",
-       answersong: 'songs/Acameback.mp3',
-       answerimage: 'images/17.jpg'
-    },
-    {
-       title: "다이나믹듀오 - 시간아 멈춰",
-       answer: ["시간아 멈춰", "시간아멈춰"],
-       secondsong: 'songs/시간아멈춰.mp3',
-       hint: "ㅅㄱㅇㅁㅊ",
-       answersong: 'songs/A시간아멈춰.mp3',
-       answerimage: 'images/18.jpg'
-    },
-    {
-       title: "씨잼 - Puzzel",
-       answer: ["퍼즐", "puzzel", "Puzzel"],
-       secondsong: 'songs/퍼즐.mp3',
-       hint: "ㅍㅈ",
-       answersong: 'songs/A퍼즐.mp3',
-       answerimage: 'images/19.jpg'
-    },
-    {
-       title: "래원 - 오태식",
-       answer: ["오태식"],
-       secondsong: 'songs/오태식.mp3',
-       hint: "ㅇㅌㅅ",
-       answersong: 'songs/A오태식.mp3',
-       answerimage: 'images/20.jpg'
-    },
+var i = 0;
+
+var bal = [
+ {
+    title: "멜로망스 - 취중고백",
+    answer: ["취중고백", "취중 고백"],
+    secondsong: 'songs/멜로망스 - 취중고백.mp3',
+    hint:"ㅊㅈㄱㅂ",
+    answersong: 'songs/A멜로망스 - 취중고백.mp3',
+    answerimage: 'images/1.jpg'
+ },
+  
+ {
+    title: "성시경 - 거리에서",
+    answer: ["거리에서", "거리 에서"],
+    secondsong: 'songs/성시경 - 거리에서.mp3',
+    hint: "ㄱㄹㅇㅅ",
+    answersong: 'songs/A성시경 - 거리에서.mp3',
+    answerimage: 'images/2.jpg'
+ },
+ {
+   title: "에일리 - 첫눈처럼 너에게 가겠다",
+   answer: ["첫눈처럼너에게가겠다", "첫눈처럼 너에게 가겠다", "첫눈처럼 너에게가겠다", "첫눈 처럼 너에게 가겠다", "첫 눈처럼 너에게 가겠다"],
+   secondsong: 'songs/에일리 - 첫눈처럼 너에게 가겠다.mp3',
+   hint: "ㅊㄴㅊㄹ ㄴㅇㄱ ㄱㄱㄷ",
+   answersong: 'songs/A에일리 - 첫눈처럼 너에게 가겠다.mp3',
+   answerimage: 'images/3.jpg'
+},
+{
+   title: "윤종신 - 좋니",
+   answer: ["좋니"],
+   secondsong: 'songs/윤종신 - 좋니',
+   hint: "ㅈㄴ",
+   answersong: 'songs/A윤종신 - 좋니.mp3',
+   answerimage: 'images/4.jpg'
+},
+{
+   title: "이지 - 응급실",
+   answer: ["응급실"],
+   secondsong: 'songs/이지 - 응급실.mp3',
+   hint: "ㅇㄱㅅ",
+   answersong: 'songs/A이지 - 응급실.mp3',
+   answerimage: 'images/5.jpg'
+},
+{
+   title: "정승환 - 너였다면",
+   answer: ["너였다면"],
+   secondsong: 'songs/정승환 - 너였다면.mp3',
+   hint: "ㄴㅇㄷㅁ",
+   answersong: 'songs/A정승환 - 너였다면.mp3',
+   answerimage: 'images/6.jpg'
+},
+{
+   title: "폴킴 - 모든 날 모든 순간",
+   answer: ["모든 날 모든 순간", "모든날모든순간", "모든 날 모든순간", "모든날 모든 순간"],
+   secondsong: 'songs/폴킴 - 모든 날 모든 순간.mp3',
+   hint: "ㅁㄷ ㄴ ㅁㄷ ㅅㄱ",
+   answersong: 'songs/A폴킴 - 모든 날 모든 순간.mp3',
+   answerimage: 'images/7.jpg'
+},
+{
+   title: "폴킴 - 안녕",
+   answer: ["안녕"],
+   secondsong: 'songs/폴킴 - 안녕.mp3',
+   hint: "ㅇㄴ",
+   answersong: 'songs/A폴킴 - 안녕.mp3',
+   answerimage: 'images/8.jpg'
+},
+{
+   title: "하은 - 신용재",
+   answer: ["신용재"],
+   secondsong: 'songs/하은 - 신용재.mp3',
+   hint: "ㅅㅇㅈ",
+   answersong: 'songs/A하은 - 신용재.mp3',
+   answerimage: 'images/9.jpg'
+}
+ //,
+// {
+//    title: "pH-1, Kid Milli, 루피 - Good Day (Feat. 팔로알토)",
+//    answer: ["굿데이", "굳데이", "굿 데이", "Goodday","GoodDay", "Good day", "Good Day"],
+//    secondsong: 'songs/ph1 - 굿데이.mp3',
+//    hint: "ㄱㄷㅇ",
+//    answersong: 'songs/Aph1 - 굿데이.mp3',
+//    answerimage: 'images/10.jpg'
+// }
 ];
 
 var bol = false;
@@ -100,17 +103,17 @@ let cnt = 10;
 let isPlaying = false;
 let gotoPass = false;
 
-var secondsong = new Audio(hiphop[i].secondsong);
-var answersong = new Audio(hiphop[i].answersong);
-var songPath2 = hiphop[i].secondsong;
-var songPath = hiphop[i].answersong;
+var secondsong = new Audio(bal[i].secondsong);
+var answersong = new Audio(bal[i].answersong);
+var songPath2 = bal[i].secondsong;
+var songPath = bal[i].answersong;
 
 //시작 버튼 나오면 수정! 
 if (typeof startBtn !== 'undefined' && startBtn !== null) {
     startBtn.addEventListener("click", function(){
-                secondsong = new Audio(hiphop[0].secondsong);
+                secondsong = new Audio(bal[0].secondsong);
                 secondsong.play();
-                hint.textContent = hiphop[0].hint;
+                hint.textContent = bal[0].hint;
         })
 }
 
@@ -128,8 +131,8 @@ function nextquiz() {
         musicTitle.style.display = 'none';
         songbox.style.display = 'grid';
         hint.style.display = 'block';
-        hint.textContent = hiphop[i].hint;
-        secondsong = new Audio(hiphop[i].secondsong);
+        hint.textContent = bal[i].hint;
+        secondsong = new Audio(bal[i].secondsong);
         secondsong.play();
         
     }
@@ -192,7 +195,7 @@ function input() {
 
 // 정답 체크
 function checkanswer() {
-    var isCorrect = hiphop[i].answer.some(function(answer){
+    var isCorrect = bal[i].answer.some(function(answer){
         return answer === inputanswer.value
     });
           //패스
@@ -211,13 +214,12 @@ function checkanswer() {
             cover.style.display = 'block';
             musicTitle.style.display = 'block';
             inputanswer.style.display = 'none';
-            answerimage.src = hiphop[i].answerimage;
-            musicTitle.textContent = hiphop[i].title;
+            answerimage.src = bal[i].answerimage;
+            musicTitle.textContent = bal[i].title;
             songbox.style.display = 'none';
             playBtn.style.marginTop = '4%'
             document.getElementById('coverbox').style.marginTop="14%"
-            answersong = new Audio(hiphop[i].answersong);
-            secondsong.pause();
+            answersong = new Audio(bal[i].answersong);
             answersong.play();
             isPlaying = true;
             alert("정답입니다!");
@@ -236,7 +238,7 @@ function checkanswer() {
 // 다음 문제 버튼 클릭시
 if (typeof nextBtn !== 'undefined' && nextBtn !== null) {
     nextBtn.addEventListener("click", function(){
-        if(i < hiphop.length) {
+        if(i < bal.length) {
             bol = false;
             answerimage.src = "../images/question-mark-icon.png";
             answersong.pause();

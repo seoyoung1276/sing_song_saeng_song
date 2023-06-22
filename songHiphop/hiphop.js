@@ -221,11 +221,12 @@ function checkanswer() {
             answersong = new Audio(hiphop[i].answersong);
             answersong.play();
             isPlaying = true;
-            alert(answer);
+            alert("정답입니다!");
             i++;
         //정답이 아닐 때
         }else{
-            alert("땡!");
+            alert("땡! 다시 입력해보세요");
+            inputanswer.value = null;
         }
        
  }

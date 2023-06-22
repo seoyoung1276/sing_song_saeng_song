@@ -431,8 +431,8 @@ nav {
 
   #hint{
     font-size: 1vw;
-    padding-top: 5%;
     animation: ease-in-out 0.3s; 
+    animation: fadeInLeft 1.5s;
   }
 
   .show-animation {
@@ -588,18 +588,51 @@ nav {
   }
   
 
-  /* tap */
+  /* tab */
 
   @media screen and (max-width: 700px) {
-    #answerimage {
-      width: 70%;
-      height: 70%;
-      border-radius: 3vw;
+
+    .nav-list {
+      position: absolute;
+      top: 70px;  /* navbar 아래로 */
+      right: 0;   /* 너비를 양 옆으로 늘리기 */
+      left: 0;    /* 너비를 양 옆으로 늘리기 */
+      flex-direction: column; /* 수직 배열 */
+      /* align-items: center;    교차축 가운데 */
+      text-align: center; /* 글자만 가운데로 */
+      background-color: rgba(239, 177, 28, 0.4);
+      backdrop-filter: blur(8px); /* blur 효과 */
+      height: 0;
+      overflow: hidden;
+      transition: 0.4s;
+  }
+  .nav-item {
+      padding: 1em 0;
+  }
+  .nav-link {
+    display: block;
+  }
+
+  .nav-toggle{
+    visibility: visible;
+    margin-right: 3%;
+  }
+
+  .show-menu {
+    height: 156px;
+  }
+    /*choice*/
+    .container1 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 7%;
     }
+
     .container2{
       /* position: relative; */
       width: 70vw;
-      height: 100%;
+      height: 80%;
     }
     
     #answerimage{
@@ -660,13 +693,21 @@ nav {
     }
   
     .coverbox{
-      width: 70vw;
-      height: 70vw;
+      width: 67vw;
+      height: 67vw;
       display: flex;
       border-radius: 2vw;
     }
   
-  
+    #hint{
+      writing-mode: vertical-rl;
+      letter-spacing: 7px;
+      text-orientation: upright;
+      animation: fadeInLeft 1.5s;
+      padding-top: 370%;
+      padding-left: 13%;
+    }
+
     .hint {
       position: relative;
       height: 6vw;
@@ -674,22 +715,23 @@ nav {
       border: none;
       border-radius: 100%;
       box-shadow: 0px 4px 17px 0px rgba(0, 0, 0, 0.15);
-      top: -11%;
-      left: -64vw;
+      top: 100%;
+      left: -70vw;
     }
   
     .hiddenHint {
       position: absolute;
       display: none;
-      height: 6vw;
-      width: 23vw;
+      height: 5vw;
+      width: 5vw;
       box-shadow: 0px 4px 17px 0px rgba(0, 0, 0, 0.15);
       border-radius: 50px;
       opacity: 0;
       visibility: hidden;
       animation-duration: 0.3s;
       animation-timing-function: ease-in-out;
-      animation-fill-mode: forwards;
+      animation-fill-mode: row;
+      left: 0.5vw;
     }
   
     .show-animation {
@@ -698,10 +740,10 @@ nav {
   
     @keyframes hintMove {
       0% {
-          width: 0;
+          height: 0;
       }
       100% {
-          width: 68vw;
+          height: 40vw;
       }
     }
   
@@ -971,6 +1013,10 @@ nav {
     #hint{
       padding-top: 3.2%;
       animation: fadeInLeft 1.5s; 
+      writing-mode: horizontal-tb;
+      letter-spacing: 3px;
+      padding-top: 2%;
+      padding-left: 1%;
     }
   
     .hiddenHint {
