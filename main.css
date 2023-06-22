@@ -99,28 +99,25 @@ nav {
 
 /* Main */
 
-
-.background{
-    position: relative;
+.img{
+  position: relative;
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto;
     background-position: center;
 }
 
 .mainText{
-  display: grid;
-  grid-template-rows: auto;
+  display: flex;
+  flex-direction: column;
   margin: 28vw 0 0 3vw;
 }
-
 .title{
   font-size: 7.8vw;
   font-weight: bolder;
   color: white;
 }
-
 .comment{
   display: flex;
   column-gap: 20%;
@@ -128,7 +125,6 @@ nav {
   font-weight: bold;
   color: white;
 }
-
 .start-button {
   width: 15vw;
   height: 4.5vw;
@@ -141,7 +137,6 @@ nav {
   border: none;
   margin-top: 5%;
 }
-
 .start-text {
   color: #7000FF;
   font-size: 2vw;
