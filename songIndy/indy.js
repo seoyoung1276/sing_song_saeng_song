@@ -83,13 +83,13 @@ var indy = [
        "answerimage": 'image/9.jpg'
     }
     /* ,{
-       "id":3,
-       "title": "검정치마 - everything",
-       "answer":["everything", "에브리띵", "Everything"],
-       "secondsong": 'songs/검정치마 - everything.mp3',
-       "hint": "ㅇㅂㄹㄸ",
-       "answersong": 'songs/A검정치마 - everything.mp3',
-       "answerimage": 'image/3.jpg'
+       "id":10,
+       "title": " - ",
+       "answer":[""],
+       "secondsong": 'songs/ .mp3',
+       "hint": " ",
+       "answersong": 'songs/A .mp3',
+       "answerimage": 'image/10.jpg'
     }
     */
    ];
@@ -211,9 +211,10 @@ var indy = [
            if(answer === "pass"){
             var passtoNext = confirm("패스하시겠습니까?")
             if(passtoNext){
-                 cnt--;
-                 i++;
-                 nextquiz();
+                cnt--;
+                i++;
+                nextquiz();
+                return alert("다음 문제로 넘어갑니다.");
             }
         }
            //정답이 맞을 때

@@ -578,7 +578,6 @@ nav {
     border-radius: 3%;
   }
   
-  
 
   /* tap */
 
@@ -592,12 +591,213 @@ nav {
       /* position: relative; */
       width: 70vw;
       height: 100%;
-      background-color: rgba(255, 255, 255, 0.8);
-      
+    }
+    
+    #answerimage{
+      width: 100%;
+      height: 100%;
+      border-radius: 3%;
+    }
+
+    .secondBack{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container2{
+      display: flex;
+      flex-direction: column;
+      row-gap: 3vw;
+    }
+  
+  .popup-message {
+    color: rgb(0, 0, 0);
+    font-size: 5vw;
+    text-align: center;
+    margin-bottom: 1.5%;
+  }
+  
+  .start-text2 {
+    font-size: 2vw;
+    margin: none;
+    color: #7e7e7e;
+    margin-bottom: 2.5%;
+  }
+  
+  .countdown-image {
+    display: block;
+    width: 8vw; 
+    height: 11vw;
+    margin: none;
+  }
+
+  .startBtn {
+    width: 20vw;
+    height: 5vw;
+    font-size: 3vw;
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2vw;
+    border: none;
+    background-color: white;
+    box-shadow: 0px 4px 17px 0px rgba(0, 0, 0, 0.15);
+  }
+  
+    .songbox{
+      grid-template-columns: center;
+    }
+  
+    .coverbox{
+      width: 70vw;
+      height: 70vw;
+      display: flex;
+      border-radius: 2vw;
+    }
+  
+  
+    .hint {
+      position: relative;
+      height: 6vw;
+      width: 6vw;
+      border: none;
+      border-radius: 100%;
+      box-shadow: 0px 4px 17px 0px rgba(0, 0, 0, 0.15);
+      top: -11%;
+      left: -64vw;
+    }
+  
+    .hiddenHint {
+      position: absolute;
+      display: none;
+      height: 6vw;
+      width: 23vw;
+      box-shadow: 0px 4px 17px 0px rgba(0, 0, 0, 0.15);
+      border-radius: 50px;
+      opacity: 0;
+      visibility: hidden;
+      animation-duration: 0.3s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+    }
+  
+    .show-animation {
+      animation-name: hintMove;
+    }
+  
+    @keyframes hintMove {
+      0% {
+          width: 0;
+      }
+      100% {
+          width: 68vw;
+      }
+    }
+  
+    .musicbox{
+      /* position: absolute; */
+      width: 70vw;
+      height: 35vw;
+      border-radius: 3vw;
+      /* margin: 21vw 0vw 0vw 50vw; */
+      box-shadow: 0px 4px 17px 0px rgb(0, 0, 0, 0.15);
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+    }
+
+    .musicTitle{
+      width: auto;
+      font-size: 3.5vw;
+      text-align: center;
+      margin-top: 9vw;
+    }
+
+  
+    input{
+      /* position: absolute; */
+      width: 57vw;
+      height: 8vw;
+      border-radius: 50vw;
+      outline: none;
+      border: none;
+      box-shadow: 0px 4px 10px 0px inset rgba(0, 0, 0, 0.2);
+      font-size: 2.2vw;
+      font-family: 'Noto Sans KR', sans-serif;
+      /* font-weight: bold; */
+      text-align: center;
+      margin-top: 6vw;
+    }
+    input:focus::placeholder {
+      color: transparent;
+    }
+  
+    .genre{
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 1.5vw;
+      margin-top: 4%;
+      color: #7e7e7e;
+    }
+  
+    .playline{
+      width: 57vw;
+      height: 0.6vw;
+      margin-top: 7%;
+      background-color: #E3E3E3;
+      border-radius: 50px;
+    }
+  
+    @keyframes lineMove {
+      0% {
+        width: 0;
+      }
+      100% {
+        width: 100%;
+      }
+    }
+  
+    .element {
+      width: 57vw;
+      height: 0.6vw;
+      margin-top: 7%;
+      background-color: #7000FF;
+      border-radius: 50px;
+      animation: lineMove 2s linear forwards;
+      animation-name: lineMove;
+      animation-duration: 2s;
+      animation-timing-function: linear;
+      animation-fill-mode: forwards; /* 애니메이션 종료 후 상태를 유지 */
+    }
+  
+    .play{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items: center;
+      margin-top: 1.8vw;
+      grid-column-gap: 5vw;
+    }
+  
+    .backBtn{
+      background: none;
+      border: none;
+      width: 7vw;
+      height: 5vw;
+    }
+    
+    .playBtn{
+      background: none;
+      border: none;
+      width: 7vw;
+      height: 5vw;
+    }
+  
+    .nextBtn{
+      background: none;
+      border: none;
+      width: 7vw;
+      height: 5vw;
     }
   }
 
