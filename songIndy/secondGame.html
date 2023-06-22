@@ -70,6 +70,15 @@
         }, 3000);
     }
 
+    const navToggle = document.getElementById('nav_toggle');
+    const navToggleIcon = document.getElementById('nav_toggle_icon');
+    const navList = document.querySelector('.nav-list');
+
+    navToggle.addEventListener('click', function () {
+        navToggleIcon.classList.toggle('bi-list');
+        navToggleIcon.classList.toggle('bi-x-lg');
+        navList.classList.toggle('show-menu');
+    });
 
 </script>
 <body>
