@@ -82,15 +82,15 @@ var kpop = [
        "answersong": 'songs/Acix - 시네마.mp3',
        "answerimage": 'images/9.jpg'
     }
-    // {
-    //    "id":10,
-    //    "title": " - ",
-    //    "answer":[""],
-    //    "secondsong": 'songs/ .mp3',
-    //    "hint": " ",
-    //    "answersong": 'songs/A .mp3',
-    //    "answerimage": 'image/10.jpg'
-    // }
+    {
+       "id":10,
+       "title": "The Boyz - 스릴라이드",
+       "answer":["스릴라이드", "스릴 라이드"],
+       "secondsong": 'songs/더보이즈 - 스릴라이드.mp3',
+       "hint": "ㅅㄹㄹㅇㄷ",
+       "answersong": 'songs/A더보이즈 - 스릴라이드 .mp3',
+       "answerimage": 'image/10.jpg'
+    }
     
    ];
    
