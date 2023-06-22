@@ -95,9 +95,12 @@ const playBtn = document.getElementById("playBtn");
 const startBtn = document.getElementById("startBtn");
 let answerimage = document.getElementById("answerimage");
 let inputanswer = document.getElementById("inputanswer");
+let playBtns = document.getElementById("play");
 let answer ="";
 let currentTime = 0;
+let cnt = 10;
 let isPlaying = false;
+let gotoPass = false;
 
 var secondsong = new Audio(hiphop[i].secondsong);
 var answersong = new Audio(hiphop[i].answersong);
@@ -120,11 +123,12 @@ musicTitle.style.display = 'none';
 // 문제 화면
 function nextquiz() {
     if(bol === false){
+     
         inputanswer.value = null;
         inputanswer.style.display = 'block';
         cover.style.display = 'none';
         musicTitle.style.display = 'none';
-        songbox.style.display = 'block';
+        songbox.style.display = 'grid';
         hint.style.display = 'block';
         hint.textContent = hiphop[i].hint;
         secondsong = new Audio(hiphop[i].secondsong);
@@ -190,29 +194,42 @@ function input() {
 
 // 정답 체크
 function checkanswer() {
-   var isCorrect = hiphop[i].answer.some(function(answer){
-       return answer === inputanswer.value
-   });
-       //정답이 맞을 때
-       if(isCorrect){
-           bol = true; 
-           cover.style.display = 'flex';
-           musicTitle.style.display = 'block';
-           inputanswer.style.display = 'none';
-           answerimage.src = hiphop[i].answerimage;
-           musicTitle.textContent = hiphop[i].title;
-           songbox.style.display = 'none';
-           hint.style.display = 'none';
-           answersong = new Audio(hiphop[i].answersong);
-           answersong.play();
-           isPlaying = true;
-           alert(answer);
-           i++;
-       //정답이 아닐 때
-       }else{
-           alert("땡!");
-       }
-   }
+    var isCorrect = hiphop[i].answer.some(function(answer){
+        return answer === inputanswer.value
+    });
+          //패스
+        if(answer === "pass"){
+         var passtoNext = confirm("패스하시겠습니까?")
+         if(passtoNext){
+             cnt--;
+             i++;
+             nextquiz();
+             return alert("다음 문제로 넘어갑니다.");
+         }
+     }
+        //정답이 맞을 때
+        if(isCorrect){
+            bol = true; 
+            cover.style.display = 'block';
+            musicTitle.style.display = 'block';
+            inputanswer.style.display = 'none';
+            answerimage.src = hiphop[i].answerimage;
+            musicTitle.textContent = hiphop[i].title;
+            songbox.style.display = 'none';
+            playBtn.style.marginTop = '4%'
+            document.getElementById('coverbox').style.marginTop="14%"
+            answersong = new Audio(hiphop[i].answersong);
+            answersong.play();
+            isPlaying = true;
+            alert(answer);
+            i++;
+        //정답이 아닐 때
+        }else{
+            alert("땡!");
+        }
+       
+ }
+
 
 
 
@@ -221,7 +238,7 @@ if (typeof nextBtn !== 'undefined' && nextBtn !== null) {
     nextBtn.addEventListener("click", function(){
         if(i < hiphop.length) {
             bol = false;
-            answerimage.src = " ";
+            answerimage.src = "../images/question-mark-icon.png";
             answersong.pause();
             nextquiz();
         }else{
@@ -229,5 +246,3 @@ if (typeof nextBtn !== 'undefined' && nextBtn !== null) {
         }
     }); 
 }
-
-

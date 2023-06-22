@@ -1,97 +1,97 @@
-var indy = [
+var kpop = [
     {
        "id": 1,
-       "title": "잔나비 - 주저하는 연인들을 위해",
-       "answer": ["주저하는 연인들을 위해", "주저하는연인들을위해", "주저하는연인들을 위해", "주저하는 연인들을위해"],
-       "secondsong": 'songs/잔나비 - 주저하는 연인들을 위해.mp3',
-       "hint":"ㅈㅈㅎㄴ ㅇㄴㄷㅇ ㅇㅎ",
-       "answersong": 'songs/A잔나비 - 주저하는 연인들을 위해.mp3',
-       "answerimage": "image/1.jpg"
+       "title": "소녀시대 - 다시 만난 세계",
+       "answer": ["다시만난세계", "다시 만난 세계", "다만세", "다시만난 세계", "다시 만난세계"],
+       "secondsong": 'songs/소녀시대 - 다시만난세계.mp3',
+       "hint":"ㄷㅅ ㅁㄴ ㅅㄱ",
+       "answersong": 'songs/A소녀시대 - 다시만난세계.mp3',
+       "answerimage": "images/1.jpg"
     },
      
     {
        "id": 2,
-       "title": "백아 - 첫사랑",
-       "answer": ["첫사랑", "첫 사랑"],
-       "secondsong": 'songs/백아 - 첫사랑.mp3',
-       "hint": "ㅊㅅㄹ",
-       "answersong": 'songs/A백아 - 첫사랑.mp3',
-       "answerimage": 'image/2.jpg'
+       "title": "IVE - ELEVEN",
+       "answer": ["eleven", "Eleven", "일레븐"],
+       "secondsong": 'songs/아이브 - 일레븐.mp3',
+       "hint": "ㅇㄹㅂ",
+       "answersong": 'songs/A아이브 - 일레븐.mp3',
+       "answerimage": 'images/2.jpg'
     },
    
     {
        "id":3,
-       "title": "검정치마 - everything",
-       "answer":["everything", "에브리띵", "Everything"],
-       "secondsong": 'songs/검정치마 - everything.mp3',
-       "hint": "ㅇㅂㄹㄸ",
-       "answersong": 'songs/A검정치마 - everything.mp3',
-       "answerimage": 'image/3.jpg'
+       "title": "NCT DREAM - Hello Future ",
+       "answer":["헬로퓨쳐", "헬로퓨처", "헬로 퓨쳐", "헬로 퓨처", "hellofuture", "hello future", "Hello Future", "Hello future", "Hellofuture"],
+       "secondsong": 'songs/엔시티드림 - 헬로퓨쳐.mp3',
+       "hint": "ㅎㄹㅍㅊ",
+       "answersong": 'songs/A엔시티드림 - 헬로퓨쳐.mp3',
+       "answerimage": 'images/3.jpg'
     },
     {
        "id":4,
-       "title": "가까운 듯 먼 그대여 - 카더가든",
-       "answer":["가까운듯먼그대여", "가까운 듯 먼 그대여", "가까운듯 먼 그대여", "가까운듯먼 그대여"],
-       "secondsong": 'songs/가까운듯먼그대여-카더가든.mp3',
-       "hint": "ㄱㄲㅇ ㄷ ㅁ ㄱㄷㅇ",
-       "answersong": 'songs/A가까운듯먼그대여-카더가든.mp3',
-       "answerimage": 'image/4.jpg'
+       "title": "ENHYPHEN - Drunk-Dazed",
+       "answer":["드렁크데이즈드", "드렁크 데이즈드", "drunk dazed", "drunk-dazed", "drunkdazed", "Drunk-dazed", "Drunk-Dazed", "Drunk dazed", "Drunk Dazed"],
+       "secondsong": 'songs/엔하이픈 - 드렁큰데이즈드.mp3',
+       "hint": "ㄷㄹㅋ ㄷㅇㅈㄷ",
+       "answersong": 'songs/A엔하이픈 - 드렁큰데이즈드.mp3',
+       "answerimage": 'images/4.jpg'
     },
     {
        "id":5,
-       "title": "허회경 - 그렇게 살아가는 것",
-       "answer":["그렇게살아가는것", "그렇게 살아가는 것", "그렇게 살아가는것"],
-       "secondsong": 'songs/그렇게살아가는것-허회경.mp3',
-       "hint": "ㄱㄹㄱ ㅅㅇㄱㄴ ㄱ",
-       "answersong": 'songs/A그렇게살아가는것-허회경.mp3',
-       "answerimage": 'image/5.jpg'
+       "title": "오마이걸 - 살짝 설랬어",
+       "answer":["살짝설렜어", "살짝 설렜어"],
+       "secondsong": 'songs/오마이걸 - 살짝설렜어.mp3',
+       "hint": "ㅅㅉ ㅅㄹㅇ",
+       "answersong": 'songs/A오마이걸 - 살짝설렜어.mp3',
+       "answerimage": 'images/5.jpg'
     },
     {
        "id":6,
-       "title": "검정치마 - 기다린 만큼 더",
-       "answer":["기다린만큼더", "기다린 만큼 더", "기다린 만큼더"],
-       "secondsong": 'songs/기다린만큼더-검정치마',
-       "hint": "ㄱㄷㄹ ㅁㅋ ㄷ",
-       "answersong": 'songs/A기다린만큼더-검정치마.mp3',
-       "answerimage": 'image/6.jpg'
+       "title": "위클리 - After School",
+       "answer":["에프터 스쿨", "에프터스쿨", "애프터 스쿨", "애프터스쿨", "After School", "after school", "afterschool", "After school"],
+       "secondsong": 'songs/위클리 - afterschool',
+       "hint": "ㅇㅍㅌㅅㅋ",
+       "answersong": 'songs/A위클리 - afterschool.mp3',
+       "answerimage": 'images/6.jpg'
     },
     {
        "id":7,
-       "title": "넬 - 기억을 걷는 시간",
-       "answer":["기억을걷는시간", "기억을 걷는 시간", "기억을걷는 시간", "기억을 걷는시간"],
-       "secondsong": 'songs/기억을걷는시간-넬.mp3',
-       "hint": "ㄱㅇㅇ ㄱㄴ ㅅㄱ",
-       "answersong": 'songs/A기억을걷는시간-넬.mp3',
-       "answerimage": 'image/7.jpg'
+       "title": "TXT - 0X1=LOVESONG",
+       "answer":["제로바이원러브송", "영원럽", "제로 바이 원 러브 송", "제로바이 원 러브송", "0x1=lovesong"],
+       "secondsong": 'songs/투바투 - 제로바이원러브송.mp3',
+       "hint": "ㅈㄹㅂㅇㅇㄹㅂㅅ",
+       "answersong": 'songs/투바투 - 제로바이원러브송.mp3',
+       "answerimage": 'images/7.jpg'
     },
     {
        "id":8,
-       "title": "이강승 - 우리가 맞다는 대답을 할거예요",
-       "answer":["우리가맞다는대답을할거에요","우리가맞다는대답을할거예요", "우리가 맞다는 대답을 할거예요", "우리가 맞다는 대답을 할거에요", "우리가 맞다는 대답을 할 거예요", "우리가 맞다는 대답을 할 거에요"],
-       "secondsong": 'songs/우리가맞다는대답을할거예요-이강승.mp3',
-       "hint": "ㅇㄹㄱ ㅁㄷㄴ ㄷㄷㅇ ㅎㄱㅇㅇ",
-       "answersong": 'songs/A우리가맞다는대답을할거예요-이강승.mp3',
-       "answerimage": 'image/8.jpg'
+       "title": "TWICE - Scientist",
+       "answer":["사이언티스트","scientist", "Scientist"],
+       "secondsong": 'songs/트와이스 - scientist.mp3',
+       "hint": "ㅅㅇㅇㅌㅅㅌ",
+       "answersong": 'songs/A트와이스 - scientist.mp3',
+       "answerimage": 'images/8.jpg'
     },
     {
        "id":9,
-       "title": "혁오 - 위잉위잉",
-       "answer":["위잉위잉"],
-       "secondsong": 'songs/위잉위잉-혁오.mp3',
-       "hint": "ㅇㅇㅇㅇ",
-       "answersong": 'songs/A위잉위잉-혁오.mp3',
-       "answerimage": 'image/9.jpg'
+       "title": "CIX - Cinema",
+       "answer":["시네마", "씨네마", "Cinema", "cinema"],
+       "secondsong": 'songs/cix - 시네마.mp3',
+       "hint": "ㅅㄴㅁ",
+       "answersong": 'songs/Acix - 시네마.mp3',
+       "answerimage": 'images/9.jpg'
     }
-    /* ,{
-       "id":10,
-       "title": " - ",
-       "answer":[""],
-       "secondsong": 'songs/ .mp3',
-       "hint": " ",
-       "answersong": 'songs/A .mp3',
-       "answerimage": 'image/10.jpg'
-    }
-    */
+    // {
+    //    "id":10,
+    //    "title": " - ",
+    //    "answer":[""],
+    //    "secondsong": 'songs/ .mp3',
+    //    "hint": " ",
+    //    "answersong": 'songs/A .mp3',
+    //    "answerimage": 'image/10.jpg'
+    // }
+    
    ];
    
    var bol = false;
@@ -112,18 +112,17 @@ var indy = [
    let isPlaying = false;
    let gotoPass = false;
    
-   var secondsong = new Audio(indy[i].secondsong);
-   var answersong = new Audio(indy[i].answersong);
-   var songPath2 = indy[i].secondsong;
-   var songPath = indy[i].answersong;
+   var secondsong = new Audio(kpop[i].secondsong);
+   var answersong = new Audio(kpop[i].answersong);
+   var songPath2 = kpop[i].secondsong;
+   var songPath = kpop[i].answersong;
    
- 
-   // 시작 버튼 클릭시 노래 시작
+   //시작 버튼 나오면 수정! 
    if (typeof startBtn !== 'undefined' && startBtn !== null) {
        startBtn.addEventListener("click", function(){
-                   secondsong = new Audio(indy[0].secondsong);
+                   secondsong = new Audio(kpop[0].secondsong);
                    secondsong.play();
-                   hint.textContent = indy[0].hint;
+                   hint.textContent = kpop[0].hint;
            })
    }
    
@@ -141,8 +140,8 @@ var indy = [
            musicTitle.style.display = 'none';
            songbox.style.display = 'grid';
            hint.style.display = 'block';
-           hint.textContent = indy[i].hint;
-           secondsong = new Audio(indy[i].secondsong);
+           hint.textContent = kpop[i].hint;
+           secondsong = new Audio(kpop[i].secondsong);
            secondsong.play();
            
        }
@@ -202,14 +201,10 @@ var indy = [
        answer = inputanswer.value;
        checkanswer();
    }
-
-
-
-
-
+   
    // 정답 체크
    function checkanswer() {
-       var isCorrect = indy[i].answer.some(function(answer){
+       var isCorrect = kpop[i].answer.some(function(answer){
            return answer === inputanswer.value
        });
              //패스
@@ -220,8 +215,6 @@ var indy = [
                 i++;
                 nextquiz();
                 return alert("다음 문제로 넘어갑니다.");
-            }else{
-                return alert("화이팅!");
             }
         }
            //정답이 맞을 때
@@ -230,36 +223,36 @@ var indy = [
                cover.style.display = 'block';
                musicTitle.style.display = 'block';
                inputanswer.style.display = 'none';
-               answerimage.src = indy[i].answerimage;
-               musicTitle.textContent = indy[i].title;
+               answerimage.src = kpop[i].answerimage;
+               musicTitle.textContent = kpop[i].title;
                songbox.style.display = 'none';
                playBtn.style.marginTop = '4%'
                document.getElementById('coverbox').style.marginTop="14%"
-               answersong = new Audio(indy[i].answersong);
+               answersong = new Audio(kpop[i].answersong);
                answersong.play();
                isPlaying = true;
-               alert(answer);
+               alert("정답입니다!");
                i++;
            //정답이 아닐 때
            }else{
-
+               alert("땡!");
            }
           
     }
 
    
-   
-   
    // 다음 문제 버튼 클릭시
    if (typeof nextBtn !== 'undefined' && nextBtn !== null) {
        nextBtn.addEventListener("click", function(){
-           if(i < indy.length) {
+           if(i < kpop.length) {
                bol = false;
                answerimage.src = "../images/question-mark-icon.png";
                answersong.pause();
                nextquiz();
            }else{
-               alert("문제 끝~ ^>^");
+            function showPopup() {
+                 window.open("08_2_popup.html", "a", "width=400, height=300, left=100, top=50"); 
+                }
            }
        }); 
    }
@@ -268,7 +261,7 @@ var indy = [
    // function entertonext(event){
    //     if(event.key === 'Enter'){
    //         event.preventDefault();
-   //         if(i < indy.length){
+   //         if(i < kpop.length){
    //             bol = false;
    //             answersong.pause();
    //             nextquiz();
