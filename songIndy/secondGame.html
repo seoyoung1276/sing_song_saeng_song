@@ -3,6 +3,7 @@
     <title>싱송생송</title>
     <link rel="icon" href="../images/logo.ico">
     <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 <script>
     function showHiddenHint() {
@@ -55,6 +56,8 @@
                 clearInterval(countdownInterval);
             }
             }, 1000);
+
+
         }
 
     startCountdown();
@@ -70,6 +73,16 @@
         }, 3000);
     }
 
+    const navToggleI = nav_toggle.getElementsByTagName("i")[0];
+    const navListUl = document.getElementsByClassName("nav-list")[0];
+
+
+nav_toggle.onclick = () => {
+    navToggleI.classList.toggle("bi-list");
+    navToggleI.classList.toggle("bi-x-lg");
+    navListUl.classList.toggle("show-menu");
+}
+
 
 </script>
 <body>
@@ -83,7 +96,7 @@
                 <li class="nav-item"><a href="" class="nav-link">인디</a></li>
                 <li class="nav-item"><a href="" class="nav-link">pop</a></li>
             </ul>
-            <div class="new-toggle" id="nav_toggle">
+            <div class="nav-toggle" id="nav_toggle">
                 <i class="bi bi-list"></i>
             </div>
         </nav>
@@ -94,7 +107,7 @@
             <div id="songbox" class="songbox">
                     <button class="hint" onclick="showHiddenHint()"><img src="../images/hint-icon.png" width="80%">
                         <div class="hiddenHint">
-                            <p id="hint"></p>
+                            <div id="hint"></div>
                         </div>
                     </button>
                <div  class="coverbox"><img src="../images/question-mark-icon.png" width="33%" height="50%"></div> 
