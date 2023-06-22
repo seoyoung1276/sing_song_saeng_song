@@ -117,8 +117,7 @@ var indy = [
    var songPath2 = indy[i].secondsong;
    var songPath = indy[i].answersong;
    
- 
-   // 시작 버튼 클릭시 노래 시작
+   //시작 버튼 나오면 수정! 
    if (typeof startBtn !== 'undefined' && startBtn !== null) {
        startBtn.addEventListener("click", function(){
                    secondsong = new Audio(indy[0].secondsong);
@@ -202,11 +201,7 @@ var indy = [
        answer = inputanswer.value;
        checkanswer();
    }
-
-
-
-
-
+   
    // 정답 체크
    function checkanswer() {
        var isCorrect = indy[i].answer.some(function(answer){
@@ -220,8 +215,6 @@ var indy = [
                 i++;
                 nextquiz();
                 return alert("다음 문제로 넘어갑니다.");
-            }else{
-                return alert("화이팅!");
             }
         }
            //정답이 맞을 때
@@ -233,8 +226,8 @@ var indy = [
                answerimage.src = indy[i].answerimage;
                musicTitle.textContent = indy[i].title;
                songbox.style.display = 'none';
-               playBtn.style.marginTop = '4%'
-               document.getElementById('coverbox').style.marginTop="14%"
+               playBtns.style.marginTop = '6%'
+               cover.style.marginTop="14%"
                answersong = new Audio(indy[i].answersong);
                answersong.play();
                isPlaying = true;
@@ -242,7 +235,7 @@ var indy = [
                i++;
            //정답이 아닐 때
            }else{
-
+               alert("땡!");
            }
           
     }
