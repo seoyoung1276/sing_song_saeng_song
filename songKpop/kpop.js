@@ -39,7 +39,7 @@ var kpop = [
     },
     {
        "id":5,
-       "title": "오마이걸 - 살짝 설랬어",
+       "title": "오마이걸 - 살짝 설let어",
        "answer":["살짝설렜어", "살짝 설렜어"],
        "secondsong": 'songs/오마이걸 - 살짝설렜어.mp3',
        "hint": "ㅅㅉ ㅅㄹㅇ",
