@@ -583,6 +583,37 @@ nav {
     height: 100%;
     border-radius: 3%;
   }
+
+  .end {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* 화면의 세로 크기를 100%로 설정 */
+  }
+  
+  .ending, .score, .homeBtn {
+    margin-bottom: 50px; /* 각 요소들 사이의 여백을 설정 (선택적) */
+    font-size: 3vw;
+  }
+
+  .score{
+    color: #7000FF;
+  }
+
+  .homeBtn{
+    width: 15vw;
+    height: 5vw;
+    background-color: white;
+    font-size: 2vw;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 10vw;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4%;
+    border: none;
+  }
+  
   
 
   /* tap */
