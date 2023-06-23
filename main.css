@@ -649,12 +649,12 @@ nav {
   .show-menu {
     height: 156px;
   }
-    /*choice*/
-    .container1 {
+    /* choice */
+    /* .container1 {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      margin-top: 7%;
+      margin-top: 7%;  */
     .container{
       display: flex;
       flex-direction: row;
