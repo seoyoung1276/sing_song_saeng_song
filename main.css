@@ -16,6 +16,7 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;  
+  overflow: hidden;
 }
 
 .background{
@@ -314,6 +315,7 @@ flex-direction: column;
 
 
 .container2{
+  /* top: -40px; */
   display: grid;
   grid-template-columns: auto auto;
   align-items: center;
@@ -644,7 +646,7 @@ input:focus::placeholder {
 
   .container2{
     width: 70vw;
-    height: 80%;
+    height: 90%;
   }
   
   #answerimage{

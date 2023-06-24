@@ -79,9 +79,9 @@ var bal = [
    title: "조정석 - 아로하",
    answer: ["아로하"],
    secondsong: 'songs/조정석 - 아로하.mp3',
-   hint: "ㄱㄷㅇ",
+   hint: "ㅇㄹㅎ",
    answersong: 'songs/A조정석 - 아로하.mp3',
-   answerimage: 'images/10.jpg'
+   answerimage: 'images/15.jpg'
 }
 ];
 

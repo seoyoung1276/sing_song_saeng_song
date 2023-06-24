@@ -74,7 +74,7 @@ var indy = [
        secondsong: 'songs/t백아 - 테두리.mp3',
        hint: "ㅌㄷㄹ",
        answersong: 'songs/A백아 - 테두리.mp3',
-       answerimage: 'images/19.jpg'
+       answerimage: 'image/13.jpg'
     },
     {
        title: "나디(n@di) - 편지",
@@ -82,7 +82,7 @@ var indy = [
        secondsong: 'songs/t나디 - 편지.mp3',
        hint: "ㅍㅈ",
        answersong: 'songs/A나디 - 편지.mp3',
-       answerimage: 'images/20.jpg'
+       answerimage: 'image/10.jpg'
     },
 ];
 

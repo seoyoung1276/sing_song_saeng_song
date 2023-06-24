@@ -59,7 +59,7 @@ var bal = [
     },
     {
        title: "경서 - 나의 x에게",
-       answer: ["나의 x에게", "나의x에게", "나의 X에게"],
+       answer: ["나의 x에게", "나의x에게", "나의 X에게", "나의X에게"],
        secondsong: 'songs/경서 - 나의 x에게.mp3',
        hint: "ㄴㅇ ㅇㅅㅇㄱ",
        answersong: 'songs/A경서 - 나의 X에게.mp3',
@@ -80,7 +80,7 @@ var bal = [
         secondsong: 'songs/t이지 - 응급실.mp3',
         hint: "ㅇㄱㅅ",
         answersong: 'songs/A이지 - 응급실.mp3',
-        answerimage: 'image/16.jpg'
+        answerimage: 'images/5.jpg'
      },
 ];
 
