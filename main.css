@@ -37,82 +37,26 @@ body{
   justify-content: center;
   align-items: center;  
 }
-/* 
-header {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-}
-nav {
-  height: 60px;
-}
-
-.nav.container {
-display: flex;
-justify-content: space-between;
-align-items: center;
-color: #fff;
-padding: 0 16px;   
-}
-
-.nav-list {
-  display: flex;
-  column-gap: 10vw;
-  font-size: 20px;
-  list-style: none;
-  margin-top: 2%;
-  margin-left: 10%;
-
-}
-
-.nav-item{
-width: auto;
-}
-
-.nav-link{
-text-decoration: none;
-}
-
-.nav-logo{
-font-size: 40px;
-text-align: center;
-display: flex;
-justify-content: center;
-align-items: center;
-padding-top: 1vw;
-text-decoration: none;
-}
-
-.nav-container{
-height: 60px;
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-border-bottom: 1px solid #E6E6E6;
-}
-
-.nav-toggle{
-font-size: 1.5rem;
-visibility: hidden;
-} */
 
 /* Main */
 
-.img{
-position: relative;
+.background{
+  position: relative;
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
   background-position: center;
+
 }
 
+
 .mainText{
-display: flex;
-flex-direction: column;
-margin: 28vw 0 0 3vw;
+  top: 58%;
+  left: 4%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
 }
 .title{
 font-size: 7.8vw;
@@ -126,17 +70,18 @@ font-size: 2.8vw;
 font-weight: bold;
 color: white;
 }
+
 .start-button {
-width: 15vw;
-height: 4.5vw;
-display: grid;
-grid-template-columns: auto auto;
-column-gap: 6.5%;
-justify-content: center;
-/* align-items: center; */
-border-radius: 100px;
-border: none;
-margin-top: 5%;
+  position: absolute;
+  width: 15vw;
+  height: 4.5vw;
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 6.5%;
+  justify-content: center;
+  border-radius: 100px;
+  border: none;
+  margin-top: 5%;
 }
 .start-text {
 color: #7000FF;
@@ -156,6 +101,17 @@ justify-content: center;
 
 
 /*Genre css*/
+
+.container-wrapper {
+  width: 79%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+}
+.container-wrapper::-webkit-scrollbar{
+  display:none;
+}
+
 .container{
   display: flex;
   flex-direction: row;
@@ -163,9 +119,10 @@ justify-content: center;
   justify-content: center;
   margin-top: 100px;
   overflow: auto;
-  overflow-x: auto;
   white-space: nowrap;
   column-gap: 56px;
+  width: max-content;
+  scroll-snap-type: x mandatory; /* 가로 스크롤 스냅 설정 */
 }
 
 
@@ -177,9 +134,10 @@ justify-content: center;
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 254px;
+  flex-shrink: 0;
+  min-width: 254px;
   height: 805px;
-  background: linear-gradient(rgba(112, 0, 255, 0.5), rgba(112, 0, 255, 0.5)), url(./images/k-pop.jpg);
+  background: linear-gradient(rgba(112, 0, 255, 0.5), rgba(112, 0, 255, 0.5)), url(../images/k-pop.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -195,9 +153,10 @@ justify-content: center;
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 254px;
+  flex-shrink: 0;
+  min-width: 254px;
   height: 805px;
-  background: linear-gradient(rgba(112, 0, 255, 0.5), rgba(112, 0, 255, 0.5)), url(./images/ballad.jpg);
+  background: linear-gradient(rgba(112, 0, 255, 0.5), rgba(112, 0, 255, 0.5)), url(../images/ballad.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -213,9 +172,10 @@ justify-content: center;
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 254px;
+  flex-shrink: 0;
+  min-width: 254px;
   height: 805px;
-  background: linear-gradient(rgba(112, 0, 255, 0.5), rgba(112, 0, 255, 0.5)), url(./images/hip-pop.png);
+  background: linear-gradient(rgba(112, 0, 255, 0.5), rgba(112, 0, 255, 0.5)), url(../images/hip-pop.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -231,9 +191,10 @@ justify-content: center;
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 254px;
+  flex-shrink: 0;
+  min-width: 254px;
   height: 805px;
-  background: linear-gradient(rgba(112, 0, 255, 0.5), rgba(112, 0, 255, 0.5)), url(./images/indi.jpg);
+  background: linear-gradient(rgba(112, 0, 255, 0.5), rgba(112, 0, 255, 0.5)), url(../images/indi.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -249,9 +210,10 @@ justify-content: center;
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 254px;
+  flex-shrink: 0;
+  min-width: 254px;
   height: 805px;
-  background: linear-gradient(rgba(112, 0, 255, 0.5), rgba(112, 0, 255, 0.5)), url(./images/pop.jpg);
+  background: linear-gradient(rgba(112, 0, 255, 0.5), rgba(112, 0, 255, 0.5)), url(../images/pop.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
