@@ -1,3 +1,5 @@
+
+
 var indy = [
     {
        "id": 1,
@@ -226,7 +228,6 @@ var indy = [
                answerimage.src = indy[i].answerimage;
                musicTitle.textContent = indy[i].title;
                songbox.style.display = 'none';
-               playBtns.style.marginTop = '6%'
                cover.style.marginTop="14%"
                answersong = new Audio(indy[i].answersong);
                answersong.play();
