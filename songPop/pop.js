@@ -241,7 +241,8 @@ if (typeof nextBtn !== 'undefined' && nextBtn !== null) {
             answersong.pause();
             nextquiz();
         }else{
-            alert(cnt + "개 맞췄습니당");
+            alert("퀴즈 끝!" + cnt +"개 맞췄습니다.");
+            location.href = "../main.html";
         }
     }); 
 }

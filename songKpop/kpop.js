@@ -233,8 +233,8 @@ function input() {
         }else{
             passtoNext = confirm("마지막 문제 입니다! 패스하시겠습니까?")
             if(passtoNext){
-                alert("퀴즈 끝! 점수를 확인해보세요");
-                location.href="End.html";
+                alert("퀴즈 끝!" + cnt +"개 맞췄습니다.");
+                location.href = "../main.html";
             }
         }
     }
@@ -294,14 +294,15 @@ if (typeof nextBtn !== 'undefined' && nextBtn !== null) {
                 } else {
                     passtoNext = confirm("마지막 문제 입니다! 패스하시겠습니까?")
                     if (passtoNext) {
-                        alert("퀴즈 끝! 점수를 확인해보세요");
+                        alert("퀴즈 끝!" + cnt +"개 맞췄습니다.");
+                        location.href = "../main.html";
                         
                     }
                 }
             }
         } else {
-            alert("퀴즈 끝! 점수를 확인해보세요");
-            location.href = "../End.html";
+            alert("퀴즈 끝!" + cnt +"개 맞췄습니다.");
+            location.href = "../main.html";
         }
     });
 }
