@@ -263,7 +263,7 @@ function checkanswer() {
 // 다음 문제 버튼 클릭시
 if (typeof nextBtn !== 'undefined' && nextBtn !== null) {
     nextBtn.addEventListener("click", function(){
-        if (i < kpop.length) {
+        if (i <= 8 ) {
             if (bol === true) {
                 bol = false;
                 answerimage.src = "../images/question-mark-icon.png";
@@ -282,8 +282,8 @@ if (typeof nextBtn !== 'undefined' && nextBtn !== null) {
                 } else {
                     passtoNext = confirm("마지막 문제 입니다! 패스하시겠습니까?")
                     if (passtoNext) {
-                        alert("퀴즈 끝! 점수를 확인해보세요");
-                        location.href = "../End.html";
+                        alert("퀴즈 끝!" + cnt +"개 맞췄습니다.");
+                        location.href = "../main.html";
                     }
                 }
             }
