@@ -28,7 +28,7 @@ var bal = [
         //t
        title: "멜로망스 - 취중고백",
        answer: ["취중고백"],
-       secondsong: 'songs/멜로망스 - 취중고백.mp3',
+       secondsong: 'songs/t멜로망스 - 취중고백.mp3',
        hint: "ㅊㅈㄱㅂ",
        answersong: 'songs/A멜로망스 - 취중고백.mp3',
        answerimage: 'images/1.jpg'
@@ -36,7 +36,7 @@ var bal = [
     {
        title: "조정석 - 아로하",
        answer: ["아로하"],
-       secondsong: 'songs/조정석 - 아로하.mp3',
+       secondsong: 'songs/t조정석 - 아로하.mp3',
        hint: "ㅇㄹㅎ",
        answersong: 'songs/A조정석 - 아로하.mp3',
        answerimage: 'images/15.jpg'
@@ -50,11 +50,11 @@ var bal = [
        answerimage: 'images/16.jpg'
     },
     {
-       title: "장범준 - 흔들리는 꽃들 속에서 네 샴푸 향이 느껴진 거야",
-       answer: ["흔들리는 꽃들 속에서 네 샴푸 향이 느껴진 거야", "흔들리는꽃들속에서네샴푸향이느껴진거야", "흔들리는 꽃들 속에서 네 샴푸향이 느껴진거야","흔들리는 꽃들 속에서 네 샴푸향이 느껴진 거야", "흔들리는 꽃들 속에서 네 샴푸 향이 느껴진거야",],
-       secondsong: 'songs/장범준 - 흔들리는 꽃들 속에서 네 샴푸향이 느껴진 거야.mp3',
-       hint: "ㅎㄷㄹㄴ ㄲㄷ ㅅㅇㅅ ㄴ ㅅㅍ ㅎㅇ ㄴㄲㅈㄱㅇ",
-       answersong: 'songs/A장범준 - 흔들리는 꽃들 속에서 네 샴푸향이 느껴진 거야.mp3',
+       title: "임영웅 - 사랑은 늘 도망가",
+       answer: ["사랑은 늘 도망가", "사랑은늘도망가", "사랑은늘 도망가","사랑은 늘도망가",],
+       secondsong: 'songs/t임영웅 - 사랑은 늘 도망가.mp3',
+       hint: "ㅅㄹㅇ ㄴ ㄷㅁㄱ",
+       answersong: 'songs/A임영웅 - 사랑은 늘 도망가.mp3',
        answerimage: 'images/17.jpg'
     },
     {
@@ -62,26 +62,26 @@ var bal = [
        answer: ["나의 x에게", "나의x에게", "나의 X에게"],
        secondsong: 'songs/경서 - 나의 x에게.mp3',
        hint: "ㄴㅇ ㅇㅅㅇㄱ",
-       answersong: 'songs/A경서 - 나의 x에게.mp3',
+       answersong: 'songs/A경서 - 나의 X에게.mp3',
        answerimage: 'images/18.jpg'
     },
     {
         // t
        title: "성시경 - 거리에서",
        answer: ["거리에서"],
-       secondsong: 'songs/스키즈 - 매니악.mp3',
+       secondsong: 'songs/t성시경 - 거리에서.mp3',
        hint: "ㅁㄴㅇ",
-       answersong: 'songs/A스키즈 - 매니악.mp3',
+       answersong: 'songs/A성시경 - 거리에서.mp3',
        answerimage: 'images/2.jpg'
     },
-    // {
-    //    title: "온앤오프 - 여름쏙",
-    //    answer: ["여름쏙", "여름 쏙"],
-    //    secondsong: 'songs/온앤오프 - 여름쏙.mp3',
-    //    hint: "ㅇㄹㅆ",
-    //    answersong: 'songs/A온앤오프 - 여름쏙.mp3',
-    //    answerimage: 'images/20.jpg'
-    // }
+    {
+        title: "이지 - 응급실",
+        answer: ["응급실"],
+        secondsong: 'songs/t이지 - 응급실.mp3',
+        hint: "ㅇㄱㅅ",
+        answersong: 'songs/A이지 - 응급실.mp3',
+        answerimage: 'image/16.jpg'
+     },
 ];
 
 var bol = false;
