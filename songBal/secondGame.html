@@ -4,7 +4,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="icon" href="../images/logo.ico">
     <link rel="stylesheet" href="../main.css">
-    <!-- <link rel="stylesheet" href="../game.css"> -->
     <link rel="stylesheet" href="../nav.css">
 </head>
 <script>
@@ -73,90 +72,23 @@
         }, 3000);
     }
 
-    // const nav_toggle = document.getElementById("nav_toggle");
-    // const navToggleI = document.getElementById("i");
-    // const navListUl = document.getElementById("nav-list");
-
-
-    // nav_toggle.onclick = () => {
-    //     navToggleI.classList.toggle("bi-list");
-    //     navToggleI.classList.toggle("bi-x-lg");
-    //     navListUl.classList.toggle("show-menu");
-    // }
-
 </script>
 <body>
     <header>
         <nav class="nav-container">
-            <a href="" class="nav-logo">싱송생송</a>
+            <a href="../Main.html" class="nav-logo">싱송생송</a>
             <ul class="nav-list">
-                <li class="nav-item"><a href="" class="nav-link">k-pop</a></li>
-                <li class="nav-item"><a href="" class="nav-link">발라드</a></li>
-                <li class="nav-item"><a href="" class="nav-link">힙합</a></li>
-                <li class="nav-item"><a href="" class="nav-link">인디</a></li>
-                <li class="nav-item"><a href="" class="nav-link">pop</a></li>
+                <li class="nav-item"><a href="../songKpop/Choice.html" class="nav-link">k-pop</a></li>
+                <li class="nav-item"><a href="../songBal/Choice.html" class="nav-link">발라드</a></li>
+                <li class="nav-item"><a href="../songHiphop/Choice.html" class="nav-link">힙합</a></li>
+                <li class="nav-item"><a href="../songIndy/Choice.html" class="nav-link">인디</a></li>
+                <li class="nav-item"><a href="../songPop/Choice.html" class="nav-link">pop</a></li>
             </ul>
             <div class="nav-toggle" id="nav_toggle">
                 <i class="bi bi-list"></i>
             </div>
         </nav>
     </header>
-
-    <!-- <header>
-        <ul class="menu">
-            <li>
-              <a href="#">k-pop</a>
-              <ul class="submenu">
-                <li><a href="#">ksadgag</a></li>
-                <li><a href="#">submenu02</a></li>
-                <li><a href="#">submenu03</a></li>
-                <li><a href="#">submenu04</a></li>
-                <li><a href="#">submenu05</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">MENU2</a>
-              <ul class="submenu">
-                <li><a href="#">submenu01</a></li>
-                <li><a href="#">submenu02</a></li>
-                <li><a href="#">submenu03</a></li>
-                <li><a href="#">submenu04</a></li>
-                <li><a href="#">submenu05</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">MENU3</a>
-              <ul class="submenu">
-                <li><a href="#">submenu01</a></li>
-                <li><a href="#">submenu02</a></li>
-                <li><a href="#">submenu03</a></li>
-                <li><a href="#">submenu04</a></li>
-                <li><a href="#">submenu05</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">MENU4</a>
-              <ul class="submenu">
-                <li><a href="#">submenu01</a></li>
-                <li><a href="#">submenu02</a></li>
-                <li><a href="#">submenu03</a></li>
-                <li><a href="#">submenu04</a></li>
-                <li><a href="#">submenu05</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">MENU5</a>
-              <ul class="submenu">
-                <li><a href="#">submenu01</a></li>
-                <li><a href="#">submenu02</a></li>
-                <li><a href="#">submenu03</a></li>
-                <li><a href="#">submenu04</a></li>
-                <li><a href="#">submenu05</a></li>
-              </ul>
-            </li>
-          </ul>
-    </header>
-           -->
     <div class="secondBack">
         <div class="container2">
             <div id="coverbox" class="coverbox"><img id="answerimage" src="" width="33%" height="50%"></div> 
@@ -185,13 +117,14 @@
                     </div>
                 </div>
             </div>
+            <div class="popup">
+                <div class="popup-message">시작하기 버튼을 누르면 시작됩니다!</div>
+                <div class="start-text2">총 10개의 노래가 있습니다.</div>
+                <img class="countdown-image" src="../images/three.png" alt="countdown">
+                <button id="startBtn" class="startBtn">시작하기</button>
+            </div>
         </div>
-        <div class="popup">
-            <div class="popup-message">시작하기 버튼을 누르면 시작됩니다!</div>
-            <div class="start-text2">총 10개의 노래가 있습니다.</div>
-            <img class="countdown-image" src="../images/three.png" alt="countdown">
-            <button id="startBtn" class="startBtn">시작하기</button>
-        </div>
+        
     </div>
     <script src="bal.js"></script>
     <script src="../nav.js"></script>

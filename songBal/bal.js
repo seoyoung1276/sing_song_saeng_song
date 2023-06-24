@@ -74,15 +74,15 @@ var bal = [
    answersong: 'songs/A하은 - 신용재.mp3',
    answerimage: 'images/9.jpg'
 }
- //,
-// {
-//    title: "pH-1, Kid Milli, 루피 - Good Day (Feat. 팔로알토)",
-//    answer: ["굿데이", "굳데이", "굿 데이", "Goodday","GoodDay", "Good day", "Good Day"],
-//    secondsong: 'songs/ph1 - 굿데이.mp3',
-//    hint: "ㄱㄷㅇ",
-//    answersong: 'songs/Aph1 - 굿데이.mp3',
-//    answerimage: 'images/10.jpg'
-// }
+ ,
+{
+   title: "조정석 - 아로하",
+   answer: ["아로하"],
+   secondsong: 'songs/조정석 - 아로하.mp3',
+   hint: "ㄱㄷㅇ",
+   answersong: 'songs/A조정석 - 아로하.mp3',
+   answerimage: 'images/10.jpg'
+}
 ];
 
 var bol = false;

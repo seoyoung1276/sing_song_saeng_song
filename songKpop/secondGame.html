@@ -1,10 +1,10 @@
 <html>
 <head>
     <title>싱송생송</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="icon" href="../images/logo.ico">
     <link rel="stylesheet" href="../main.css">
     <link rel="stylesheet" href="../nav.css">
-
 </head>
 <script>
     function showHiddenHint() {
@@ -56,7 +56,7 @@
                 startBtn.style.display = 'block';
                 clearInterval(countdownInterval);
             }
-            }, 1000);
+            }, 1000);          
         }
 
     startCountdown();
@@ -72,20 +72,19 @@
         }, 3000);
     }
 
-
 </script>
 <body>
     <header>
         <nav class="nav-container">
-            <a href="" class="nav-logo">싱송생송</a>
+            <a href="../Main.html" class="nav-logo">싱송생송</a>
             <ul class="nav-list">
-                <li class="nav-item"><a href="" class="nav-link">k-pop</a></li>
-                <li class="nav-item"><a href="" class="nav-link">발라드</a></li>
-                <li class="nav-item"><a href="" class="nav-link">힙합</a></li>
-                <li class="nav-item"><a href="" class="nav-link">인디</a></li>
-                <li class="nav-item"><a href="" class="nav-link">pop</a></li>
+                <li class="nav-item"><a href="../songKpop/Choice.html" class="nav-link">k-pop</a></li>
+                <li class="nav-item"><a href="../songBal/Choice.html" class="nav-link">발라드</a></li>
+                <li class="nav-item"><a href="../songHiphop/Choice.html" class="nav-link">힙합</a></li>
+                <li class="nav-item"><a href="../songIndy/Choice.html" class="nav-link">인디</a></li>
+                <li class="nav-item"><a href="../songPop/Choice.html" class="nav-link">pop</a></li>
             </ul>
-            <div class="new-toggle" id="nav_toggle">
+            <div class="nav-toggle" id="nav_toggle">
                 <i class="bi bi-list"></i>
             </div>
         </nav>
@@ -105,7 +104,7 @@
                 <div class="musicbox">
                     <input id = "inputanswer" type="text" placeholder='노래 제목을 입력하세요!'></input>
                     <div id="musicTitle" class="musicTitle"></div>
-                    <div class="genre">♬ K-POP</div>
+                    <div class="genre">♬ 인디</div>
                     <div class="line">
                         <div class="playline">
                             <div class="element"></div>
@@ -118,14 +117,16 @@
                     </div>
                 </div>
             </div>
+            <div class="popup">
+                <div class="popup-message">시작하기 버튼을 누르면 시작됩니다!</div>
+                <div class="start-text2">총 10개의 노래가 있습니다.</div>
+                <img class="countdown-image" src="../images/three.png" alt="countdown">
+                <button id="startBtn" class="startBtn">시작하기</button>
+            </div>
         </div>
-        <div class="popup">
-            <div class="popup-message">시작하기 버튼을 누르면 시작됩니다!</div>
-            <div class="start-text2">총 10개의 노래가 있습니다.</div>
-            <img class="countdown-image" src="../images/three.png" alt="countdown">
-            <button id="startBtn" class="startBtn">시작하기</button>
-        </div>
+        
     </div>
-    <script src="kpop.js"></script>
+    <script src="indy.js"></script>
+    <script src="../nav.js"></script>
 </body>
 </html>
