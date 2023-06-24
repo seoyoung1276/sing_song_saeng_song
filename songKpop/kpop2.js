@@ -210,7 +210,7 @@ function input() {
     answer = inputanswer.value;
      //패스
      if(answer === "pass"){
-        if(i < kpop.length){
+        if(i <= 8){
             var passtoNext = confirm("패스하시겠습니까?")
             if(passtoNext){
                 cnt--;
@@ -221,8 +221,8 @@ function input() {
         }else{
             passtoNext = confirm("마지막 문제 입니다! 패스하시겠습니까?")
             if(passtoNext){
-                alert("퀴즈 끝! 점수를 확인해보세요");
-                location.href="End.html";
+                alert("퀴즈 끝!" + cnt +"개 맞췄습니다.");
+                location.href = "../main.html";
             }
         }
     }
@@ -275,6 +275,7 @@ if (typeof nextBtn !== 'undefined' && nextBtn !== null) {
                     passtoNext = confirm("패스 하시겠습니까?");
                     if (passtoNext) {
                         cnt--;
+                        i++;
                         nextquiz();
                         return alert("다음 문제로 넘어갑니다.");
                     }
@@ -287,8 +288,8 @@ if (typeof nextBtn !== 'undefined' && nextBtn !== null) {
                 }
             }
         } else {
-            alert("퀴즈 끝! 점수를 확인해보세요");
-            location.href = "../End.html";
+            alert("퀴즈 끝!" + cnt +"개 맞췄습니다.");
+            location.href = "../main.html";
         }
     });
 }
