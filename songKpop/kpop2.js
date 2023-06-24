@@ -210,7 +210,7 @@ function input() {
     answer = inputanswer.value;
      //패스
      if(answer === "pass"){
-        if(i < kpop.length -1){
+        if(i < kpop.length){
             var passtoNext = confirm("패스하시겠습니까?")
             if(passtoNext){
                 cnt--;
@@ -218,12 +218,12 @@ function input() {
                 nextquiz();
                 return alert("다음 문제로 넘어갑니다.");
             }
-        }
-    }else{
-        passtoNext = confirm("마지막 문제 입니다! 패스하시겠습니까?")
-        if(passtoNext){
-            alert("퀴즈 끝! 점수를 확인해보세요");
-            location.href="End.html";
+        }else{
+            passtoNext = confirm("마지막 문제 입니다! 패스하시겠습니까?")
+            if(passtoNext){
+                alert("퀴즈 끝! 점수를 확인해보세요");
+                location.href="End.html";
+            }
         }
     }
     checkanswer();

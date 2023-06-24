@@ -29,7 +29,7 @@ var bal = [
 {
    title: "윤종신 - 좋니",
    answer: ["좋니"],
-   secondsong: 'songs/윤종신 - 좋니',
+   secondsong: 'songs/윤종신 - 좋니.mp3',
    hint: "ㅈㄴ",
    answersong: 'songs/A윤종신 - 좋니.mp3',
    answerimage: 'images/4.jpg'

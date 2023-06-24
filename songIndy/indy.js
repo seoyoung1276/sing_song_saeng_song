@@ -32,7 +32,7 @@ var indy = [
     },
     {
        "id":4,
-       "title": "가까운 듯 먼 그대여 - 카더가든",
+       "title": "카더가든 - 가까운 듯 먼 그대여",
        "answer":["가까운듯먼그대여", "가까운 듯 먼 그대여", "가까운듯 먼 그대여", "가까운듯먼 그대여"],
        "secondsong": 'songs/가까운듯먼그대여-카더가든.mp3',
        "hint": "ㄱㄲㅇ ㄷ ㅁ ㄱㄷㅇ",
@@ -52,7 +52,7 @@ var indy = [
        "id":6,
        "title": "검정치마 - 기다린 만큼 더",
        "answer":["기다린만큼더", "기다린 만큼 더", "기다린 만큼더"],
-       "secondsong": 'songs/기다린만큼더-검정치마',
+       "secondsong": 'songs/기다린만큼더-검정치마.mp3',
        "hint": "ㄱㄷㄹ ㅁㅋ ㄷ",
        "answersong": 'songs/A기다린만큼더-검정치마.mp3',
        "answerimage": 'image/6.jpg'
@@ -105,6 +105,10 @@ var indy = [
    const musicTitle = document.getElementById("musicTitle");
    const playBtn = document.getElementById("playBtn");
    const startBtn = document.getElementById("startBtn");
+   const homeBtn = document.getElementById("homeBtn");
+   const endingment = document.getElementById("endingment");
+//    const score = document.getElementById("score");
+//    const page = document.getElementById("page");
    let answerimage = document.getElementById("answerimage");
    let inputanswer = document.getElementById("inputanswer");
    let playBtns = document.getElementById("play");
@@ -118,99 +122,116 @@ var indy = [
    var answersong = new Audio(indy[i].answersong);
    var songPath2 = indy[i].secondsong;
    var songPath = indy[i].answersong;
-   
-   //시작 버튼 나오면 수정! 
-   if (typeof startBtn !== 'undefined' && startBtn !== null) {
-       startBtn.addEventListener("click", function(){
-                   secondsong = new Audio(indy[0].secondsong);
-                   secondsong.play();
-                   hint.textContent = indy[0].hint;
-           })
-   }
-   
-   cover.style.display = 'none';
-   musicTitle.style.display = 'none';
-   
-   
-   // 문제 화면
-   function nextquiz() {
-       if(bol === false){
+//    endingment.remove();
+//    homeBtn.remove();
+//    score.remove();
+
+//시작 버튼 나오면 수정! 
+if (typeof startBtn !== 'undefined' && startBtn !== null) {
+    startBtn.addEventListener("click", function(){
+                secondsong = new Audio(indy[0].secondsong);
+                secondsong.play();
+                isPlaying = true;
+                hint.textContent = indy[0].hint;
+        })
+}
+
+cover.style.display = 'none';
+musicTitle.style.display = 'none';
+
+
+// 문제 화면
+function nextquiz() {
+    if(bol === false){
+        secondsong.pause();
+        isPlaying = false;
+        inputanswer.value = null;
+        inputanswer.style.display = 'block';
+        cover.style.display = 'none';
+        musicTitle.style.display = 'none';
+        songbox.style.display = 'grid';
+        hint.style.display = 'block';
+        hint.textContent = indy[i].hint;
+        secondsong = new Audio(indy[i].secondsong);
+        secondsong.play();
+        isPlaying = true;
         
-           inputanswer.value = null;
-           inputanswer.style.display = 'block';
-           cover.style.display = 'none';
-           musicTitle.style.display = 'none';
-           songbox.style.display = 'grid';
-           hint.style.display = 'block';
-           hint.textContent = indy[i].hint;
-           secondsong = new Audio(indy[i].secondsong);
-           secondsong.play();
-           
-       }
-   }
-   
-   // 노래 재생 & 멈춤 버튼 (다시 재생 됨)
-   if (typeof playBtn !== 'undefined' && playBtn !== null) {
-       playBtn.addEventListener("click", function() {
-         if (bol === false) {
-           secondsong.play();
-         } else {
-           if (isPlaying) {
-             answersong.pause();
-             currentTime = answersong.currentTime;
-             isPlaying = false;
-           } else {
-             answersong.currentTime = currentTime;
-             answersong.play();
-             isPlaying = true;
-           }
-         }
-       });
-     }
-     
-     // 스페이스 눌러도 노래 멈추게 하고픔
-     function spacetopause(event) {
-       if(bol === true){
-           if (event.key === ' ') {
-               if (isPlaying) {
-                   answersong.pause();
-                   currentTime = answersong.currentTime;
-                   isPlaying = false;
-               } else {
-                   answersong.currentTime = currentTime;
-                   answersong.play();
-                   isPlaying = true;
-               }
-           }
-       }
-     }
-     
-     document.addEventListener('keydown', spacetopause);
-     
-     
-   
-   
-   // 엔터 키 동작
-   function handleEnterKey(event) {
-       if(event.key === 'Enter'){
-           input();
-       }
-   }
-   
-   inputanswer.addEventListener('keydown', handleEnterKey)
-   
-   function input() {
-       answer = inputanswer.value;
-       checkanswer();
-   }
-   
-   // 정답 체크
-   function checkanswer() {
-       var isCorrect = indy[i].answer.some(function(answer){
-           return answer === inputanswer.value
-       });
-             //패스
-           if(answer === "pass"){
+    }
+}
+
+// 노래 재생 & 멈춤 버튼 (다시 재생 됨)
+if (typeof playBtn !== 'undefined' && playBtn !== null) {
+    playBtn.addEventListener("click", function() {
+      if (bol === false) {
+        if(isPlaying) {
+            secondsong.pause();
+            currentTime = secondsong.currentTime;
+            isPlaying = false;
+        }else{
+            secondsong.currentTime = currentTime;
+            secondsong.play();
+            isPlaying = true;
+        }
+      } else {
+        if (isPlaying) {
+          answersong.pause();
+          currentTime = answersong.currentTime;
+          isPlaying = false;
+        } else {
+          answersong.currentTime = currentTime;
+          answersong.play();
+          isPlaying = true;
+        }
+      }
+    });
+  }
+  
+  // 스페이스 눌러도 노래 멈추게 하고픔
+  function spacetopause(event) {
+    if (event.key === ' ') {
+        if(bol === true){
+            if (isPlaying) {
+                answersong.pause();
+                currentTime = answersong.currentTime;
+                isPlaying = false;
+            } else {
+                answersong.currentTime = currentTime;
+                answersong.play();
+                isPlaying = true;
+            }
+        }else{
+            if(isPlaying) {
+                secondsong.pause();
+                currentTime = secondsong.currentTime;
+                isPlaying = false;
+            }else{
+                secondsong.currentTime = currentTime;
+                secondsong.play();
+                isPlaying = true;
+            }
+        }
+    }
+}
+  
+  document.addEventListener('keydown', spacetopause);
+  
+  
+
+
+// 엔터 키 동작
+function handleEnterKey(event) {
+    if(event.key === 'Enter'){
+        input();
+    }
+}
+
+inputanswer.addEventListener('keydown', handleEnterKey)
+
+function input() {
+    answer = inputanswer.value;
+     //패스
+     if(answer === "pass"){
+        if(i < indy.length -1){
             var passtoNext = confirm("패스하시겠습니까?")
             if(passtoNext){
                 cnt--;
@@ -218,59 +239,79 @@ var indy = [
                 nextquiz();
                 return alert("다음 문제로 넘어갑니다.");
             }
-        }
-           //정답이 맞을 때
-           if(isCorrect){
-               bol = true; 
-               cover.style.display = 'block';
-               musicTitle.style.display = 'block';
-               inputanswer.style.display = 'none';
-               answerimage.src = indy[i].answerimage;
-               musicTitle.textContent = indy[i].title;
-               songbox.style.display = 'none';
-               cover.style.marginTop="14%"
-               answersong = new Audio(indy[i].answersong);
-               answersong.play();
-               isPlaying = true;
-               alert("정답입니다!");
-                i++;
-        //정답이 아닐 때
         }else{
-            alert("땡! 다시 입력해보세요");
-            inputanswer.value = null;
+            passtoNext = confirm("마지막 문제 입니다! 패스하시겠습니까?")
+            if(passtoNext){
+                alert("퀴즈 끝! 점수를 확인해보세요");
+                location.href="End.html";
+            }
         }
-          
+    }
+    checkanswer();
+}
+
+// 정답 체크
+function checkanswer() {
+    var isCorrect = indy[i].answer.some(function(answer){
+        return answer === inputanswer.value;
+    });
+         
+    // 정답이 맞을 때
+    if (isCorrect) {
+        bol = true; 
+        cover.style.display = 'block';
+        musicTitle.style.display = 'block';
+        inputanswer.style.display = 'none';
+        answerimage.src = indy[i].answerimage;
+        musicTitle.textContent = indy[i].title;
+        songbox.style.display = 'none';
+        playBtn.style.marginTop = '4%';
+        document.getElementById('coverbox').style.marginTop = '14%';
+        secondsong.pause();
+        answersong = new Audio(indy[i].answersong);
+        answersong.play();
+        isPlaying = true;
+        alert("정답입니다!");
+    // 정답이 아닐 때
+    } else {
+        alert("땡! 다시 입력해보세요");
+        inputanswer.value = null;
     }
 
-   
-   
-   
-   // 다음 문제 버튼 클릭시
-   if (typeof nextBtn !== 'undefined' && nextBtn !== null) {
-       nextBtn.addEventListener("click", function(){
-           if(i < indy.length) {
-               bol = false;
-               answerimage.src = "../images/question-mark-icon.png";
-               answersong.pause();
-               nextquiz();
-           }else{
-               alert("문제 끝~ ^>^");
-           }
-       }); 
-   }
-   
-   // // 엔터 누를 시 다음문제 넘어가는 것인데....안됨 ㅠㅠ
-   // function entertonext(event){
-   //     if(event.key === 'Enter'){
-   //         event.preventDefault();
-   //         if(i < indy.length){
-   //             bol = false;
-   //             answersong.pause();
-   //             nextquiz();
-   //         } else {
-   //             alert("문제 끝!");
-   //         }
-   //     }
-   // }
-   
-   // document.addEventListener('keydown', entertonext);
+    i++; // 다음 문제로 넘어감
+}
+
+// 다음 문제 버튼 클릭시
+if (typeof nextBtn !== 'undefined' && nextBtn !== null) {
+    nextBtn.addEventListener("click", function(){
+        if (i < indy.length) {
+            if (bol === true) {
+                bol = false;
+                answerimage.src = "../images/question-mark-icon.png";
+                secondsong.pause();
+                answersong.pause();
+                nextquiz();
+            } else {
+                if (i < indy.length - 1) {
+                    passtoNext = confirm("패스 하시겠습니까?");
+                    if (passtoNext) {
+                        i++
+                        cnt--;
+                        nextquiz();
+                        return alert("다음 문제로 넘어갑니다.");
+                    }
+                } else {
+                    passtoNext = confirm("마지막 문제 입니다! 패스하시겠습니까?")
+                    if (passtoNext) {
+                        alert("퀴즈 끝! 점수를 확인해보세요");
+                        
+                    }
+                }
+            }
+        } else {
+            alert("퀴즈 끝! 점수를 확인해보세요");
+            location.href = "../End.html";
+        }
+    });
+}
+
