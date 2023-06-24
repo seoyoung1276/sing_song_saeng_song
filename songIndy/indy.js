@@ -111,6 +111,7 @@ var indy = [
    let answerimage = document.getElementById("answerimage");
    let inputanswer = document.getElementById("inputanswer");
    let playBtns = document.getElementById("play");
+   let line = document.getElementsByClassName("element")
    let answer ="";
    let currentTime = 0;
    let cnt = 10;
@@ -125,6 +126,25 @@ var indy = [
 //    homeBtn.remove();
 //    score.remove();
 
+function createKeyframes() {
+    var style = document.createElement('style');
+    style.type = 'text/css';
+    
+    var keyframes = '\
+      @keyframes lineMove {\
+        0% {\
+          width: 0;\
+        }\
+        100% {\
+          width: 100%;\
+        }\
+      }';
+  
+    style.appendChild(document.createTextNode(keyframes));
+    document.head.appendChild(style);
+  }
+  
+
 //시작 버튼 나오면 수정! 
 if (typeof startBtn !== 'undefined' && startBtn !== null) {
     startBtn.addEventListener("click", function(){
@@ -132,6 +152,8 @@ if (typeof startBtn !== 'undefined' && startBtn !== null) {
                 secondsong.play();
                 isPlaying = true;
                 hint.textContent = indy[0].hint;
+                createKeyframes();
+
         })
 }
 
@@ -154,7 +176,6 @@ function nextquiz() {
         secondsong = new Audio(indy[i].secondsong);
         secondsong.play();
         isPlaying = true;
-        
     }
 }
 
