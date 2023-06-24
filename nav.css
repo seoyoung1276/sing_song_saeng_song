@@ -1,4 +1,4 @@
-:root {
+ :root {
     --first-color: #ffffff;
     --second-color: #efb11c;
     --body-color: #000;
@@ -103,7 +103,7 @@ nav {
     .nav-link {
         display: block;
     }
-
+    
     .nav-toggle {
         visibility: visible;
         position: absolute;

@@ -1,18 +1,3 @@
-/*desktop*/
-
-/* Main css*/
-
-/* @font-face {
-    font-family: 'KBO-Dia-Gothic_bold';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/KBO-Dia-Gothic_bold.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
-}
-
-*{
-    font-family: 'KBO-Dia-Gothic_bold';
-} */
-
 @font-face {
   font-family: 'GangwonEduPowerExtraBoldA';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff') format('woff');
@@ -21,11 +6,6 @@
 }
 
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
-
-/* .notosanskr * { 
-font-family: 'Noto Sans KR', sans-serif;
-} */
-
 
 *{
   font-family: 'GangwonEduPowerExtraBoldA';
@@ -37,8 +17,6 @@ body{
   justify-content: center;
   align-items: center;  
 }
-
-/* Main */
 
 .background{
   position: relative;
@@ -102,10 +80,6 @@ color: #7000FF;
 justify-content: center;
 }
 
-
-
-/*Genre css*/
-
 .container-wrapper {
   width: 79%;
   overflow-x: auto;
@@ -127,7 +101,7 @@ justify-content: center;
   white-space: nowrap;
   column-gap: 56px;
   width: max-content;
-  scroll-snap-type: x mandatory; /* 가로 스크롤 스냅 설정 */
+  scroll-snap-type: x mandatory;
 }
 
 
@@ -229,8 +203,8 @@ justify-content: center;
   color: white;
 }
 
-/*Choice css*/
 .container1 {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -242,11 +216,11 @@ justify-content: center;
   width: 25vw;
   height: 30vw;
   border-radius: 2vw;
-  margin: 5% 0 0 40px;
+  margin: 5% 3% 0 3%;
   box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.092);
   display: flex;
   flex-direction: column;
-  row-gap: 8%;
+  row-gap: 10%;
   align-items: center;
   justify-content: center;
 }
@@ -264,8 +238,6 @@ justify-content: center;
   height: 10vw;
 }
 
-
-/* PlayGame css*/
 
 @keyframes fadeInLeft{
   0%{
@@ -309,8 +281,6 @@ display: block;
 width: 6vw; 
 height: 9vw;
 margin: none;
-/* margin: 0 auto; */
-/* margin-bottom: 20px; */
 }
 
 .startBtn {
@@ -348,12 +318,6 @@ flex-direction: column;
   align-items: center;
   margin: auto;
   position: relative;
-  /* width: 100vw;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  margin-left: auto auto;
-  flex-direction: column; */
 }
 
 .songbox{
@@ -367,7 +331,6 @@ flex-direction: column;
   height: 28vw;
   border-radius: 1.3vw;
   background-color: #7000FF;
-  /* margin: 10vw 0vw 0vw 17vw; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -524,7 +487,6 @@ input:focus::placeholder {
   height: 3vw;
 }
 
-/* Answer css */
 .musicTitle{
   width: 23vw;
   height: 1.8vw;
@@ -570,62 +532,24 @@ input:focus::placeholder {
 
 .score{
   color: #7000FF;
+  font-size: 2vw;
 }
 
 .homeBtn{
-  width: 15vw;
-  height: 5vw;
+  width: 10vw;
+  height: 3vw;
   background-color: white;
-  font-size: 2vw;
+  font-size: 1.5vw;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2);
   border-radius: 10vw;
   align-items: center;
   justify-content: center;
-  padding-top: 4%;
+  padding-top: 2%;
   border: none;
 }
 
-
-
-/* tab */
-
 @media screen and (max-width: 720px) {
-  /* .nav-logo{
-    margin: 0 auto;
-  }
-
-  .nav-list {
-    position: absolute;
-    top: 70px;
-    right: 10vw;  
-    flex-direction: column; 
-    align-items: flex-end;
-    text-align: center; 
-    background-color: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(8px); 
-    height: 0;
-    overflow: hidden;
-    transition: 0.7s;
-}
-.nav-item {
-    padding: 1em 0;
-}
-.nav-link {
-  display: block;
-}
-.nav-item{
-  width: auto;
-}
-
-.nav-toggle{
-  visibility: visible;
-  margin-right: 3%;
-}
-
-.show-menu {
-  height: 156px;
-} */
-  /*choice*/
+ 
   .container1 {
     display: flex;
     flex-wrap: wrap;
@@ -646,7 +570,6 @@ input:focus::placeholder {
 }
 
 .box {
-  /* position: relative; */
   display: flex;
   flex-direction: column;
   width: 80vw;
@@ -673,7 +596,6 @@ input:focus::placeholder {
   }
 
   .container2{
-    /* position: relative; */
     width: 70vw;
     height: 80%;
   }
@@ -804,11 +726,9 @@ input:focus::placeholder {
   }
 
   .musicbox{
-    /* position: absolute; */
     width: 70vw;
     height: 35vw;
     border-radius: 3vw;
-    /* margin: 21vw 0vw 0vw 50vw; */
     box-shadow: 0px 4px 17px 0px rgb(0, 0, 0, 0.15);
     display: flex;
     flex-direction: column;
@@ -824,7 +744,6 @@ input:focus::placeholder {
 
 
   input{
-    /* position: absolute; */
     width: 57vw;
     height: 8vw;
     border-radius: 50vw;
@@ -833,7 +752,6 @@ input:focus::placeholder {
     box-shadow: 0px 4px 10px 0px inset rgba(0, 0, 0, 0.2);
     font-size: 2.2vw;
     font-family: 'Noto Sans KR', sans-serif;
-    /* font-weight: bold; */
     text-align: center;
     margin-top: 6vw;
   }
@@ -875,7 +793,7 @@ input:focus::placeholder {
     animation-name: lineMove;
     animation-duration: 2s;
     animation-timing-function: linear;
-    animation-fill-mode: forwards; /* 애니메이션 종료 후 상태를 유지 */
+    animation-fill-mode: forwards;
   }
 
   .play{
@@ -909,11 +827,8 @@ input:focus::placeholder {
 }
 
 
-/* phone */
-
 @media screen and (max-width: 540px) {
   
-  /*choice*/
   .container1 {
     display: flex;
     flex-direction: row;
@@ -924,7 +839,6 @@ input:focus::placeholder {
   }
   
  .box {
-    /* position: relative; */
     width: 90vw;
     height: 40vw;
     border-radius: 2vw;
@@ -950,7 +864,6 @@ input:focus::placeholder {
     height: 20vw;
   }
 
-  /*secondGame css*/
   .popup {
     width: 120%;
     height: 120%;
