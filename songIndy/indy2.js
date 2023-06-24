@@ -19,37 +19,37 @@ var indy = [
      },
      {
         //t
-       title: " ",
-       answer: ["스텝백", "스텝 백", "스탭백", "스탭 백", "stepback", "Stepback", "Step Back", "StepBack", "step back"],
-       secondsong: 'songs/갓더비트 - stepback.mp3',
-       hint: "ㅅㅌㅂ",
-       answersong: 'songs/A갓더비트 - stepback.mp3',
-       answerimage: 'image/13.jpg'
+       title: "허회경 - 그렇게 살아가는 것",
+       answer: ["그렇게 살아가는 것", "그렇게살아가는 것", "그렇게 살아가는것", "그렇게살아가는것"],
+       secondsong: 'songs/t허회경 - 그렇게 살아가는 것.mp3',
+       hint: "ㄱㄹㄱ ㅅㅇㄱㄴ ㄱ",
+       answersong: 'songs/A그렇게살아가는것-허회경.mp3',
+       answerimage: 'image/5.jpg'
     },
     {
-       title: "이문세 - 소녀",
-       answer: ["소녀"],
-       secondsong: 'songs/이문세 - 소녀.mp3',
-       hint: "ㅅㄴ",
-       answersong: 'songs/A이문세 - 소녀.mp3',
-       answerimage: 'image/14.jpg'
+       title: "혁오 - 위잉위잉",
+       answer: ["위잉위잉", "위잉 위잉"],
+       secondsong: 'songs/t혁오 - 위잉위잉.mp3',
+       hint: "ㅇㅇㅇㅇ",
+       answersong: 'songs/A위잉위잉-혁오.mp3',
+       answerimage: 'image/9.jpg'
     },
     {
         //t
        title: "검정치마 - 기다린만큼, 더",
        answer: ["기다린만큼 더", "기다린 만큼 더", "기다린만큼더", "기다린만큼, 더"],
-       secondsong: 'songs/t검정치마 - 기다린만큼, 더.mp3',
+       secondsong: 'songs/t검정치마 - 기다린 만큼, 더.mp3',
        hint: "ㄱㄷㄹㅁㅋ ㄷ",
-       answersong: 'songs/A검정치마 - 기다린만큼, 더.mp3',
+       answersong: 'songs/A기다린만큼더-검정치마.mp3',
        answerimage: 'image/6.jpg'
     },
     {
-       title: "이지 - 응급실",
-       answer: ["응급실"],
-       secondsong: 'songs/이지 - 응급실.mp3',
-       hint: "ㅇㄱㅅ",
-       answersong: 'songs/A이지 - 응급실.mp3',
-       answerimage: 'image/16.jpg'
+       title: "백아 - 첫사랑",
+       answer: ["첫사랑", "첫 사랑"],
+       secondsong: 'songs/t백아 - 첫사랑.mp3',
+       hint: "ㅊㅅㄹ",
+       answersong: 'songs/A백아 - 첫사랑.mp3',
+       answerimage: 'image/2.jpg'
     },
     {
         //t
@@ -57,31 +57,31 @@ var indy = [
        answer: ["우리가맞다는대답을할거에요","우리가맞다는대답을할거예요", "우리가 맞다는 대답을 할거예요", "우리가 맞다는 대답을 할거에요", "우리가 맞다는 대답을 할 거예요", "우리가 맞다는 대답을 할 거에요"],
        secondsong: 'songs/t이강승 - 우리가 맞다는 대답을 할 거예요.mp3',
        hint: "ㅇㄹㄱ ㅁㄷㄴ ㄷㄷㅇ ㅎ ㄱㅇㅇ",
-       answersong: 'songs/A이강승 - 우리가 맞다는 대답을 할 거예요.mp3',
+       answersong: 'songs/A우리가맞다는대답을할거예요-이강승.mp3',
        answerimage: 'image/8.jpg'
     },
     {
-       title: "브레이브 걸스 - Thank You",
-       answer: ["땡큐", "Thank You", "thankyou", "thank you", "ThankYou", "Thankyou", "Thank you"],
-       secondsong: 'songs/브레이브걸스 - thankyou.mp3',
-       hint: "ㄸㅋ",
-       answersong: 'songs/A브레이브걸스 - thankyou.mp3',
-       answerimage: 'images/18.jpg'
+       title: "넬(NELL) - 기억을 걷는 시간",
+       answer: ["기억을 걷는 시간", "기억을걷는 시간", "기억을 걷는시간", "기억을걷는시간"],
+       secondsong: 'songs/t넬 - 기억을 걷는 시간.mp3',
+       hint: "ㄱㅇㅇ ㄱㄴ ㅅㄱ",
+       answersong: 'songs/A기억을걷는시간-넬.mp3',
+       answerimage: 'image/7.jpg'
     },
     {
-       title: "Stray Kids - MANIAC",
-       answer: ["매니악", "maniac", "Maniac", "MANIAC"],
-       secondsong: 'songs/스키즈 - 매니악.mp3',
-       hint: "ㅁㄴㅇ",
-       answersong: 'songs/A스키즈 - 매니악.mp3',
+       title: "백아 - 테두리",
+       answer: ["테두리"],
+       secondsong: 'songs/t백아 - 테두리.mp3',
+       hint: "ㅌㄷㄹ",
+       answersong: 'songs/A백아 - 테두리.mp3',
        answerimage: 'images/19.jpg'
     },
     {
-       title: "온앤오프 - 여름쏙",
-       answer: ["여름쏙", "여름 쏙"],
-       secondsong: 'songs/온앤오프 - 여름쏙.mp3',
-       hint: "ㅇㄹㅆ",
-       answersong: 'songs/A온앤오프 - 여름쏙.mp3',
+       title: "나디(n@di) - 편지",
+       answer: ["편지"],
+       secondsong: 'songs/t나디 - 편지.mp3',
+       hint: "ㅍㅈ",
+       answersong: 'songs/A나디 - 편지.mp3',
        answerimage: 'images/20.jpg'
     },
 ];

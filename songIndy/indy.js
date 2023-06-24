@@ -84,16 +84,15 @@ var indy = [
        "answersong": 'songs/A위잉위잉-혁오.mp3',
        "answerimage": 'image/9.jpg'
     }
-    /* ,{
+     ,{
        "id":10,
-       "title": " - ",
-       "answer":[""],
-       "secondsong": 'songs/ .mp3',
-       "hint": " ",
-       "answersong": 'songs/A .mp3',
+       "title": "나디(n@di) - 편지",
+       "answer":["편지"],
+       "secondsong": 'songs/나디 - 편지.mp3',
+       "hint": "ㅍㅈ",
+       "answersong": 'songs/A나디 - 편지.mp3',
        "answerimage": 'image/10.jpg'
     }
-    */
    ];
    
    var bol = false;

@@ -75,7 +75,7 @@ var bal = [
        answerimage: 'images/2.jpg'
     },
     {
-        title: "이지 - 응급실",
+        title: "이지(izi) - 응급실",
         answer: ["응급실"],
         secondsong: 'songs/t이지 - 응급실.mp3',
         hint: "ㅇㄱㅅ",
