@@ -70,7 +70,7 @@ var bal = [
        title: "성시경 - 거리에서",
        answer: ["거리에서"],
        secondsong: 'songs/t성시경 - 거리에서.mp3',
-       hint: "ㅁㄴㅇ",
+       hint: "ㄱㄹㅇㅅ",
        answersong: 'songs/A성시경 - 거리에서.mp3',
        answerimage: 'images/2.jpg'
     },
