@@ -273,6 +273,7 @@ function checkanswer() {
         answersong = new Audio(bal[i].answersong);
         answersong.play();
         isPlaying = true;
+        i++; 
         alert("정답입니다!");
     // 정답이 아닐 때
     } else {
@@ -280,7 +281,7 @@ function checkanswer() {
         inputanswer.value = null;
     }
 
-    i++; // 다음 문제로 넘어감
+    
 }
 
 // 다음 문제 버튼 클릭시

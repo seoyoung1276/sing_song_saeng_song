@@ -104,14 +104,9 @@ var indy = [
    const musicTitle = document.getElementById("musicTitle");
    const playBtn = document.getElementById("playBtn");
    const startBtn = document.getElementById("startBtn");
-   const homeBtn = document.getElementById("homeBtn");
-   const endingment = document.getElementById("endingment");
-//    const score = document.getElementById("score");
-//    const page = document.getElementById("page");
    let answerimage = document.getElementById("answerimage");
    let inputanswer = document.getElementById("inputanswer");
    let playBtns = document.getElementById("play");
-   let line = document.getElementsByClassName("element")
    let answer ="";
    let currentTime = 0;
    let cnt = 10;
@@ -122,11 +117,8 @@ var indy = [
    var answersong = new Audio(indy[i].answersong);
    var songPath2 = indy[i].secondsong;
    var songPath = indy[i].answersong;
-//    endingment.remove();
-//    homeBtn.remove();
-//    score.remove();
 
-function createKeyframes() {
+   function createKeyframes() {
     var style = document.createElement('style');
     style.type = 'text/css';
     
@@ -143,9 +135,8 @@ function createKeyframes() {
     style.appendChild(document.createTextNode(keyframes));
     document.head.appendChild(style);
   }
-  
-
-//시작 버튼! 
+   
+//시작 버튼 나오면 수정! 
 if (typeof startBtn !== 'undefined' && startBtn !== null) {
     startBtn.addEventListener("click", function(){
                 secondsong = new Audio(indy[0].secondsong);
@@ -175,6 +166,7 @@ function nextquiz() {
         secondsong = new Audio(indy[i].secondsong);
         secondsong.play();
         isPlaying = true;
+        
     }
 }
 
@@ -250,7 +242,7 @@ function input() {
     answer = inputanswer.value;
      //패스
      if(answer === "pass"){
-        if(i < indy.length -1){
+        if(i <= 8){
             var passtoNext = confirm("패스하시겠습니까?")
             if(passtoNext){
                 cnt--;
@@ -261,8 +253,9 @@ function input() {
         }else{
             passtoNext = confirm("마지막 문제 입니다! 패스하시겠습니까?")
             if(passtoNext){
-                alert("퀴즈 끝! 점수를 확인해보세요");
-                location.href="End.html";
+                cnt--;
+                alert("퀴즈 끝! " + cnt +"개 맞췄습니다.");
+               return location.href = "../index.html";
             }
         }
     }
@@ -290,6 +283,7 @@ function checkanswer() {
         answersong = new Audio(indy[i].answersong);
         answersong.play();
         isPlaying = true;
+        i++; // 다음 문제로 넘어감
         alert("정답입니다!");
     // 정답이 아닐 때
     } else {
@@ -297,22 +291,21 @@ function checkanswer() {
         inputanswer.value = null;
     }
 
-    i++; // 다음 문제로 넘어감
+    
 }
 
 // 다음 문제 버튼 클릭시
 if (typeof nextBtn !== 'undefined' && nextBtn !== null) {
     nextBtn.addEventListener("click", function(){
-        if (i < indy.length) {
+        if (i <= 8) {
             if (bol === true) {
                 bol = false;
                 answerimage.src = "../images/question-mark-icon.png";
                 secondsong.pause();
                 answersong.pause();
                 nextquiz();
-                createKeyframes();
             } else {
-                if (i < indy.length - 1) {
+                if (i <= 8) {
                     passtoNext = confirm("패스 하시겠습니까?");
                     if (passtoNext) {
                         i++
@@ -323,15 +316,21 @@ if (typeof nextBtn !== 'undefined' && nextBtn !== null) {
                 } else {
                     passtoNext = confirm("마지막 문제 입니다! 패스하시겠습니까?")
                     if (passtoNext) {
-                        alert("퀴즈 끝! 점수를 확인해보세요");
+                        cnt--;
+                        alert("퀴즈 끝! " + cnt +"개 맞췄습니다.");
+                        return location.href = "../index.html";
                         
                     }
                 }
             }
         } else {
-            alert("퀴즈 끝! 점수를 확인해보세요");
-            location.href = "../End.html";
+            passtoNext = confirm("마지막 문제 입니다! 패스하시겠습니까?")
+            if (passtoNext) {
+                cnt--;
+                alert("퀴즈 끝! " + cnt +"개 맞췄습니다.");
+                return location.href = "../index.html";
+                
+            }
         }
     });
 }
-

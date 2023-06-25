@@ -224,8 +224,8 @@ function input() {
          passtoNext = confirm("마지막 문제 입니다! 패스하시겠습니까?")
          if(passtoNext){
              cnt--;
-             alert("퀴즈 끝!" + cnt +"개 맞췄습니다.");
-            return location.href = "../main.html";
+             alert("퀴즈 끝! " + cnt +"개 맞췄습니다.");
+            return location.href = "../index.html";
          }
      }
  }
@@ -253,6 +253,7 @@ function checkanswer() {
      answersong = new Audio(hiphop[i].answersong);
      answersong.play();
      isPlaying = true;
+     i++; // 다음 문제로 넘어감
      alert("정답입니다!");
  // 정답이 아닐 때
  } else {
@@ -260,7 +261,6 @@ function checkanswer() {
      inputanswer.value = null;
  }
 
- i++; // 다음 문제로 넘어감
 }
 
 // 다음 문제 버튼 클릭시
@@ -286,8 +286,8 @@ if (typeof nextBtn !== 'undefined' && nextBtn !== null) {
                  passtoNext = confirm("마지막 문제 입니다! 패스하시겠습니까?")
                  if (passtoNext) {
                      cnt--;
-                     alert("퀴즈 끝!" + cnt +"개 맞췄습니다.");
-                     return location.href = "../main.html";
+                     alert("퀴즈 끝! " + cnt +"개 맞췄습니다.");
+                     return location.href = "../index.html";
                      
                  }
              }
@@ -296,8 +296,8 @@ if (typeof nextBtn !== 'undefined' && nextBtn !== null) {
          passtoNext = confirm("마지막 문제 입니다! 패스하시겠습니까?")
          if (passtoNext) {
              cnt--;
-             alert("퀴즈 끝!" + cnt +"개 맞췄습니다.");
-             return location.href = "../main.html";
+             alert("퀴즈 끝! " + cnt +"개 맞췄습니다.");
+             return location.href = "../index.html";
              
          }
      }
