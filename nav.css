@@ -1,6 +1,4 @@
  :root {
-    --first-color: #ffffff;
-    --second-color: #efb11c;
     --body-color: #000;
 
     --h1-font-size: 2rem;  
@@ -25,7 +23,7 @@ hr{
 }
 
 header {
-    background-color: var(--first-color);
+    background-color: var(--body-color);
     position: fixed;
     top: 0;
     right: 0;
