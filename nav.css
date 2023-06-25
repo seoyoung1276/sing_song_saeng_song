@@ -1,6 +1,4 @@
  :root {
-    --first-color: #ffffff;
-    --second-color: #efb11c;
     --body-color: #000;
 
     --h1-font-size: 2rem;  
@@ -16,7 +14,7 @@
 
 body {
     font-family: var(--body-font);
-    color: var(--body-color);
+    /* color: #7000FF;/ */
 }
 
 hr{
@@ -25,7 +23,7 @@ hr{
 }
 
 header {
-    background-color: var(--first-color);
+    background-color: white;
     position: fixed;
     top: 0;
     right: 0;
@@ -44,16 +42,17 @@ nav {
     display: flex;
     align-items: center;
     margin-top: 1%;
+    color: #7000FF;
 }
 .nav.container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #fff;
+    color: #7000FF;
     padding: 0 16px; 
 }
 .nav.container a {
-    color: #fff;  
+    color: #7000FF;
 }
 .nav-link{
     text-decoration: none;
@@ -64,7 +63,7 @@ nav {
     list-style: none;
     width: auto;
     font-size: 1.3vw;
-    
+    color: #7000FF;
 }
 .nav-list {
     width: 60%;
