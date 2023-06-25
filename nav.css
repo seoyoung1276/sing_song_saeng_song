@@ -48,11 +48,11 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #fff;
+    color: #7000FF;
     padding: 0 16px; 
 }
 .nav.container a {
-    color: #fff;  
+    color: #7000FF;
 }
 .nav-link{
     text-decoration: none;
