@@ -84,34 +84,35 @@ var bal = [
      },
 ];
 
-var bol = false;
-var i = 0; 
-
-const cover = document.getElementById("coverbox");
-const songbox = document.getElementById("songbox");
-const hint = document.getElementById("hint");
-const musicTitle = document.getElementById("musicTitle");
-const playBtn = document.getElementById("playBtn");
-const startBtn = document.getElementById("startBtn");
-let answerimage = document.getElementById("answerimage");
-let inputanswer = document.getElementById("inputanswer");
-let playBtns = document.getElementById("play");
-let answer ="";
-let currentTime = 0;
-let cnt = 10;
-let isPlaying = false;
-let gotoPass = false;
-
-var secondsong = new Audio(bal[i].secondsong);
-var answersong = new Audio(bal[i].answersong);
-var songPath2 = bal[i].secondsong;
-var songPath = bal[i].answersong;
-
+   var bol = false;
+   var i = 0; 
+   
+   const cover = document.getElementById("coverbox");
+   const songbox = document.getElementById("songbox");
+   const hint = document.getElementById("hint");
+   const musicTitle = document.getElementById("musicTitle");
+   const playBtn = document.getElementById("playBtn");
+   const startBtn = document.getElementById("startBtn");
+   let answerimage = document.getElementById("answerimage");
+   let inputanswer = document.getElementById("inputanswer");
+   let playBtns = document.getElementById("play");
+   let answer ="";
+   let currentTime = 0;
+   let cnt = 9;
+   let isPlaying = false;
+   let gotoPass = false;
+   
+   var secondsong = new Audio(bal[i].secondsong);
+   var answersong = new Audio(bal[i].answersong);
+   var songPath2 = bal[i].secondsong;
+   var songPath = bal[i].answersong;
+   
 //시작 버튼 나오면 수정! 
 if (typeof startBtn !== 'undefined' && startBtn !== null) {
     startBtn.addEventListener("click", function(){
                 secondsong = new Audio(bal[0].secondsong);
                 secondsong.play();
+                isPlaying = true;
                 hint.textContent = bal[0].hint;
         })
 }
@@ -123,7 +124,8 @@ musicTitle.style.display = 'none';
 // 문제 화면
 function nextquiz() {
     if(bol === false){
-     
+        secondsong.pause();
+        isPlaying = false;
         inputanswer.value = null;
         inputanswer.style.display = 'block';
         cover.style.display = 'none';
@@ -133,6 +135,7 @@ function nextquiz() {
         hint.textContent = bal[i].hint;
         secondsong = new Audio(bal[i].secondsong);
         secondsong.play();
+        isPlaying = true;
         
     }
 }
@@ -141,7 +144,15 @@ function nextquiz() {
 if (typeof playBtn !== 'undefined' && playBtn !== null) {
     playBtn.addEventListener("click", function() {
       if (bol === false) {
-        secondsong.play();
+        if(isPlaying) {
+            secondsong.pause();
+            currentTime = secondsong.currentTime;
+            isPlaying = false;
+        }else{
+            secondsong.currentTime = currentTime;
+            secondsong.play();
+            isPlaying = true;
+        }
       } else {
         if (isPlaying) {
           answersong.pause();
@@ -158,8 +169,8 @@ if (typeof playBtn !== 'undefined' && playBtn !== null) {
   
   // 스페이스 눌러도 노래 멈추게 하고픔
   function spacetopause(event) {
-    if(bol === true){
-        if (event.key === ' ') {
+    if (event.key === ' ') {
+        if(bol === true){
             if (isPlaying) {
                 answersong.pause();
                 currentTime = answersong.currentTime;
@@ -169,9 +180,19 @@ if (typeof playBtn !== 'undefined' && playBtn !== null) {
                 answersong.play();
                 isPlaying = true;
             }
+        }else{
+            if(isPlaying) {
+                secondsong.pause();
+                currentTime = secondsong.currentTime;
+                isPlaying = false;
+            }else{
+                secondsong.currentTime = currentTime;
+                secondsong.play();
+                isPlaying = true;
+            }
         }
     }
-  }
+}
   
   document.addEventListener('keydown', spacetopause);
   
@@ -189,63 +210,96 @@ inputanswer.addEventListener('keydown', handleEnterKey)
 
 function input() {
     answer = inputanswer.value;
+     //패스
+     if(answer === "pass"){
+        if(i <= 8){
+            var passtoNext = confirm("패스하시겠습니까?")
+            if(passtoNext){
+                cnt--;
+                i++;
+                nextquiz();
+                return alert("다음 문제로 넘어갑니다.");
+            }
+        }else{
+            passtoNext = confirm("마지막 문제 입니다! 패스하시겠습니까?")
+            if(passtoNext){
+                cnt--;
+                alert("퀴즈 끝!" + cnt +"개 맞췄습니다.");
+               return location.href = "../main.html";
+            }
+        }
+    }
     checkanswer();
 }
 
 // 정답 체크
 function checkanswer() {
     var isCorrect = bal[i].answer.some(function(answer){
-        return answer === inputanswer.value
+        return answer === inputanswer.value;
     });
-          //패스
-        if(answer === "pass"){
-         var passtoNext = confirm("패스하시겠습니까?")
-         if(passtoNext){
-             cnt--;
-             i++;
-             nextquiz();
-             return alert("다음 문제로 넘어갑니다.");
-         }
-     }
-        //정답이 맞을 때
-        if(isCorrect){
-            bol = true; 
-            cover.style.display = 'block';
-            musicTitle.style.display = 'block';
-            inputanswer.style.display = 'none';
-            answerimage.src = bal[i].answerimage;
-            musicTitle.textContent = bal[i].title;
-            songbox.style.display = 'none';
-            playBtn.style.marginTop = '4%'
-            document.getElementById('coverbox').style.marginTop="14%"
-            answersong = new Audio(bal[i].answersong);
-            secondsong.pause();
-            answersong.play();
-            isPlaying = true;
-            alert("정답입니다!");
-            i++;
-        //정답이 아닐 때
-        }else{
-            alert("땡! 다시 입력해보세요");
-            inputanswer.value = null;
-        }
-       
- }
+         
+    // 정답이 맞을 때
+    if (isCorrect) {
+        bol = true; 
+        cover.style.display = 'block';
+        musicTitle.style.display = 'block';
+        inputanswer.style.display = 'none';
+        answerimage.src = bal[i].answerimage;
+        musicTitle.textContent = bal[i].title;
+        songbox.style.display = 'none';
+        playBtn.style.marginTop = '4%';
+        document.getElementById('coverbox').style.marginTop = '14%';
+        secondsong.pause();
+        answersong = new Audio(bal[i].answersong);
+        answersong.play();
+        isPlaying = true;
+        alert("정답입니다!");
+    // 정답이 아닐 때
+    } else {
+        alert("땡! 다시 입력해보세요");
+        inputanswer.value = null;
+    }
 
-
-
+    i++; // 다음 문제로 넘어감
+}
 
 // 다음 문제 버튼 클릭시
 if (typeof nextBtn !== 'undefined' && nextBtn !== null) {
     nextBtn.addEventListener("click", function(){
-        if(i < bal.length) {
-            bol = false;
-            answerimage.src = "../images/question-mark-icon.png";
-            secondsong.pause();
-            answersong.pause();
-            nextquiz();
-        }else{
-            alert("문제 끝~ ^>^");
+        if (i <= 8) {
+            if (bol === true) {
+                bol = false;
+                answerimage.src = "../images/question-mark-icon.png";
+                secondsong.pause();
+                answersong.pause();
+                nextquiz();
+            } else {
+                if (i <= 8) {
+                    passtoNext = confirm("패스 하시겠습니까?");
+                    if (passtoNext) {
+                        i++
+                        cnt--;
+                        nextquiz();
+                        return alert("다음 문제로 넘어갑니다.");
+                    }
+                } else {
+                    passtoNext = confirm("마지막 문제 입니다! 패스하시겠습니까?")
+                    if (passtoNext) {
+                        cnt--;
+                        alert("퀴즈 끝!" + cnt +"개 맞췄습니다.");
+                        return location.href = "../main.html";
+                        
+                    }
+                }
+            }
+        } else {
+            passtoNext = confirm("마지막 문제 입니다! 패스하시겠습니까?")
+            if (passtoNext) {
+                cnt--;
+                alert("퀴즈 끝!" + cnt +"개 맞췄습니다.");
+                return location.href = "../main.html";
+                
+            }
         }
-    }); 
+    });
 }

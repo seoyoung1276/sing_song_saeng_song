@@ -108,7 +108,7 @@ var kpop = [
    let playBtns = document.getElementById("play");
    let answer ="";
    let currentTime = 0;
-   let cnt = 10;
+   let cnt = 9;
    let isPlaying = false;
    let gotoPass = false;
    
@@ -222,7 +222,7 @@ function input() {
     answer = inputanswer.value;
      //패스
      if(answer === "pass"){
-        if(i < kpop.length -1){
+        if(i <= 8){
             var passtoNext = confirm("패스하시겠습니까?")
             if(passtoNext){
                 cnt--;
@@ -233,8 +233,9 @@ function input() {
         }else{
             passtoNext = confirm("마지막 문제 입니다! 패스하시겠습니까?")
             if(passtoNext){
+                cnt--;
                 alert("퀴즈 끝!" + cnt +"개 맞췄습니다.");
-                location.href = "../main.html";
+               return location.href = "../main.html";
             }
         }
     }
@@ -275,7 +276,7 @@ function checkanswer() {
 // 다음 문제 버튼 클릭시
 if (typeof nextBtn !== 'undefined' && nextBtn !== null) {
     nextBtn.addEventListener("click", function(){
-        if (i < kpop.length) {
+        if (i <= 8) {
             if (bol === true) {
                 bol = false;
                 answerimage.src = "../images/question-mark-icon.png";
@@ -283,7 +284,7 @@ if (typeof nextBtn !== 'undefined' && nextBtn !== null) {
                 answersong.pause();
                 nextquiz();
             } else {
-                if (i < kpop.length - 1) {
+                if (i <= 8) {
                     passtoNext = confirm("패스 하시겠습니까?");
                     if (passtoNext) {
                         i++
@@ -294,15 +295,21 @@ if (typeof nextBtn !== 'undefined' && nextBtn !== null) {
                 } else {
                     passtoNext = confirm("마지막 문제 입니다! 패스하시겠습니까?")
                     if (passtoNext) {
+                        cnt--;
                         alert("퀴즈 끝!" + cnt +"개 맞췄습니다.");
-                        location.href = "../main.html";
+                        return location.href = "../main.html";
                         
                     }
                 }
             }
         } else {
-            alert("퀴즈 끝!" + cnt +"개 맞췄습니다.");
-            location.href = "../main.html";
+            passtoNext = confirm("마지막 문제 입니다! 패스하시겠습니까?")
+            if (passtoNext) {
+                cnt--;
+                alert("퀴즈 끝!" + cnt +"개 맞췄습니다.");
+                return location.href = "../main.html";
+                
+            }
         }
     });
 }
