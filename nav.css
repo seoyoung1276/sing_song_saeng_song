@@ -68,7 +68,7 @@ nav {
 }
 .nav-list {
     width: 60%;
-    column-gap: 10%;
+    column-gap: 15%;
     font-weight: var(--font-extra-bold);
     justify-content: center;
     align-items: center;
