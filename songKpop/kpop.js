@@ -108,7 +108,7 @@ var kpop = [
    let playBtns = document.getElementById("play");
    let answer ="";
    let currentTime = 0;
-   let cnt = 9;
+   let cnt = 10;
    let isPlaying = false;
    let gotoPass = false;
    
@@ -116,6 +116,24 @@ var kpop = [
    var answersong = new Audio(kpop[i].answersong);
    var songPath2 = kpop[i].secondsong;
    var songPath = kpop[i].answersong;
+
+   function createKeyframes() {
+    var style = document.createElement('style');
+    style.type = 'text/css';
+    
+    var keyframes = '\
+      @keyframes lineMove {\
+        0% {\
+          width: 0;\
+        }\
+        100% {\
+          width: 100%;\
+        }\
+      }';
+  
+    style.appendChild(document.createTextNode(keyframes));
+    document.head.appendChild(style);
+  }
    
 //시작 버튼 나오면 수정! 
 if (typeof startBtn !== 'undefined' && startBtn !== null) {
@@ -124,6 +142,7 @@ if (typeof startBtn !== 'undefined' && startBtn !== null) {
                 secondsong.play();
                 isPlaying = true;
                 hint.textContent = kpop[0].hint;
+                createKeyframes();
         })
 }
 

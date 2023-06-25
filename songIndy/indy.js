@@ -145,7 +145,7 @@ function createKeyframes() {
   }
   
 
-//시작 버튼 나오면 수정! 
+//시작 버튼! 
 if (typeof startBtn !== 'undefined' && startBtn !== null) {
     startBtn.addEventListener("click", function(){
                 secondsong = new Audio(indy[0].secondsong);
@@ -175,7 +175,6 @@ function nextquiz() {
         secondsong = new Audio(indy[i].secondsong);
         secondsong.play();
         isPlaying = true;
-        createKeyframes();
     }
 }
 
@@ -311,6 +310,7 @@ if (typeof nextBtn !== 'undefined' && nextBtn !== null) {
                 secondsong.pause();
                 answersong.pause();
                 nextquiz();
+                createKeyframes();
             } else {
                 if (i < indy.length - 1) {
                     passtoNext = confirm("패스 하시겠습니까?");
