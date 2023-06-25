@@ -44,6 +44,7 @@ nav {
     display: flex;
     align-items: center;
     margin-top: 1%;
+    color: #7000FF;
 }
 .nav.container {
     display: flex;
