@@ -153,7 +153,6 @@ if (typeof startBtn !== 'undefined' && startBtn !== null) {
                 isPlaying = true;
                 hint.textContent = indy[0].hint;
                 createKeyframes();
-
         })
 }
 
@@ -176,6 +175,7 @@ function nextquiz() {
         secondsong = new Audio(indy[i].secondsong);
         secondsong.play();
         isPlaying = true;
+        createKeyframes();
     }
 }
 

@@ -19,6 +19,11 @@ body {
     color: var(--body-color);
 }
 
+hr{
+    width: 90%;
+    border: solid 0.1px rgb(238, 238, 238);
+}
+
 header {
     background-color: var(--first-color);
     position: fixed;
@@ -55,6 +60,7 @@ nav {
 }
 
 .nav-item{
+    margin-top: 1.7%;
     list-style: none;
     width: auto;
     font-size: 1.3vw;
@@ -114,5 +120,11 @@ nav {
     .show-menu {
         width: 100%;
         height: 50vw;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .nav-logo {
+        margin-top: 5%;
     }
 }

@@ -18,9 +18,10 @@ body{
   
   .img {
     display: none;
-    width: 100%;
+    width: 100VW;
     height: 100%;
-    object-fit: cover;
+    background-size: cover;
+    background-position: center;
   }
   
   .img.on {
