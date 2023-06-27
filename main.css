@@ -59,16 +59,17 @@ font-weight: bold;
 
 .start-button {
   position: absolute;
-  width: 13vw;
-  height: 4vw;
-  margin-left: 155%;
-  margin-top: 25%;
-  display: flex;
-  align-items: center;
-  column-gap: 6.5%;
-  justify-content: center;
-  border-radius: 100px;
-  border: none;
+    width: 13vw;
+    height: 4vw;
+    margin-left: 155%;
+    margin-bottom: -5%;
+    display: flex;
+    align-items: center;
+    column-gap: 6.5%;
+    justify-content: center;
+    border-radius: 100px;
+    border: none;
+    bottom: 15%;
 }
 .start-text {
 color: #7000FF;
@@ -577,13 +578,14 @@ input:focus::placeholder {
     width: 25vw;
     height: 8vw;
     margin-left: 78%;
-    top: 660px;
+    /* bottom: -300%; */
     display: flex;
     align-items: center;
     column-gap: 6.5%;
     justify-content: center;
     border-radius: 100px;
     border: none;
+    margin-bottom: -115%;
   }
   .start-text {
   color: #7000FF;
