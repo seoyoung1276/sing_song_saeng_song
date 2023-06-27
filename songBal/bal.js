@@ -270,6 +270,7 @@ function checkanswer() {
         playBtn.style.marginTop = '4%';
         document.getElementById('coverbox').style.marginTop = '14%';
         secondsong.pause();
+        isPlaying = false;
         answersong = new Audio(bal[i].answersong);
         answersong.play();
         isPlaying = true;
@@ -293,6 +294,7 @@ if (typeof nextBtn !== 'undefined' && nextBtn !== null) {
                 answerimage.src = "../images/question-mark-icon.png";
                 secondsong.pause();
                 answersong.pause();
+                isPlaying = false;
                 nextquiz();
             } else {
                 if (i <= 8) {
