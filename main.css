@@ -875,6 +875,13 @@ input:focus::placeholder {
 
 
 @media screen and (max-width: 540px) {
+  .main-box {
+    top: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .mainText{
     /* position: absolute; */
     /* top:5%;*/
@@ -902,14 +909,14 @@ input:focus::placeholder {
     position: absolute;
     width: 30vw;
     height: 10vw;
-    top: 700px;
-    right: 115px;
+    margin-left: 35%;
     display: flex;
     align-items: center;
     column-gap: 6.5%;
     justify-content: center;
     border-radius: 100px;
     border: none;
+    margin-bottom: -180%;
   }
   .start-text {
   color: #7000FF;
