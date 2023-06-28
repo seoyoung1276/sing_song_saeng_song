@@ -314,14 +314,18 @@ if (typeof nextBtn !== 'undefined' && nextBtn !== null) {
                  }
              }
          }
-     } else {
-         passtoNext = confirm("마지막 문제 입니다! 패스하시겠습니까?")
-         if (passtoNext) {
-             cnt--;
-             alert("퀴즈 끝! " + cnt +"개 맞췄습니다.");
-             return location.href = "../index.html";
-             
-         }
-     }
+        } else {
+            if(bol === false) {
+                passtoNext = confirm("마지막 문제 입니다! 패스하시겠습니까?")
+                if (passtoNext) {
+                    cnt--;
+                    alert("퀴즈 끝! " + cnt +"개 맞췄습니다.");
+                    return location.href = "../index.html";
+                }
+            }else{
+                alert("퀴즈 끝! " + cnt +"개 맞췄습니다.");
+                return location.href = "../index.html";
+            }
+        }
  });
 }
