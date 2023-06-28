@@ -133,7 +133,7 @@ justify-content: center;
   background-position: center center;
   border: none;
   border-radius: 30px;
-  font-size: 48px;
+  font-size: 38px;
   font-weight: bolder;
   color: white;
 }
@@ -152,7 +152,7 @@ justify-content: center;
   background-position: center center;
   border: none;
   border-radius: 30px;
-  font-size: 48px;
+  font-size: 38px;
   font-weight: bolder;
   color: white;
 }
@@ -171,7 +171,7 @@ justify-content: center;
   background-position: center center;
   border: none;
   border-radius: 30px;
-  font-size: 48px;
+  font-size: 38px;
   font-weight: bolder;
   color: white;
 }
@@ -190,7 +190,7 @@ justify-content: center;
   background-position: center center;
   border: none;
   border-radius: 30px;
-  font-size: 48px;
+  font-size: 38px;
   font-weight: bolder;
   color: white;
 }
@@ -209,7 +209,7 @@ justify-content: center;
   background-position: center center;
   border: none;
   border-radius: 30px;
-  font-size: 48px;
+  font-size: 38px;
   font-weight: bolder;
   color: white;
 }
@@ -617,7 +617,7 @@ input:focus::placeholder {
  
   .container{
     /* justify-content: center; */
-    column-gap: 12%;
+    column-gap: 10%;
     /* margin-top: 100px;/ */
     overflow: auto;
     white-space: nowrap;
@@ -632,6 +632,15 @@ input:focus::placeholder {
   flex-direction: row;
 }
 
+.k,
+.b,
+.i,
+.h,
+.p{
+  min-width: 170px;
+  font-size: 25px;
+}
+
 .box {
   width: 70vw;
   height: 48vw;
@@ -639,9 +648,9 @@ input:focus::placeholder {
   box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.092);
   margin-top: 10%;
 }
-.secondbox{
+/* .secondbox{
   margin-bottom: -20%;
-}
+} */
 
 .icon{
   padding-top: 5%;
@@ -956,9 +965,9 @@ input:focus::placeholder {
     column-gap: 10%;
   }
 
-  .secondbox{
+  /* .secondbox{
     margin-bottom: -40%;
-  }
+  } */
 
   .text {
     font-size: 5vw;

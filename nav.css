@@ -22,6 +22,10 @@ hr{
     border: solid 0.1px rgb(238, 238, 238);
 }
 
+a:active{
+    color: #7000FF;
+}
+
 header {
     background-color: white;
     position: fixed;
