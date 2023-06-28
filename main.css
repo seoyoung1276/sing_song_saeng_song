@@ -86,7 +86,10 @@ justify-content: center;
 }
 
 .container-wrapper {
-  width: 79%;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: center;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -ms-overflow-style: none;
@@ -100,13 +103,16 @@ justify-content: center;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: center;
-  margin-top: 110px;
+  /* justify-content: center;/ */
+  /* margin-top: 110px; */
+  align-items: flex-end;
   overflow: auto;
   white-space: nowrap;
   column-gap: 56px;
+  height: 90%;
   width: max-content;
   scroll-snap-type: x mandatory;
+  margin-bottom: 1%; 
 }
 
 .k{
@@ -115,8 +121,8 @@ justify-content: center;
   align-items: center;
   text-align: center;
   flex-shrink: 0;
-  min-width: 254px;
-  height: 805px;
+  min-width: 200px;;
+  height: 90%;
   background: linear-gradient(rgba(112, 0, 255, 0.5), rgba(112, 0, 255, 0.5)), url(../images/k-pop.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -134,8 +140,8 @@ justify-content: center;
   align-items: center;
   text-align: center;
   flex-shrink: 0;
-  min-width: 254px;
-  height: 805px;
+  min-width: 200px;;
+  height: 90%;
   background: linear-gradient(rgba(112, 0, 255, 0.5), rgba(112, 0, 255, 0.5)), url(../images/ballad.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -153,8 +159,8 @@ justify-content: center;
   align-items: center;
   text-align: center;
   flex-shrink: 0;
-  min-width: 254px;
-  height: 805px;
+  min-width: 200px;;
+  height: 90%;
   background: linear-gradient(rgba(112, 0, 255, 0.5), rgba(112, 0, 255, 0.5)), url(../images/hip-pop.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -172,8 +178,8 @@ justify-content: center;
   align-items: center;
   text-align: center;
   flex-shrink: 0;
-  min-width: 254px;
-  height: 805px;
+  min-width: 200px;;
+  height: 90%;
   background: linear-gradient(rgba(112, 0, 255, 0.5), rgba(112, 0, 255, 0.5)), url(../images/indi.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -191,8 +197,8 @@ justify-content: center;
   align-items: center;
   text-align: center;
   flex-shrink: 0;
-  min-width: 254px;
-  height: 805px;
+  min-width: 200px;;
+  height: 90%;
   background: linear-gradient(rgba(112, 0, 255, 0.5), rgba(112, 0, 255, 0.5)), url(../images/pop.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -601,11 +607,9 @@ input:focus::placeholder {
   }
  
   .container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    margin-top: 100px;
+    /* justify-content: center; */
+    column-gap: 12%;
+    /* margin-top: 100px;/ */
     overflow: auto;
     white-space: nowrap;
 }
@@ -625,7 +629,6 @@ input:focus::placeholder {
   box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.092);
   margin-top: 10%;
 }
-
 .secondbox{
   margin-bottom: -20%;
 }
