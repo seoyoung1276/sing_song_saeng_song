@@ -238,12 +238,14 @@ function input() {
              return alert("다음 문제로 넘어갑니다.");
          }
      }else{
+        if(bol === false){
          passtoNext = confirm("마지막 문제 입니다! 패스하시겠습니까?")
          if(passtoNext){
              cnt--;
              alert("퀴즈 끝! " + cnt +"개 맞췄습니다.");
             return location.href = "../index.html";
          }
+        }
      }
  }
  checkanswer();
@@ -252,7 +254,7 @@ function input() {
 // 정답 체크
 function checkanswer() {
  var isCorrect = pop[i].answer.some(function(answer){
-     return answer === inputanswer.value;
+    return answer === inputanswer.value.split(' ').join('').toLowerCase();
  });
       
  // 정답이 맞을 때
@@ -310,14 +312,18 @@ if (typeof nextBtn !== 'undefined' && nextBtn !== null) {
                  }
              }
          }
-     } else {
-         passtoNext = confirm("마지막 문제 입니다! 패스하시겠습니까?")
-         if (passtoNext) {
-             cnt--;
-             alert("퀴즈 끝! " + cnt +"개 맞췄습니다.");
-             return location.href = "../index.html";
-             
-         }
-     }
+        } else {
+            if(bol === false) {
+                passtoNext = confirm("마지막 문제 입니다! 패스하시겠습니까?")
+                if (passtoNext) {
+                    cnt--;
+                    alert("퀴즈 끝! " + cnt +"개 맞췄습니다.");
+                    return location.href = "../index.html";
+                }
+            }else{
+                alert("퀴즈 끝! " + cnt +"개 맞췄습니다.");
+                return location.href = "../index.html";
+            }
+        }
  });
 }
