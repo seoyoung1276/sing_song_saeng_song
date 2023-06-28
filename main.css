@@ -561,7 +561,7 @@ input:focus::placeholder {
   border: none;
 }
 
-@media screen and (max-width: 1534px) {
+@media screen and (max-width: 1529px) {
   .popupGenre {
       opacity: 1;
   }
@@ -600,7 +600,7 @@ input:focus::placeholder {
     justify-content: center;
     border-radius: 100px;
     border: none;
-    margin-bottom: -115%;
+    margin-bottom: -500px;
   }
   .start-text {
   color: #7000FF;
@@ -932,7 +932,7 @@ input:focus::placeholder {
     justify-content: center;
     border-radius: 100px;
     border: none;
-    margin-bottom: -180%;
+    /* margin-bottom: -520px;/ */
   }
   .start-text {
   color: #7000FF;
