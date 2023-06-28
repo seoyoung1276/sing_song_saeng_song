@@ -349,6 +349,10 @@ flex-direction: column;
   align-items: center;
 }
 
+.h-icon{
+  width: 30%;
+}
+
 
 .hint {
   position: relative;
@@ -760,6 +764,10 @@ input:focus::placeholder {
     padding-left: 13%;
   }
 
+  .h-icon{
+    width: 85%;
+  }
+
   .hint {
     position: relative;
     height: 6vw;
@@ -1071,7 +1079,10 @@ input:focus::placeholder {
     border-radius: 2vw;
   }
 
-
+  .h-icon{
+    width: 85%;
+  }
+  
   .hint {
     position: relative;
     height: 7vw;
