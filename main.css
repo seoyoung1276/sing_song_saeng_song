@@ -115,6 +115,10 @@ justify-content: center;
   margin-bottom: 1%; 
 }
 
+.popupGenre{
+  opacity: 0;
+}
+
 .k{
   display: flex;
   justify-content: center;
@@ -558,6 +562,12 @@ input:focus::placeholder {
   border: none;
 }
 
+@media screen and (max-width: 1534px) {
+  .popupGenre {
+      opacity: 1;
+  }
+}
+
 @media screen and (max-width: 720px) {
   .mainText{
     /* position: absolute; */
@@ -616,6 +626,7 @@ input:focus::placeholder {
 .container::-webkit-scrollbar{
   display: none;
 }
+
 
 .container1{
   display: flex;
