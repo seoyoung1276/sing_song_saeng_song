@@ -595,14 +595,14 @@ input:focus::placeholder {
     width: 25vw;
     height: 8vw;
     margin-left: 78%;
-    /* bottom: -300%; */
+    bottom: -120%;
     display: flex;
     align-items: center;
     column-gap: 6.5%;
     justify-content: center;
     border-radius: 100px;
     border: none;
-    margin-bottom: -85%;
+    margin-bottom: -35%;
   }
   .start-text {
   color: #7000FF;
@@ -948,7 +948,9 @@ input:focus::placeholder {
     column-gap: 6.5%;
     justify-content: center;
     border-radius: 100px;
-    border: none;
+    border: none;    
+    bottom: -200%;
+
     /* margin-bottom: -520px;/ */
   }
   .start-text {
