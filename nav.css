@@ -22,7 +22,7 @@ hr{
     border: solid 0.1px rgb(238, 238, 238);
 }
 
-a:active{
+.nav-link:active{
     color: #7000FF;
 }
 
@@ -59,6 +59,7 @@ nav {
 }
 .nav-link{
     text-decoration: none;
+    color: #7000FF;
 }
 
 .nav-item{
