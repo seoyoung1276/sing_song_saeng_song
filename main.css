@@ -602,7 +602,7 @@ input:focus::placeholder {
     justify-content: center;
     border-radius: 100px;
     border: none;
-    margin-bottom: -500px;
+    margin-bottom: -85%;
   }
   .start-text {
   color: #7000FF;
@@ -683,6 +683,7 @@ input:focus::placeholder {
   .secondBack{
     top: 8%;
     height: 90%;
+    width: auto;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -726,7 +727,7 @@ input:focus::placeholder {
 }
 
 .startBtn {
-  width: 20vw;
+  width: 16vw;
   height: 5vw;
   font-size: 3vw;
   text-align: center;
